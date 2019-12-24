@@ -1,0 +1,46 @@
+{
+  "name": "bushido-strap",
+  "version": "1.0.1",
+  "description": "a library of styled components with some global style overrides in sass",
+  "main": "styled/index.js",
+  "sass": "sass/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmyMcBride/bushido-strap.git"
+  },
+  "keywords": [
+    "styled-components",
+    "styled",
+    "components",
+    "sass",
+    "style-library",
+    "style",
+    "library"
+  ],
+  "peerDependencies": {
+    "babel-loader": "^8.0.6",
+    "node-sass": "^4.13.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
+  },
+  "author": "Jimmy McBride",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimmyMcBride/bushido-strap/issues"
+  },
+  "homepage": "https://github.com/JimmyMcBride/bushido-strap#readme",
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "node-sass": "^4.13.0",
+    "react-router-dom": "^5.1.2",
+    "sass-loader": "^8.0.0",
+    "styled-components": "^4.4.1",
+    "webpack": "^4.41.4"
+  },
+  "devDependencies": {}
+}
