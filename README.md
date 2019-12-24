@@ -11,7 +11,7 @@ Since I have added styled-components to the list of additional dependencies, I t
 - FlexBox: This is a generic div with props for **all** the flexbox properties set to there defaults. Has props for **height**, **width** and **background**, as well.
   Example:
 
-```javascript
+```react
 <FlexBox direction="column" width="100%" height="5rem">
   /* Code goes here */
 </FlexBox>
@@ -23,8 +23,40 @@ Since I have added styled-components to the list of additional dependencies, I t
 - Form: Basic form with **all** props for flexbox (flex-direction default set to column), **height**, **width** and **background**.
 - Input: Slightly styled to look a little nicer.
 
-### Importing bushido-strap css and styled components 🚀
+## Importing bushido-strap css and styled components 🚀
 
-All styled components get exported from `bushido-strap`. So all you need to do is deconstruct the component(s) you want from "./src/components/Global/styled". Example: `import { Wrapper, Button, FlexBox } from "bushido-strap`.
+All styled components get exported from `bushido-strap`. So all you need to do is deconstruct the component(s) you want from "./src/components/Global/styled". Example: `import { Wrapper, Button, FlexBox } from "bushido-strap"`.
 
-If you want to pull in bushido-strap's global style overhauls, then `import "bushido-strap/css/styles.css"` in your root index.js file. Feel free to check out the code to see what is under the hood! 🔥
+If you want to pull in bushido-strap's global style overhauls, then `import "bushido-strap/css"` in your root index.js file. Feel free to check out the code to see what is under the hood! 🔥
+
+## Theme Color Variables
+
+There are currently 2 ways you can pull in color variables. You can use one or the other, and even use both. The theme object in styled/theme has the same color variables as the variables file in the SASS folder. Only difference is one is a list of SASS variables and the other is an object with values. So we can use our variables in SASS or in styled components.
+
+#### The Styled Component Way
+
+At the top of the file you want to use the color variables in just throw in this import: `import theme from "bushido-strap/styled/theme"`
+
+Example:
+```javascript
+const StyledBox = styled(FlexBox)`
+  background: ${theme.blue5};
+`;
+```
+
+[Check here to see the full list of my javascript theme colors.](https://github.com/JimmyMcBride/bushido-strap/blob/master/styled/theme/index.js)
+
+#### The SASS Way
+
+At the top of your SASS file that you want to use the color variables in just import: `@import "bushido-strap/sass/variables.scss";`
+
+Example:
+```scss
+body {
+  background: $red3;
+}
+```
+
+[Check here to see the full list of my SASS theme colors.](https://github.com/JimmyMcBride/bushido-strap/blob/master/sass/styles/variables.scss)
+
+> The closer the number at the end of the color variable is to 0 the lighter the color is.

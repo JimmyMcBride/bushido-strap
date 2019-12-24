@@ -8,5 +8,6 @@ export default styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  background: ${theme.gray1};
+
+  background: ${theme.gray0};
 `;

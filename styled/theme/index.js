@@ -1,5 +1,6 @@
 // theme variables are set here
 const theme = {
+  gray0: "#f2f2f2",
   gray1: "#e6e6e6",
   gray2: "#cccccc",
   gray3: "#b3b3b3",
