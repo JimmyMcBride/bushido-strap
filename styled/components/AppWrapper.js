@@ -8,6 +8,5 @@ export default styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  font-size: 1.6rem;
-  background: ${theme.gs0};
+  background: ${theme.gray1};
 `;

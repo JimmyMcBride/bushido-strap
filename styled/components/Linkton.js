@@ -4,16 +4,16 @@ import theme from "../theme";
 import PropTypes from "prop-types";
 
 const Linkton = styled(Link)`
-  color: ${theme.gs1};
-  background: ${theme.gs8};
+  color: ${theme.gray1};
+  background: ${theme.gray9};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   width: ${props => (props.width ? props.width : "auto")};
   height: ${props => (props.height ? props.height : "auto")};
   &:hover {
-    color: ${theme.gs8};
-    background: ${theme.gs1};
+    color: ${theme.gray9};
+    background: ${theme.gray1};
   }
 `;
 
