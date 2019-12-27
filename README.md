@@ -26,9 +26,11 @@ export default styled.div`
 
 ## Wrapper:
 
-This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none).
+This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none), as well as special props for **min_height** (100vh) and **max_width** (100vw). 
 
-> Note: Name of **align-content** prop is **content**.
+This keeps the wrapper at least as big as the page your viewing it on. It can get longer that 100vh so we can scroll down as see stuff, but it cannot get so wide it has a horizontal scrollbar. You can change the props for min-height and max-width but I don't recommend it unless you absolutely need to.
+
+> **Note:** Name of **align-content** prop is **content**.
 
 `./styled/components/Wrapper.js`
 
@@ -215,7 +217,7 @@ export default function MyComponent() {
 }
 ```
 
-> Note: Especially if your using SASS, I recommend giving every Wrapper a class name with the naming convention `component_name-wrapper`. Then you would create a SASS file in that component's folder and open a tag for that wrappers class name and nest all the sass inside that tag.
+> **Note:** Especially if your using SASS, I recommend giving every Wrapper a class name with the naming convention `component_name-wrapper`. Then you would create a SASS file in that component's folder and open a tag for that wrappers class name and nest all the sass inside that tag.
 
 #### Example:
 
@@ -232,7 +234,7 @@ export default function MyComponent() {
 }
 ```
 
-> Styling inside of the wrapper keeps everything semantically contained to the specific component your working in. So only h2's and p tags inside the MyComponent wrapper will be effected.
+> **Note:** Styling inside of the wrapper keeps everything semantically contained to the specific component your working in. So only h2's and p tags inside the MyComponent wrapper will be effected.
 
 ## Theme Color Variables
 
@@ -266,4 +268,4 @@ body {
 
 [Check here to see the full list of my SASS theme colors.](https://github.com/JimmyMcBride/bushido-strap/blob/master/sass/styles/variables.scss)
 
-> The closer the number at the end of the color variable is to 0 the lighter the color is.
+> **Note:** The closer the number at the end of the color variable is to 0 the lighter the color is.

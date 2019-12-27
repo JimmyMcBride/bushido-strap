@@ -8,8 +8,10 @@ const Wrapper = styled.div`
   justify-content: ${props => (props.justify ? props.justify : "flex-start")};
   align-items: ${props => (props.align ? props.align : "center")};
   align-content: ${props => (props.content ? props.content : "stretch")};
-  height: ${props => (props.height ? props.height : "100vh")};
-  width: ${props => (props.width ? props.width : "100vw")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  min-height: ${props => (props.min_height ? props.min_height : "100vh")};
+  max-width: ${props => (props.max_width ? props.max_width : "100vw")};
   background: ${props => (props.background ? props.background : "none")};
 `;
 
@@ -58,5 +60,7 @@ Wrapper.propTypes = {
   ]),
   height: PropTypes.string,
   weight: PropTypes.string,
+  min_height: PropTypes.string,
+  max_weight: PropTypes.string,
   background: PropTypes.string
 };
