@@ -251,7 +251,7 @@ const StyledBox = styled(FlexBox)`
 
 #### The SASS Way
 
-At the top of your SASS file that you want to use the color variables in just import: `@import "bushido-strap/sass/variables.scss";`
+At the top of your SASS file that you want to use the color variables in just import: `@import "bushido-strap/sass/styles/variables.scss";`
 
 Example:
 
