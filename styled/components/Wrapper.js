@@ -8,10 +8,9 @@ const Wrapper = styled.div`
   justify-content: ${props => (props.justify ? props.justify : "flex-start")};
   align-items: ${props => (props.align ? props.align : "center")};
   align-content: ${props => (props.content ? props.content : "stretch")};
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : "auto")};
+  height: ${props => (props.height ? props.height : "100vh")};
+  width: ${props => (props.width ? props.width : "100vw")};
   background: ${props => (props.background ? props.background : "none")};
-  margin-bottom: 8rem;
 `;
 
 export default Wrapper;

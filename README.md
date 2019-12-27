@@ -6,28 +6,233 @@ I originally created my own [react app template named Bushido](https://www.npmjs
 
 Since I have added styled-components to the list of additional dependencies, I thought it would be a good idea to through some prebuilt styled-components that are designed to make you life a little easier when laying out your page. Here's a list of the prebuilt components and their purpose:
 
-- AppWrapper: This is just a generic div wrapping the whole app with no props. This is intended to wrap all the routes for the project in your App.js file.
-- Wrapper: This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the default for flex-direction is set to column. Also has props for **height** (auto), **width** (auto), and **background** (none).
-- FlexBox: This is a generic div with props for **all** the flexbox properties set to there defaults. Has props for **height**, **width** and **background**, as well.
-  Example:
+### AppWrapper:
 
-```react
-<FlexBox direction="column" width="100%" height="5rem">
-  /* Code goes here */
-</FlexBox>
+This is just a generic div wrapping the whole app with no props. This is intended to wrap all the routes for the project in your App.js file.
+
+`./styled/components/AppWrapper.js`
+
+```javascript
+export default styled.div`
+  min-height: 100vh;
+  max-width: 100vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  background: ${theme.gray0};
+`;
 ```
 
-- Card: For when you need to have a card component to display some information.
-- Button: Self explanatory.
-- Linkton: Looks exactly like a button, but is a Link from react-router-dom.
-- Form: Basic form with **all** props for flexbox (flex-direction default set to column), **height**, **width** and **background**.
-- Input: Slightly styled to look a little nicer.
+## Wrapper:
+
+This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none).
+
+> Note: Name of **align-content** prop is **content**.
+
+`./styled/components/Wrapper.js`
+
+```javascript
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: ${props => (props.direction ? props.direction : "column")};
+  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
+  align-items: ${props => (props.align ? props.align : "center")};
+  align-content: ${props => (props.content ? props.content : "stretch")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props => (props.background ? props.background : "none")};
+  margin-bottom: 8rem;
+`;
+```
+
+## FlexBox:
+
+This is a generic div with props for **all** the flexbox properties set to their defaults. Has props for **height**, **width** and **background**, as well.
+
+`./styled/components/FlexBox.js`
+
+```javascript
+const FlexBox = styled.div`
+  display: flex;
+  flex-direction: ${props => (props.direction ? props.direction : "row")};
+  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
+  align-items: ${props => (props.align ? props.align : "stretch")};
+  align-content: ${props => (props.content ? props.content : "stretch")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props => (props.background ? props.background : "none")};
+`;
+```
+
+## Card:
+
+For when you need to have a card component to display some information. Lot's of props going on here. All flexbox props here. **Flex-direction** (prop name **direction**) is set to **column**, and **justify-content** (prop name **justify**) is set to **center** instead of defaults. Also contains props for: **height**, **width**, **background**, **color**, **border**, **border-radius**, **padding**, and **margin**.
+
+`./styled/components/Card.js`
+
+```javascript
+const Card = styled.button`
+  display: flex;
+  flex-direction: ${props => (props.direction ? props.direction : "column")};
+  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  justify-content: ${props => (props.justify ? props.justify : "center")};
+  align-items: ${props => (props.align ? props.align : "stretch")};
+  align-content: ${props => (props.content ? props.content : "stretch")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props =>
+    props.background ? props.background : `${theme.gray2}`};
+  color: ${props => (props.color ? props.color : `${theme.gray9}`)};
+  border: ${props => (props.border ? props.border : "none")};
+  border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
+  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
+  margin: ${props => (props.margin ? props.margin : "1rem 0")};
+  box-shadow: 0 0.3rem 1rem ${theme.gray5};
+  code {
+    background: ${theme.gray1};
+  }
+  p {
+    text-align: left;
+    line-height: 2.2rem;
+  }
+`;
+```
+
+## Button:
+
+Self explanatory. Has props for: **color**, **background**, **border**, **border-radius** (prop name **radius**), **padding**, **width**, **height**, **hover_color** and **hover_background**.
+
+`./styled/components/Button.js`
+
+```javascript
+const Button = styled.button`
+  color: ${props => (props.color ? props.color : `${theme.gray1}`)};
+  background: ${props =>
+    props.background ? props.background : `${theme.gray8}`};
+  border: ${props => (props.border ? props.border : "none")};
+  border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
+  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
+  width: ${props => (props.width ? props.width : "auto")};
+  height: ${props => (props.height ? props.height : "auto")};
+  &:hover {
+    color: ${props =>
+      props.hover_color ? props.hover_color : `${theme.gray8}`};
+    background: ${props =>
+      props.hover_background ? props.hover_background : `${theme.gray2}`};
+  }
+`;
+```
+
+## Linkton:
+
+Looks exactly like a button, but is a Link from react-router-dom.
+
+`./styled/components/Linkton.js`
+
+```javascript
+const Linkton = styled(Link)`
+  color: ${props => (props.color ? props.color : `${theme.gray1}`)};
+  background: ${props =>
+    props.background ? props.background : `${theme.gray8}`};
+  border: ${props => (props.border ? props.border : "none")};
+  border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
+  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
+  width: ${props => (props.width ? props.width : "auto")};
+  height: ${props => (props.height ? props.height : "auto")};
+  &:hover {
+    color: ${props =>
+      props.hover_color ? props.hover_color : `${theme.gray8}`};
+    background: ${props =>
+      props.hover_background ? props.hover_background : `${theme.gray2}`};
+  }
+`;
+```
+
+## Form:
+
+Basic form with **all** props for flexbox (**flex-direction** (prop name **direction**) default set to **column**), **height**, **width** and **background**.
+
+```javascript
+const Form = styled.form`
+  display: flex;
+  flex-direction: ${props => (props.direction ? props.direction : "column")};
+  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
+  align-items: ${props => (props.align ? props.align : "stretch")};
+  align-content: ${props => (props.content ? props.content : "stretch")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props => (props.background ? props.background : "none")};
+`;
+```
+
+## Input:
+
+Slightly styled to look a little nicer. Has props for **border-radius** (prop name **radius**) and **padding**.
+
+```javascript
+const Input = styled.input`
+  border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
+  padding: ${props => (props.padding ? props.padding : "0.5rem")};
+`;
+```
 
 ## Importing bushido-strap css and styled components 🚀
 
-All styled components get exported from `bushido-strap`. So all you need to do is deconstruct the component(s) you want from "./src/components/Global/styled". Example: `import { Wrapper, Button, FlexBox } from "bushido-strap"`.
+If you want to pull in bushido-strap's global style overhauls, then `import "bushido-strap/css/main.css"` in your root index.js file. Feel free to check out the code to see what is under the hood! 🔥
 
-If you want to pull in bushido-strap's global style overhauls, then `import "bushido-strap/css"` in your root index.js file. Feel free to check out the code to see what is under the hood! 🔥
+All styled components get exported from `bushido-strap`. So all you need to do is deconstruct the component(s) you want from "bushido-strap".
+
+#### Example:
+
+`./src/components/MyComponent`
+
+```javascript
+import React from "react";
+import { Wrapper, FlexBox, Button, Card } from "bushido-strap";
+import "./styles.scss";
+
+export default function MyComponent() {
+  return (
+    <Wrapper className="my_component-wrapper">
+      <Card width="80vw">
+        <h2>Card Header</h2>
+        <p>Card text.</p>
+        <FlexBox>
+          <Button hover_color="red" hover_background="blue">
+            Left Button
+          </Button>
+          <Button hover_color="blue" hover_background="red">
+            Right Button
+          </Button>
+        </FlexBox>
+      </Card>
+    </Wrapper>
+  );
+}
+```
+
+> Note: Especially if your using SASS, I recommend giving every Wrapper a class name with the naming convention `component_name-wrapper`. Then you would create a SASS file in that component's folder and open a tag for that wrappers class name and nest all the sass inside that tag.
+
+#### Example:
+
+`./src/components/MyComponent/styles.scss`
+
+```scss
+.my_component-wrapper {
+  h2 {
+    font-size: 4rem;
+  }
+  p {
+    color: salmon;
+  }
+}
+```
+
+> Styling inside of the wrapper keeps everything semantically contained to the specific component your working in. So only h2's and p tags inside the MyComponent wrapper will be effected.
 
 ## Theme Color Variables
 
@@ -38,6 +243,7 @@ There are currently 2 ways you can pull in color variables. You can use one or t
 At the top of the file you want to use the color variables in just throw in this import: `import theme from "bushido-strap/styled/theme"`
 
 Example:
+
 ```javascript
 const StyledBox = styled(FlexBox)`
   background: ${theme.blue5};
@@ -51,6 +257,7 @@ const StyledBox = styled(FlexBox)`
 At the top of your SASS file that you want to use the color variables in just import: `@import "bushido-strap/sass/variables.scss";`
 
 Example:
+
 ```scss
 body {
   background: $red3;

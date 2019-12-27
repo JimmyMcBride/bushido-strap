@@ -10,15 +10,15 @@ const Card = styled.button`
   justify-content: ${props => (props.justify ? props.justify : "center")};
   align-items: ${props => (props.align ? props.align : "stretch")};
   align-content: ${props => (props.content ? props.content : "stretch")};
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props =>
+    props.background ? props.background : `${theme.gray2}`};
   color: ${props => (props.color ? props.color : `${theme.gray9}`)};
-  background: ${props => (props.color ? props.color : `${theme.gray2}`)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
-  width: ${props => (props.width ? props.width : "auto")};
-  height: ${props => (props.height ? props.height : "auto")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
-  max-width: 70rem;
   box-shadow: 0 0.3rem 1rem ${theme.gray5};
   code {
     background: ${theme.gray1};

@@ -1,6 +1,9 @@
 /* Raleway */
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
+/* Variables */
+@import "./variables.scss";
+
 html {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif;

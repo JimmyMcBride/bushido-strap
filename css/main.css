@@ -305,6 +305,7 @@ template {
   display: none; }
 
 /* Raleway */
+/* Variables */
 html {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif; }
@@ -360,7 +361,7 @@ a:hover {
 
 code {
   background-color: #808080;
-  color: white;
+  color: #f2f2f2;
   padding: 0 0.2rem;
   border-radius: 0.3rem; }
 
