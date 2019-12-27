@@ -19,7 +19,7 @@ const AppWrapper = styled.div`
 `;
 ```
 
-## Wrapper:
+### Wrapper:
 
 This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none), as well as special props for **min_height** (100vh) and **max_width** (100vw).
 
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 `;
 ```
 
-## FlexBox:
+### FlexBox:
 
 This is a generic div with props for **all** the flexbox properties set to their defaults. Has props for **height**, **width** and **background**, as well.
 
@@ -64,7 +64,7 @@ const FlexBox = styled.div`
 `;
 ```
 
-## Card:
+### Card:
 
 For when you need to have a card component to display some information. Lot's of props going on here. All flexbox props here. **Flex-direction** (prop name **direction**) is set to **column**, and **justify-content** (prop name **justify**) is set to **center** instead of defaults. Also contains props for: **height**, **width**, **background**, **color**, **border**, **border-radius**, **padding**, and **margin**.
 
@@ -98,7 +98,7 @@ const Card = styled.button`
 `;
 ```
 
-## Button:
+### Button:
 
 Self explanatory. Has props for: **color**, **background**, **border**, **border-radius** (prop name **radius**), **padding**, **width**, **height**, **hover_color** and **hover_background**.
 
@@ -123,7 +123,7 @@ const Button = styled.button`
 `;
 ```
 
-## Linkton:
+### Linkton:
 
 Looks exactly like a button, but is a Link from react-router-dom.
 
@@ -148,7 +148,7 @@ const Linkton = styled(Link)`
 `;
 ```
 
-## Form:
+### Form:
 
 Basic form with **all** props for flexbox (**flex-direction** (prop name **direction**) default set to **column**), **height**, **width** and **background**.
 
@@ -166,7 +166,7 @@ const Form = styled.form`
 `;
 ```
 
-## Input:
+### Input:
 
 Slightly styled to look a little nicer. Has props for **border-radius** (prop name **radius**) and **padding**.
 
@@ -177,7 +177,7 @@ const Input = styled.input`
 `;
 ```
 
-## Importing bushido-strap css and styled components 🚀
+### Importing bushido-strap css and styled components 🚀
 
 If you want to pull in bushido-strap's global style overhauls, then `import "bushido-strap/css/main.css"` in your root index.js file. Feel free to check out the code to see what is under the hood! 🔥
 
