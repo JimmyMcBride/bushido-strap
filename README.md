@@ -8,25 +8,20 @@ Since I have added styled-components to the list of additional dependencies, I t
 
 ### AppWrapper:
 
-This is just a generic div wrapping the whole app with no props. This is intended to wrap all the routes for the project in your App.js file.
+This is just a generic div wrapping the whole app with only one prop for **background**. This is intended to wrap all the routes for the project in your App.js file and it's only purpose it to set the background. The default is set to 5% gray so the screen is a little easier on the eyes. Wrappers that wrap a page set the page width and height and have no background by default.
 
 `./styled/components/AppWrapper.js`
 
 ```javascript
-export default styled.div`
-  min-height: 100vh;
-  max-width: 100vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-
-  background: ${theme.gray0};
+const AppWrapper = styled.div`
+  background: ${props =>
+    props.background ? props.background : `${theme.gray0}`};
 `;
 ```
 
 ## Wrapper:
 
-This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none), as well as special props for **min_height** (100vh) and **max_width** (100vw). 
+This should wrap every parent component. This is just like FlexBox, only difference is that in Wrapper the _default for **flex-direction** (prop name **direction**) is set to **column** and **align-items** (prop name **align**) is set to **center**_. Also has props for **height** (auto), **width** (auto), and **background** (none), as well as special props for **min_height** (100vh) and **max_width** (100vw).
 
 This keeps the wrapper at least as big as the page your viewing it on. It can get longer that 100vh so we can scroll down as see stuff, but it cannot get so wide it has a horizontal scrollbar. You can change the props for min-height and max-width but I don't recommend it unless you absolutely need to.
 
