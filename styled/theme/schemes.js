@@ -33,12 +33,12 @@ export const getColor = props =>
       }
     : props.invert
     ? {
-        color: `${theme.gray0}`,
-        background: `${theme.gray8}`
-      }
-    : {
         color: `${theme.gray8}`,
         background: `${theme.gray1}`
+      }
+    : {
+        color: `${theme.gray0}`,
+        background: `${theme.gray8}`
       };
 
 export const getHover = props =>
@@ -74,12 +74,12 @@ export const getHover = props =>
       }
     : props.invert
     ? {
-        color: `${theme.gray8}`,
-        background: `${theme.gray1}`
-      }
-    : {
         color: `${theme.gray1}`,
         background: `${theme.gray7}`
+      }
+    : {
+        color: `${theme.gray8}`,
+        background: `${theme.gray1}`
       };
 
 export const getValue = props =>
