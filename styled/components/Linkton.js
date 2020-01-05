@@ -92,6 +92,7 @@ const Linkton = styled(Link)`
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   width: ${props => (props.width ? props.width : "auto")};
   height: ${props => (props.height ? props.height : "auto")};
+  text-align: center;
   &:hover {
     ${getHover}
   }

@@ -38,8 +38,8 @@ const Card = styled.div`
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
-  justify-content: ${props => (props.justify ? props.justify : "center")};
-  align-items: ${props => (props.align ? props.align : "stretch")};
+  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
+  align-items: ${props => (props.align ? props.align : "center")};
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "auto")};
