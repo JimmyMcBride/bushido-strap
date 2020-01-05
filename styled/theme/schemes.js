@@ -1,3 +1,5 @@
+import theme from "../theme";
+
 export const getColor = props =>
   props.primary
     ? {
