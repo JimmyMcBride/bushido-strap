@@ -2,8 +2,39 @@ import styled from "styled-components";
 import theme from "../theme";
 import PropTypes from "prop-types";
 
-// Creds: Robbie Porter
-const Card = styled.button`
+const getColor = props =>
+  props.light
+    ? {
+        color: `${theme.gray9}`,
+        background: `${theme.gray0}`
+      }
+    : props.dark
+    ? {
+        color: `${theme.gray0}`,
+        background: `${theme.gray8}`
+      }
+    : {
+        color: `${theme.gray9}`,
+        background: `${theme.gray2}`
+      };
+
+const getCodeColor = props =>
+  props.light
+    ? {
+        background: `${theme.gray8}`
+      }
+    : props.dark
+    ? {
+        color: `${theme.gray8}`,
+        background: `${theme.gray2}`
+      }
+    : {
+        color: `${theme.gray8}`,
+        background: `${theme.gray1}`
+      };
+
+const Card = styled.div`
+  ${getColor}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
@@ -12,16 +43,13 @@ const Card = styled.button`
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "auto")};
-  background: ${props =>
-    props.background ? props.background : `${theme.gray2}`};
-  color: ${props => (props.color ? props.color : `${theme.gray9}`)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray5};
   code {
-    background: ${theme.gray1};
+    ${getCodeColor}
   }
   p {
     text-align: left;
@@ -75,8 +103,6 @@ Card.propTypes = {
 
   height: PropTypes.string,
   weight: PropTypes.string,
-  background: PropTypes.string,
-  color: PropTypes.string,
   border: PropTypes.string,
   radius: PropTypes.string,
   padding: PropTypes.string,

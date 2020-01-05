@@ -354,7 +354,8 @@ a {
   align-items: center;
   margin: 0 1rem;
   padding: 0 1rem;
-  border-radius: 0.3rem; }
+  border-radius: 0.3rem;
+  text-align: center; }
 
 a:hover {
   color: #808080; }

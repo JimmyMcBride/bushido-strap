@@ -1,5 +1,9 @@
 # My Styled Components Library 📔
 
+### Update (Live in versions 1.2.7+) Color Scheme Props!!!
+
+> Color scheme themes for Button, Linkton, and Card components have been added. See the documentation below for more info.
+
 I originally created my own [react app template named Bushido](https://www.npmjs.com/package/cra-template-bushido) and set it up just the way I like it. I had a whole bunch of nifty styled components I used quite frequently with a theme object where I had a bunch of color variables stored and a index.css file that gave everything a small but smooth overhaul. It worked really well but I got tired of trying to remember where the global folder was in relation to my current directory. And I just keep thinking to myself, _I could turn this into a style library that I could just import..._ So I did!
 
 ## Prebuilt Global Styled Components 📓
@@ -17,6 +21,43 @@ const AppWrapper = styled.div`
   background: ${props =>
     props.background ? props.background : `${theme.gray0}`};
 `;
+```
+
+### Box:
+
+Box is just a div with props for height, width, and background.
+
+> One thing to know about images is that by default, the main.css sets images to `width: 100%, height: auto` so some really funny things will happen if you don't put your images inside a container with a width property. Since height is set to auto you may need to manually tell the image div how wide and and tall to be. If you have a row of items in a FlexBox and you have a width on you image Box of 25px and the FlexBox it is in is 50px high for any reason, it will distort the image length-wise unless you hard code the height to the appropriate proportion.
+
+You can also use this Box as a spacer.
+
+Example:
+
+```javascript
+<FlexBox>
+  <TopComponent />
+  <Box height="20px" />
+  <BottomComponent />
+</FlexBox>
+```
+
+`./styled/components/Box.js`
+
+```javascript
+const Box = styled.div`
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+  background: ${props => (props.background ? props.background : "none")};
+`;
+
+export default Box;
+
+Box.propTypes = {
+  // CUSTOM PROPTYPES
+  height: PropTypes.string,
+  weight: PropTypes.string,
+  background: PropTypes.string
+};
 ```
 
 ### Wrapper:
@@ -67,12 +108,22 @@ const FlexBox = styled.div`
 
 ### Card:
 
-For when you need to have a card component to display some information. Lot's of props going on here. All flexbox props here. **Flex-direction** (prop name **direction**) is set to **column**, and **justify-content** (prop name **justify**) is set to **center** instead of defaults. Also contains props for: **height**, **width**, **background**, **color**, **border**, **border-radius**, **padding**, and **margin**.
+For when you need to have a card component to display some information. Lot's of props going on here. All flexbox props here. **Flex-direction** (prop name **direction**) is set to **column**, and **justify-content** (prop name **justify**) is set to **center** instead of defaults. Also contains props for: **height**, **width**, **border**, **border-radius**, **padding**, and **margin**.
+
+#### New: Color Scheme Props!
+
+By adding a prop to your card (example: `<Card dark><h1>Header</h1></Card>`), you can change the color scheme of that card. Here's a list of the props and their color schemes:
+
+- dark = // dark theme
+- light = // light theme
+
+> Has a medium tone by default.
 
 `./styled/components/Card.js`
 
 ```javascript
-const Card = styled.button`
+const Card = styled.div`
+  ${getColor}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
@@ -81,16 +132,13 @@ const Card = styled.button`
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "auto")};
-  background: ${props =>
-    props.background ? props.background : `${theme.gray2}`};
-  color: ${props => (props.color ? props.color : `${theme.gray9}`)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray5};
   code {
-    background: ${theme.gray1};
+    ${getCodeColor}
   }
   p {
     text-align: left;
@@ -101,25 +149,32 @@ const Card = styled.button`
 
 ### Button:
 
-Self explanatory. Has props for: **color**, **background**, **border**, **border-radius** (prop name **radius**), **padding**, **width**, **height**, **hover_color** and **hover_background**.
+Self explanatory. Has props for: **border**, **border-radius** (prop name **radius**), **padding**, **width**, and **height**.
+
+#### New: Color Scheme Props!
+
+By adding a prop to your button (example: `<Button primary>Click Here</Button>`), you can change the color scheme of that button. Here's a list of the props and their color schemes:
+
+- primary = blue
+- secondary = purple
+- accent = magenta
+- success = green
+- warning = orange
+- danger = red
+- invert = // inverts default values
 
 `./styled/components/Button.js`
 
 ```javascript
 const Button = styled.button`
-  color: ${props => (props.color ? props.color : `${theme.gray1}`)};
-  background: ${props =>
-    props.background ? props.background : `${theme.gray8}`};
+  ${getColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   width: ${props => (props.width ? props.width : "auto")};
   height: ${props => (props.height ? props.height : "auto")};
   &:hover {
-    color: ${props =>
-      props.hover_color ? props.hover_color : `${theme.gray8}`};
-    background: ${props =>
-      props.hover_background ? props.hover_background : `${theme.gray2}`};
+    ${getHover}
   }
 `;
 ```
@@ -128,23 +183,30 @@ const Button = styled.button`
 
 Looks exactly like a button, but is a Link from react-router-dom.
 
+#### New: Color Scheme Props!
+
+By adding a prop to your linkton (example: `<Linkton primary>Click Here</Linkton>`), you can change the color scheme of that linkton. Here's a list of the props and their color schemes:
+
+- primary = blue
+- secondary = purple
+- accent = magenta
+- success = green
+- warning = orange
+- danger = red
+- invert = // inverts default values
+
 `./styled/components/Linkton.js`
 
 ```javascript
 const Linkton = styled(Link)`
-  color: ${props => (props.color ? props.color : `${theme.gray1}`)};
-  background: ${props =>
-    props.background ? props.background : `${theme.gray8}`};
+  ${getColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   width: ${props => (props.width ? props.width : "auto")};
   height: ${props => (props.height ? props.height : "auto")};
   &:hover {
-    color: ${props =>
-      props.hover_color ? props.hover_color : `${theme.gray8}`};
-    background: ${props =>
-      props.hover_background ? props.hover_background : `${theme.gray2}`};
+    ${getHover}
   }
 `;
 ```
