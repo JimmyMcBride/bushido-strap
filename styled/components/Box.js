@@ -5,6 +5,10 @@ const Box = styled.div`
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "auto")};
   background: ${props => (props.background ? props.background : "none")};
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default Box;

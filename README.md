@@ -27,7 +27,7 @@ const AppWrapper = styled.div`
 
 Box is just a div with props for height, width, and background.
 
-> One thing to know about images is that by default, the main.css sets images to `width: 100%, height: auto` so some really funny things will happen if you don't put your images inside a container with a width property. Since height is set to auto you may need to manually tell the image div how wide and and tall to be. If you have a row of items in a FlexBox and you have a width on you image Box of 25px and the FlexBox it is in is 50px high for any reason, it will distort the image length-wise unless you hard code the height to the appropriate proportion.
+> Note: By placing an image inside of box you can use width props on Box to responsively size your image.
 
 You can also use this Box as a spacer.
 
@@ -48,6 +48,10 @@ const Box = styled.div`
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "auto")};
   background: ${props => (props.background ? props.background : "none")};
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default Box;
