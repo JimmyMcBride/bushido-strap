@@ -123,7 +123,7 @@ By adding a prop to your card (example: `<Card dark><h1>Header</h1></Card>`), yo
 
 ```javascript
 const Card = styled.div`
-  ${getColor}
+  ${getValue}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
@@ -138,7 +138,7 @@ const Card = styled.div`
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray5};
   code {
-    ${getCodeColor}
+    ${getCodeValue}
   }
   p {
     text-align: left;

@@ -1,40 +1,10 @@
 import styled from "styled-components";
 import theme from "../theme";
 import PropTypes from "prop-types";
-
-const getColor = props =>
-  props.light
-    ? {
-        color: `${theme.gray9}`,
-        background: `${theme.gray0}`
-      }
-    : props.dark
-    ? {
-        color: `${theme.gray0}`,
-        background: `${theme.gray8}`
-      }
-    : {
-        color: `${theme.gray9}`,
-        background: `${theme.gray2}`
-      };
-
-const getCodeColor = props =>
-  props.light
-    ? {
-        background: `${theme.gray8}`
-      }
-    : props.dark
-    ? {
-        color: `${theme.gray8}`,
-        background: `${theme.gray2}`
-      }
-    : {
-        color: `${theme.gray8}`,
-        background: `${theme.gray1}`
-      };
+import { getValue, getCodeValue } from "../theme/schemes";
 
 const Card = styled.div`
-  ${getColor}
+  ${getValue}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
@@ -49,7 +19,7 @@ const Card = styled.div`
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray5};
   code {
-    ${getCodeColor}
+    ${getCodeValue}
   }
   p {
     text-align: left;
