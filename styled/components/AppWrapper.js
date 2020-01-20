@@ -2,10 +2,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 
-import { Switch } from "react-router-dom";
-
 // root container for the application
-const AppWrapper = styled(Switch)`
+const AppWrapper = styled.div`
   background: ${props =>
     props.background ? props.background : `${theme.gray0}`};
 `;

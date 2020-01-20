@@ -12,12 +12,12 @@ Since I have added styled-components to the list of additional dependencies, I t
 
 ### AppWrapper:
 
-This is just a Switch for wrapping your routes in the App.js, with only one prop for **background**. The default background color is set to 5% gray so the screen is a little easier on the eyes. It makes sense to me to but the background color behind the whole app. Wrappers that wrap a page set the page width and height and have no background by default.
+This is just a generic div wrapping the whole app with only one prop for **background**. This is intended to wrap all the routes for the project in your App.js file and it's only purpose it to set the background. The default is set to 5% gray so the screen is a little easier on the eyes. Wrappers that wrap a page set the page width and height and have no background by default.
 
 `./styled/components/AppWrapper.js`
 
 ```javascript
-const AppWrapper = styled(Switch)`
+const AppWrapper = styled.div`
   background: ${props =>
     props.background ? props.background : `${theme.gray0}`};
 `;
