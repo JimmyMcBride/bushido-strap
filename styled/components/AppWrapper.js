@@ -8,7 +8,7 @@ const AppWrapper = styled.div`
     props.background ? props.background : `${theme.gray1}`};
   ${props =>
     props.bg_url
-      ? "background-image: ${props.bg_url}"
+      ? "background-image: url(${props.bg_url})"
       : "background-image: none"};
   background-position: center;
   background-repeat: no-repeat;
