@@ -1,4 +1,4 @@
-import theme from "../theme";
+import theme from "../../index";
 
 const getHover = props =>
   props.primary

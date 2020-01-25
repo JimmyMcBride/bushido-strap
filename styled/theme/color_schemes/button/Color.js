@@ -1,4 +1,4 @@
-import theme from "../theme";
+import theme from "../../index";
 
 const getColor = props =>
   props.primary
