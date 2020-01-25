@@ -6,15 +6,20 @@ import theme from "../theme";
 const AppWrapper = styled.div`
   background: ${props =>
     props.background ? props.background : `${theme.gray1}`};
-  ${props =>
-    props.bg_url
-      ? "background-image: url(${props.bg_url})"
-      : "background-image: none"};
+  background-image: ${props =>
+    props.bg_url ? url(`${props.bg_url}`) : "none"};
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 `;
+
+// background: ${props =>
+//     props.background
+//       ? props.background
+//       : props.bg_url
+//       ? "none"
+//       : `${theme.gray1}`};
 
 export default AppWrapper;
 
