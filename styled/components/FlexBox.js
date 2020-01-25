@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, shade, box } from "./maps";
+import { stretch, shade, box, flexWrap } from "./maps";
 import PropTypes from "prop-types";
 
 const FlexBox = styled.div`
