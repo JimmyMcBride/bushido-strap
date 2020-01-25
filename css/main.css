@@ -308,53 +308,46 @@ template {
 /* Variables */
 html {
   font-size: 62.5%;
-  font-family: "Raleway", sans-serif; }
-
-body {
-  font-size: 1.6rem; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  font-family: "Raleway", sans-serif; }
-
-h1 {
-  font-size: 3rem; }
-
-h2 {
-  font-size: 2.6rem; }
-
-h3 {
-  font-size: 2.4rem; }
-
-h4 {
-  font-size: 2.2rem; }
-
-h5 {
-  font-size: 2rem; }
-
-h6 {
-  font-size: 1.8rem; }
-
-a {
-  text-decoration: none;
-  color: #1a1a1a; }
-
-a:hover {
-  color: #808080; }
-
-code {
-  background-color: #808080;
-  color: #f2f2f2;
-  padding: 0 0.2rem;
-  border-radius: 0.3rem; }
-
-button:focus {
-  outline: 0; }
-
-img {
-  border-radius: 0.4rem; }
+  font-family: "Raleway", sans-serif;
+  line-height: 1.4; }
+  html body {
+    font-size: 1.6rem; }
+    html body p {
+      margin: 0.4rem;
+      line-height: 1.4; }
+    html body h3 {
+      margin: 1.6rem; }
+    html body h1,
+    html body h2,
+    html body h3,
+    html body h4,
+    html body h5,
+    html body h6 {
+      font-family: "Raleway", sans-serif;
+      line-height: 1.4; }
+    html body h1 {
+      font-size: 3rem; }
+    html body h2 {
+      font-size: 2.6rem; }
+    html body h3 {
+      font-size: 2.4rem; }
+    html body h4 {
+      font-size: 2.2rem; }
+    html body h5 {
+      font-size: 2rem; }
+    html body h6 {
+      font-size: 1.8rem; }
+    html body a {
+      text-decoration: none;
+      color: #1a1a1a; }
+    html body a:hover {
+      color: #808080; }
+    html body code {
+      background-color: #808080;
+      color: #f2f2f2;
+      padding: 0 0.2rem;
+      border-radius: 0.3rem; }
+    html body button:focus {
+      outline: 0; }
+    html body img {
+      border-radius: 0.4rem; }

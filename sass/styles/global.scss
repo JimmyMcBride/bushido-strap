@@ -7,66 +7,76 @@
 html {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif;
-}
+  line-height: 1.4;
 
-body {
-  font-size: 1.6rem;
-}
+  body {
+    font-size: 1.6rem;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  font-family: "Raleway", sans-serif;
-}
+    p {
+      margin: 0.4rem;
+      line-height: 1.4;
+    }
 
-h1 {
-  font-size: 3rem;
-}
+    h3 {
+      margin: 1.6rem;
+    }
 
-h2 {
-  font-size: 2.6rem;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif;
+      line-height: 1.4;
+    }
 
-h3 {
-  font-size: 2.4rem;
-}
+    h1 {
+      font-size: 3rem;
+    }
 
-h4 {
-  font-size: 2.2rem;
-}
+    h2 {
+      font-size: 2.6rem;
+    }
 
-h5 {
-  font-size: 2rem;
-}
+    h3 {
+      font-size: 2.4rem;
+    }
 
-h6 {
-  font-size: 1.8rem;
-}
+    h4 {
+      font-size: 2.2rem;
+    }
 
-a {
-  text-decoration: none;
-  color: $gray9;
-}
+    h5 {
+      font-size: 2rem;
+    }
 
-a:hover {
-  color: $gray5;
-}
+    h6 {
+      font-size: 1.8rem;
+    }
 
-code {
-  background-color: $gray5;
-  color: $gray0;
-  padding: 0 0.2rem;
-  border-radius: 0.3rem;
-}
+    a {
+      text-decoration: none;
+      color: $gray9;
+    }
 
-button:focus {
-  outline: 0;
-}
+    a:hover {
+      color: $gray5;
+    }
 
-img {
-  border-radius: 0.4rem;
+    code {
+      background-color: $gray5;
+      color: $gray0;
+      padding: 0 0.2rem;
+      border-radius: 0.3rem;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    img {
+      border-radius: 0.4rem;
+    }
+  }
 }
