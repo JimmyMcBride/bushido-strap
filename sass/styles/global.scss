@@ -19,10 +19,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
+  // margin-top: 0;
+  // margin-bottom: 0.5rem;
+  // font-weight: 500;
+  // line-height: 1.2;
   font-family: "Raleway", sans-serif;
 }
 
@@ -50,20 +50,9 @@ h6 {
   font-size: 1.8rem;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
 a {
   text-decoration: none;
   color: $gray9;
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
-  padding: 0 1rem;
-  border-radius: 0.3rem;
-  text-align: center;
 }
 
 a:hover {

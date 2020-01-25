@@ -1,3 +1,6 @@
+export { default as ButtonColor } from "./components/button/Color";
+export { default as ButtonHoverColor } from "./components/button/HoverColor";
+
 // theme variables are set here
 const theme = {
   gray0: "#f2f2f2",

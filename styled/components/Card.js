@@ -1,23 +1,34 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
 import theme from "../theme";
 import PropTypes from "prop-types";
 import { getValue, getCodeValue } from "../theme/schemes";
+
+const flexWrap = styledMap`
+  wrap: wrap;
+  default: nowrap;
+`;
+
+const stretch = styledMap`
+  stretch: 100%;
+  default: auto;
+`;
 
 const Card = styled.div`
   ${getValue}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
-  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  flex-wrap: ${flexWrap};
   justify-content: ${props => (props.justify ? props.justify : "flex-start")};
   align-items: ${props => (props.align ? props.align : "center")};
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : "auto")};
+  width: ${props => (props.width ? props.width : `${stretch}`)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
-  box-shadow: 0 0.3rem 1rem ${theme.gray5};
+  box-shadow: 0 0.3rem 1rem ${theme.gray7};
   code {
     ${getCodeValue}
   }

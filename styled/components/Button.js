@@ -1,14 +1,21 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
 import { getColor, getHover } from "../theme/schemes";
 import PropTypes from "prop-types";
+
+const stretch = styledMap`
+  stretch: 100%;
+  default: auto;
+`;
 
 const Button = styled.button`
   ${getColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
-  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
-  width: ${props => (props.width ? props.width : "auto")};
+  width: ${props => (props.width ? props.width : `${stretch}`)};
   height: ${props => (props.height ? props.height : "auto")};
+  margin: ${props => (props.margin ? props.margin : "auto")};
+  padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
   &:hover {
     ${getHover}
   }
@@ -63,7 +70,8 @@ Button.propTypes = {
   color: PropTypes.string,
   border: PropTypes.string,
   radius: PropTypes.string,
-  padding: PropTypes.string,
   hover_color: PropTypes.string,
-  hover_background: PropTypes.string
+  hover_background: PropTypes.string,
+  margin: PropTypes.string,
+  padding: PropTypes.string
 };

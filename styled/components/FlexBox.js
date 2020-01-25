@@ -1,17 +1,32 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
 import PropTypes from "prop-types";
+
+const flexWrap = styledMap`
+  wrap: wrap;
+  default: nowrap;
+`;
+
+const stretch = styledMap`
+  stretch: 100%;
+  default: auto;
+`;
 
 const FlexBox = styled.div`
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "row")};
-  flex-wrap: ${props => (props.wrap ? props.wrap : "nowrap")};
+  flex-wrap: ${flexWrap};
   justify-content: ${props => (props.justify ? props.justify : "flex-start")};
   align-items: ${props => (props.align ? props.align : "stretch")};
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : "auto")};
+  width: ${props => (props.width ? props.width : `${stretch}`)};
   background: ${props => (props.background ? props.background : "none")};
   color: ${props => (props.color ? props.color : "auto")};
+  min-height: ${props => (props.min_height ? props.min_height : "auto")};
+  max-width: ${props => (props.max_width ? props.max_width : "auto")};
+  padding: ${props => (props.padding ? props.padding : "auto")};
+  margin: ${props => (props.margin ? props.margin : "auto")};
 `;
 
 export default FlexBox;
@@ -61,5 +76,9 @@ FlexBox.propTypes = {
   height: PropTypes.string,
   weight: PropTypes.string,
   background: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  min_height: PropTypes.string,
+  max_weight: PropTypes.string,
+  padding: PropTypes.string,
+  margin: PropTypes.string
 };

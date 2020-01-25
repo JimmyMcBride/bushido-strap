@@ -1,14 +1,20 @@
 import styled from "styled-components";
+import styledMap from "styled-map";
 import { Link } from "react-router-dom";
 import { getColor, getHover } from "../theme/schemes";
 import PropTypes from "prop-types";
+
+const stretch = styledMap`
+  stretch: 100%;
+  default: auto;
+`;
 
 const Linkton = styled(Link)`
   ${getColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
-  width: ${props => (props.width ? props.width : "auto")};
+  width: ${props => (props.width ? props.width : `${stretch}`)};
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
   &:hover {
