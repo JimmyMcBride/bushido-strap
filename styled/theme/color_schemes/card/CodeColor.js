@@ -1,18 +1,14 @@
 import theme from "../../index";
 
 const getCodeValue = props =>
-  props.light
-    ? {
-        background: `${theme.gray8}`
-      }
-    : props.dark
+  props.invert
     ? {
         color: `${theme.gray8}`,
-        background: `${theme.gray2}`
+        background: `${theme.gray3}`
       }
     : {
         color: `${theme.gray8}`,
-        background: `${theme.gray1}`
+        background: `${theme.gray3}`
       };
 
 export default getCodeValue;

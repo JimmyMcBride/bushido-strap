@@ -29,9 +29,11 @@ const Card = styled.div`
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray9};
-  code {
-    ${CodeColor}
-  }
+  // code {
+  //   // ${CodeColor}
+  //   color: ${theme.gray8};
+  //   background: ${theme.green3}
+  // }
   p {
     text-align: left;
     line-height: 2.2rem;
