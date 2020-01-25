@@ -1,6 +1,6 @@
 import theme from "../theme";
 
-export const getHover = props =>
+const getHover = props =>
   props.primary
     ? {
         color: `${theme.gray0}`,
@@ -40,3 +40,5 @@ export const getHover = props =>
         color: `${theme.gray8}`,
         background: `${theme.gray1}`
       };
+
+export default getHover;

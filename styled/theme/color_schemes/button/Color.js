@@ -1,6 +1,6 @@
 import theme from "../theme";
 
-export const getColor = props =>
+const getColor = props =>
   props.primary
     ? {
         color: `${theme.gray0}`,
@@ -40,3 +40,5 @@ export const getColor = props =>
         color: `${theme.gray0}`,
         background: `${theme.gray8}`
       };
+
+export default getColor;

@@ -1,6 +1,6 @@
 import theme from "../theme";
 
-export const getValue = props =>
+const getValue = props =>
   props.invert
     ? {
         color: `${theme.gray0}`,
@@ -10,3 +10,5 @@ export const getValue = props =>
         color: `${theme.gray8}`,
         background: `${theme.gray0}`
       };
+
+export default getValue;
