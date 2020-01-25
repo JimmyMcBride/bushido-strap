@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch } from "./maps";
 import PropTypes from "prop-types";
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Input = styled.input`
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};

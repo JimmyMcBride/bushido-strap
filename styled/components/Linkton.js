@@ -1,13 +1,8 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch } from "./maps";
 import { Link } from "react-router-dom";
 import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Linkton = styled(Link)`
   ${ButtonColor}
@@ -17,6 +12,7 @@ const Linkton = styled(Link)`
   width: ${props => (props.width ? props.width : `${stretch}`)};
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
   &:hover {
     ${ButtonHoverColor}
   }
@@ -73,5 +69,6 @@ Linkton.propTypes = {
   radius: PropTypes.string,
   padding: PropTypes.string,
   hover_color: PropTypes.string,
-  hover_background: PropTypes.string
+  hover_background: PropTypes.string,
+  opacity: PropTypes.string
 };

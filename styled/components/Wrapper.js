@@ -1,16 +1,6 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch, flexWrap } from "./maps";
 import PropTypes from "prop-types";
-
-const flexWrap = styledMap`
-  wrap: wrap;
-  default: nowrap;
-`;
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,6 +14,7 @@ const Wrapper = styled.div`
   background: ${props => (props.background ? props.background : "none")};
   min-height: ${props => (props.min_height ? props.min_height : "100vh")};
   max-width: ${props => (props.max_width ? props.max_width : "100vw")};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
 `;
 
 export default Wrapper;
@@ -73,5 +64,6 @@ Wrapper.propTypes = {
   weight: PropTypes.string,
   min_height: PropTypes.string,
   max_weight: PropTypes.string,
-  background: PropTypes.string
+  background: PropTypes.string,
+  opacity: PropTypes.string
 };

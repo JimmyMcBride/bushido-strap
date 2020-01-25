@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch, shade, box } from "./maps";
 import PropTypes from "prop-types";
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Box = styled.div`
   height: ${props => (props.height ? props.height : "auto")};
@@ -15,6 +10,9 @@ const Box = styled.div`
   color: ${props => (props.color ? props.color : "auto")};
   margin: ${props => (props.margin ? props.margin : "0")};
   padding: ${props => (props.color ? props.color : "0")};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
+  box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${shade}`)};
+  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
   img {
     width: 100%;
     height: auto;
@@ -31,5 +29,8 @@ Box.propTypes = {
   radius: PropTypes.string,
   color: PropTypes.string,
   margin: PropTypes.string,
-  padding: PropTypes.string
+  padding: PropTypes.string,
+  opacity: PropTypes.string,
+  shadow: PropTypes.string,
+  box_size: PropTypes.string
 };

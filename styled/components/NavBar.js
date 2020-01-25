@@ -1,11 +1,6 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { flexWrap } from "./maps";
 import PropTypes from "prop-types";
-
-const flexWrap = styledMap`
-  wrap: wrap;
-  default: nowrap;
-`;
 
 const NavBar = styled.nav`
   display: flex;
@@ -22,6 +17,7 @@ const NavBar = styled.nav`
   max-width: ${props => (props.max_width ? props.max_width : "auto")};
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
 `;
 
 export default NavBar;
@@ -74,5 +70,6 @@ NavBar.propTypes = {
   min_height: PropTypes.string,
   max_weight: PropTypes.string,
   padding: PropTypes.string,
-  margin: PropTypes.string
+  margin: PropTypes.string,
+  opacity: PropTypes.string
 };

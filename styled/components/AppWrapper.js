@@ -8,21 +8,17 @@ const AppWrapper = styled.div`
     props.background ? props.background : `${theme.gray2}`};
   background-image: ${props =>
     props.bg_url ? `url(${props.bg_url})` : "none"};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 `;
 
-// background: ${props =>
-//     props.background
-//       ? props.background
-//       : props.bg_url
-//       ? "none"
-//       : `${theme.gray1}`};
-
 export default AppWrapper;
 
 AppWrapper.propTypes = {
-  background: PropTypes.string
+  background: PropTypes.string,
+  bg_url: PropTypes.string,
+  opacity: PropTypes.string
 };

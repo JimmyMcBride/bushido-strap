@@ -1,16 +1,6 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch, flexWrap } from "./maps";
 import PropTypes from "prop-types";
-
-const flexWrap = styledMap`
-  wrap: wrap;
-  default: nowrap;
-`;
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Form = styled.form`
   display: flex;
@@ -26,6 +16,7 @@ const Form = styled.form`
   max-width: ${props => (props.max_width ? props.max_width : "auto")};
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
 `;
 
 export default Form;
@@ -78,5 +69,6 @@ Form.propTypes = {
   min_height: PropTypes.string,
   max_weight: PropTypes.string,
   padding: PropTypes.string,
-  margin: PropTypes.string
+  margin: PropTypes.string,
+  opacity: PropTypes.string
 };

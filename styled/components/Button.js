@@ -1,12 +1,7 @@
 import styled from "styled-components";
-import styledMap from "styled-map";
+import { stretch } from "./maps";
 import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
-
-const stretch = styledMap`
-  stretch: 100%;
-  default: auto;
-`;
 
 const Button = styled.button`
   ${ButtonColor}
@@ -16,6 +11,7 @@ const Button = styled.button`
   height: ${props => (props.height ? props.height : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
+  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
   &:hover {
     ${ButtonHoverColor}
   }
@@ -73,5 +69,6 @@ Button.propTypes = {
   hover_color: PropTypes.string,
   hover_background: PropTypes.string,
   margin: PropTypes.string,
-  padding: PropTypes.string
+  padding: PropTypes.string,
+  opacity: PropTypes.string
 };
