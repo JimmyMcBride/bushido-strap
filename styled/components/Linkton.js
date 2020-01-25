@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import styledMap from "styled-map";
 import { Link } from "react-router-dom";
-import { getColor, getHover } from "../theme/schemes";
+import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
 
 const stretch = styledMap`
@@ -10,7 +10,7 @@ const stretch = styledMap`
 `;
 
 const Linkton = styled(Link)`
-  ${getColor}
+  ${ButtonColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
@@ -18,7 +18,7 @@ const Linkton = styled(Link)`
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
   &:hover {
-    ${getHover}
+    ${ButtonHoverColor}
   }
 `;
 

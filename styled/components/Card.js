@@ -2,7 +2,7 @@ import styled from "styled-components";
 import styledMap from "styled-map";
 import theme from "../theme";
 import PropTypes from "prop-types";
-import { getValue, getCodeValue } from "../theme/schemes";
+import { CardColor, CodeColor } from "../theme";
 
 const flexWrap = styledMap`
   wrap: wrap;
@@ -15,7 +15,7 @@ const stretch = styledMap`
 `;
 
 const Card = styled.div`
-  ${getValue}
+  ${CardColor}
   display: flex;
   flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${flexWrap};
@@ -30,7 +30,7 @@ const Card = styled.div`
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
   box-shadow: 0 0.3rem 1rem ${theme.gray7};
   code {
-    ${getCodeValue}
+    ${CodeColor}
   }
   p {
     text-align: left;

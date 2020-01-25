@@ -1,5 +1,7 @@
-export { default as ButtonColor } from "./components/button/Color";
-export { default as ButtonHoverColor } from "./components/button/HoverColor";
+export { default as ButtonColor } from "./color_schemes/button/Color";
+export { default as ButtonHoverColor } from "./color_schemes/button/HoverColor";
+export { default as CardColor } from "./color_schemes/card/Color";
+export { default as CodeColor } from "./color_schemes/card/CodeColor";
 
 // theme variables are set here
 const theme = {
