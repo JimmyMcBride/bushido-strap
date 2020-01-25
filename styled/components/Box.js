@@ -13,8 +13,8 @@ const Box = styled.div`
   background: ${props => (props.background ? props.background : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   color: ${props => (props.color ? props.color : "auto")};
-  margin: ${props => (props.margin ? props.margin : "auto")};
-  padding: ${props => (props.color ? props.color : "auto")};
+  margin: ${props => (props.margin ? props.margin : "0")};
+  padding: ${props => (props.color ? props.color : "0")};
   img {
     width: 100%;
     height: auto;
