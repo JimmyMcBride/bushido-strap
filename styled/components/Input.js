@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch } from "./maps";
+import { stretch, box } from "./maps";
 import PropTypes from "prop-types";
 
 const Input = styled.input`
@@ -7,6 +7,7 @@ const Input = styled.input`
   padding: ${props => (props.padding ? props.padding : "1rem")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   width: ${props => (props.width ? props.width : `${stretch}`)};
+  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
 `;
 
 export default Input;
@@ -16,5 +17,6 @@ Input.propTypes = {
   radius: PropTypes.string,
   padding: PropTypes.string,
   margin: PropTypes.string,
-  width: PropTypes.string
+  width: PropTypes.string,
+  box_size: PropTypes.string
 };
