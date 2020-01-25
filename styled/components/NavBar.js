@@ -9,7 +9,7 @@ const flexWrap = styledMap`
 
 const NavBar = styled.nav`
   display: flex;
-  flex-direction: ${props => (props.direction ? props.direction : "column")};
+  flex-direction: ${props => (props.direction ? props.direction : "row")};
   flex-wrap: ${flexWrap};
   justify-content: ${props => (props.justify ? props.justify : "flex-start")};
   align-items: ${props => (props.align ? props.align : "stretch")};
