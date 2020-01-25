@@ -315,8 +315,6 @@ html {
     html body p {
       margin: 0.4rem;
       line-height: 1.4; }
-    html body h3 {
-      margin: 1.6rem; }
     html body h1,
     html body h2,
     html body h3,
@@ -324,7 +322,8 @@ html {
     html body h5,
     html body h6 {
       font-family: "Raleway", sans-serif;
-      line-height: 1.4; }
+      line-height: 1.2;
+      margin: 1.6rem; }
     html body h1 {
       font-size: 3rem; }
     html body h2 {
