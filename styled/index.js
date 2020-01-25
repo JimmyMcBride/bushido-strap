@@ -1,5 +1,6 @@
 export { default as AppWrapper } from "./components/AppWrapper";
 export { default as Wrapper } from "./components/Wrapper";
+export { default as NavBar } from "./components/NavBar";
 export { default as FlexBox } from "./components/FlexBox";
 export { default as Form } from "./components/Form";
 export { default as Input } from "./components/Input";
