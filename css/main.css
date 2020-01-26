@@ -316,7 +316,7 @@ html {
     width: 10px;
     background: rgba(0, 0, 0, 0.1); }
   html ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #808080; }
+    box-shadow: inset 0 0 5px #333333; }
   html ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 10px; }
