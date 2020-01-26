@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, box } from "./maps";
+import { stretch, boxSize } from "./maps";
 import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
 
@@ -12,7 +12,7 @@ const Button = styled.button`
   margin: ${props => (props.margin ? props.margin : "auto")};
   padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
+  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
   &:hover {
     ${ButtonHoverColor}
   }

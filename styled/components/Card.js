@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { stretch, flexWrap, box } from "./maps";
-import theme from "../theme";
+import { stretch, flexWrap, boxSize, boxShadow } from "./maps";
 import PropTypes from "prop-types";
 import { CardColor, LinkColor } from "../theme";
 
@@ -18,9 +17,9 @@ const Card = styled.div`
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
-  box-shadow: 0 0.3rem 1rem ${theme.gray7};
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : `${boxShadow}`)};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
   p {
     text-align: left;
     line-height: 2.2rem;
@@ -81,5 +80,6 @@ Card.propTypes = {
   padding: PropTypes.string,
   margin: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
+  shadow: PropTypes.string
 };

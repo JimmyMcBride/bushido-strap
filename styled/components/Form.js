@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, flexWrap, box } from "./maps";
+import { stretch, flexWrap, boxSize } from "./maps";
 import PropTypes from "prop-types";
 
 const Form = styled.form`
@@ -17,7 +17,7 @@ const Form = styled.form`
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
+  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
 `;
 
 export default Form;

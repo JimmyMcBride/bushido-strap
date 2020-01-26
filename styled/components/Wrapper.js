@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   background: ${props => (props.background ? props.background : "none")};
   min-height: ${props => (props.min_height ? props.min_height : "100vh")};
   max-width: ${props => (props.max_width ? props.max_width : "100vw")};
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
 `;
 
 export default Wrapper;

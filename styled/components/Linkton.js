@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, box } from "./maps";
+import { stretch, boxSize } from "./maps";
 import { Link } from "react-router-dom";
 import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
@@ -13,7 +13,7 @@ const Linkton = styled(Link)`
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
+  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
   &:hover {
     ${ButtonHoverColor}
   }
