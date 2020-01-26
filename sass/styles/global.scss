@@ -1,12 +1,12 @@
-/* Raleway */
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+// /* Raleway */
+// @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 /* Variables */
 @import "./variables.scss";
 
 html {
   font-size: 62.5%;
-  font-family: "Raleway", sans-serif;
+  // font-family: "Raleway", sans-serif;
   line-height: 1.4;
 
   body {
@@ -23,7 +23,7 @@ html {
     h4,
     h5,
     h6 {
-      font-family: "Raleway", sans-serif;
+      // font-family: "Raleway", sans-serif;
       line-height: 1.2;
       margin: 1.6rem;
     }
