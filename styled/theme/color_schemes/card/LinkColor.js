@@ -9,4 +9,4 @@ const getLinkValue = props =>
         color: `${theme.gray8}`
       };
 
-export default getCodeValue;
+export default getLinkValue;
