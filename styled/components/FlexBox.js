@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, shade, box, flexWrap } from "./maps";
+import { stretch, boxShadow, box, flexWrap } from "./maps";
 import PropTypes from "prop-types";
 
 const FlexBox = styled.div`
@@ -18,7 +18,7 @@ const FlexBox = styled.div`
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${shade}`)};
+  box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${boxShadow}`)};
   box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
 `;
 
