@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import WebFont from "webfontloader";
+// import WebFont from "webfontloader";
 import "../../css/fonts.css";
 
-WebFont.load({
-  google: {
-    families: [`${props.head_font}`, `${props.font}`]
-  }
-});
+// WebFont.load({
+//   google: {
+//     families: [`${head_font}`, `${font}`]
+//   }
+// });
 
 // root container for the application
 const AppWrapper = styled.div`
@@ -18,7 +18,7 @@ const AppWrapper = styled.div`
     props.bg_url ? `url(${props.bg_url})` : "none"};
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
   font-family: ${props =>
-    props.font ? `${props.font}` : `"Raleway", sans-serif`};
+    props.font ? `${(font = props.font)}` : `"Raleway", sans-serif`};
   h1,
   h2,
   h3,
@@ -26,7 +26,9 @@ const AppWrapper = styled.div`
   h5,
   h6 {
     font-family: ${props =>
-      props.head_font ? `${props.head_font}` : `"Raleway", sans-serif`};
+      props.head_font
+        ? `${(head_font = props.head_font)}`
+        : `"Raleway", sans-serif`};
     line-height: 1.2;
     margin: 1.6rem;
   }
