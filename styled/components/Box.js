@@ -13,6 +13,7 @@ const Box = styled.div`
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
   box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${shade}`)};
   box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
+  overflow: ${props => (props.ovr_flow ? `${props.ovr_flow}` : "hidden")};
   img {
     width: 100%;
     height: auto;
@@ -32,5 +33,6 @@ Box.propTypes = {
   padding: PropTypes.string,
   opacity: PropTypes.string,
   shadow: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
+  ovr_flow: PropTypes.string
 };
