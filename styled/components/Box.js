@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, shade, box } from "./maps";
+import { stretch, boxShadow, box } from "./maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
@@ -11,7 +11,7 @@ const Box = styled.div`
   margin: ${props => (props.margin ? props.margin : "0")};
   padding: ${props => (props.color ? props.color : "0")};
   opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${shade}`)};
+  box-shadow: ${props => (props.shadow ? `${props.shadow}` : `${boxShadow}`)};
   box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${box}`)};
   overflow: ${props => (props.ovr_flow ? `${props.ovr_flow}` : "hidden")};
   img {
