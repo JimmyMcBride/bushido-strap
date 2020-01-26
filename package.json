@@ -1,6 +1,6 @@
 {
   "name": "bushido-strap",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "a library of styled components with some global style overrides in sass",
   "main": "styled/index.js",
   "sass": "sass/styles.scss",
@@ -40,6 +40,7 @@
     "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1",
     "styled-map": "^3.3.0",
+    "webfontloader": "^1.6.28",
     "webpack": "^4.41.4"
   },
   "devDependencies": {}
