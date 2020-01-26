@@ -5,8 +5,7 @@ import "../../css/fonts.css";
 
 // root container for the application
 const AppWrapper = styled.div`
-  background: ${props =>
-    props.background ? props.background : `${theme.gray2}`};
+  background: ${props => (props.background ? props.background : theme.gray2)};
   background-image: ${props =>
     props.bg_url ? `url(${props.bg_url})` : "none"};
   opacity: ${props => (props.opacity ? props.opacity : "none")};

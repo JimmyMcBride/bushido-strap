@@ -10,7 +10,7 @@ const FlexBox = styled.div`
   align-items: ${props => (props.align ? props.align : "stretch")};
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : `${stretch}`)};
+  width: ${props => (props.width ? props.width : stretch)};
   background: ${props => (props.background ? props.background : "none")};
   color: ${props => (props.color ? props.color : "auto")};
   min-height: ${props => (props.min_height ? props.min_height : "auto")};
@@ -18,8 +18,8 @@ const FlexBox = styled.div`
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-shadow: ${props => (props.shadow ? props.shadow : `${boxShadow}`)};
-  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
+  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
 `;
 
 export default FlexBox;

@@ -12,14 +12,14 @@ const Card = styled.div`
   align-items: ${props => (props.align ? props.align : "center")};
   align-content: ${props => (props.content ? props.content : "stretch")};
   height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : `${stretch}`)};
+  width: ${props => (props.width ? props.width : stretch)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   margin: ${props => (props.margin ? props.margin : "1rem 0")};
-  box-shadow: ${props => (props.shadow ? props.shadow : `${boxShadow}`)};
+  box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
+  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   p {
     text-align: left;
     line-height: 2.2rem;

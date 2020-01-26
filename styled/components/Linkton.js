@@ -9,11 +9,11 @@ const Linkton = styled(Link)`
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
-  width: ${props => (props.width ? props.width : `${stretch}`)};
+  width: ${props => (props.width ? props.width : stretch)};
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
   opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
+  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   &:hover {
     ${ButtonHoverColor}
   }

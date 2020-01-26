@@ -7,12 +7,12 @@ const Button = styled.button`
   ${ButtonColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
-  width: ${props => (props.width ? props.width : `${stretch}`)};
+  width: ${props => (props.width ? props.width : stretch)};
   height: ${props => (props.height ? props.height : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
+  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   &:hover {
     ${ButtonHoverColor}
   }
