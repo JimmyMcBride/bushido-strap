@@ -11,8 +11,8 @@ const Button = styled.button`
   height: ${props => (props.height ? props.height : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
   &:hover {
     ${ButtonHoverColor}
   }

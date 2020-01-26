@@ -7,7 +7,7 @@ const Input = styled.input`
   padding: ${props => (props.padding ? props.padding : "1rem")};
   margin: ${props => (props.margin ? props.margin : "auto")};
   width: ${props => (props.width ? props.width : `${stretch}`)};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
+  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
 `;
 
 export default Input;

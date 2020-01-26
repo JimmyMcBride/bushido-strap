@@ -9,9 +9,8 @@ const AppWrapper = styled.div`
     props.background ? props.background : `${theme.gray2}`};
   background-image: ${props =>
     props.bg_url ? `url(${props.bg_url})` : "none"};
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  font-family: ${props =>
-    props.font ? `${props.font}` : `"Raleway", sans-serif`};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  font-family: ${props => (props.font ? props.font : `"Raleway", sans-serif`)};
   h1,
   h2,
   h3,
@@ -19,7 +18,7 @@ const AppWrapper = styled.div`
   h5,
   h6 {
     font-family: ${props =>
-      props.head_font ? `${props.head_font}` : `"Raleway", sans-serif`};
+      props.head_font ? props.head_font : `"Raleway", sans-serif`};
     line-height: 1.2;
     margin: 1.6rem;
   }

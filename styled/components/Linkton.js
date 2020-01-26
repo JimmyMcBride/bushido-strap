@@ -12,8 +12,8 @@ const Linkton = styled(Link)`
   width: ${props => (props.width ? props.width : `${stretch}`)};
   height: ${props => (props.height ? props.height : "auto")};
   text-align: center;
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
   &:hover {
     ${ButtonHoverColor}
   }

@@ -17,8 +17,8 @@ const NavBar = styled.nav`
   max-width: ${props => (props.max_width ? props.max_width : "auto")};
   padding: ${props => (props.padding ? props.padding : "auto")};
   margin: ${props => (props.margin ? props.margin : "auto")};
-  opacity: ${props => (props.opacity ? `${props.opacity}` : "none")};
-  box-sizing: ${props => (props.box_size ? `${props.box_size}` : `${boxSize}`)};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${props => (props.box_size ? props.box_size : `${boxSize}`)};
 `;
 
 export default NavBar;
