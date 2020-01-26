@@ -2,9 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import WebFont from "webfontloader";
-
-/* Raleway */
-import "https://fonts.googleapis.com/css?family=Raleway&display=swap";
+import "../../css/fonts.css";
 
 WebFont.load({
   google: {
