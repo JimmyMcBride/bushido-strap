@@ -1,5 +1,5 @@
-export { default as stretch } from "./styles/width";
-export { default as reach } from "./styles/height";
+export { default as sideways } from "./styles/width";
+export { default as longways } from "./styles/height";
 export { default as boxShadow } from "./styles/box/boxShadow";
 export { default as boxSize } from "./styles/box/boxSizing";
 export { default as shape } from "./styles/box/boxShape";
