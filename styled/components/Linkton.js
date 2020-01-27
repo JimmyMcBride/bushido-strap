@@ -8,12 +8,13 @@ const Linkton = styled(Link)`
   ${ButtonColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
-  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   width: ${props => (props.width ? props.width : stretch)};
   height: ${props => (props.height ? props.height : "auto")};
-  text-align: center;
+  margin: ${props => (props.margin ? props.margin : "1rem")};
+  padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  text-align: center;
   &:hover {
     ${ButtonHoverColor}
   }
@@ -68,9 +69,10 @@ Linkton.propTypes = {
   color: PropTypes.string,
   border: PropTypes.string,
   radius: PropTypes.string,
-  padding: PropTypes.string,
   hover_color: PropTypes.string,
   hover_background: PropTypes.string,
+  margin: PropTypes.string,
+  padding: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string
 };
