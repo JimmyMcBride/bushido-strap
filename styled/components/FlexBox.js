@@ -1,5 +1,13 @@
 import styled from "styled-components";
-import { stretch, boxShadow, boxSize, flexWrap, marg, pad } from "./maps";
+import {
+  stretch,
+  boxShadow,
+  boxSize,
+  flexWrap,
+  shape,
+  marg,
+  pad
+} from "./maps";
 import PropTypes from "prop-types";
 
 const FlexBox = styled.div`
@@ -20,6 +28,7 @@ const FlexBox = styled.div`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  clip-path: ${props => (props.clip ? props.clip : shape)};
 `;
 
 export default FlexBox;
@@ -76,5 +85,6 @@ FlexBox.propTypes = {
   margin: PropTypes.string,
   opacity: PropTypes.string,
   shadow: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
+  clip: PropTypes.string
 };

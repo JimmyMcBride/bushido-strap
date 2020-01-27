@@ -14,7 +14,7 @@ const Box = styled.div`
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   overflow: ${props => (props.ovr_flow ? props.ovr_flow : "hidden")};
-  clip-path: ${shape};
+  clip-path: ${props => (props.clip ? props.clip : shape)};
   img {
     width: 100%;
     height: auto;
@@ -35,5 +35,6 @@ Box.propTypes = {
   opacity: PropTypes.string,
   shadow: PropTypes.string,
   box_size: PropTypes.string,
-  ovr_flow: PropTypes.string
+  ovr_flow: PropTypes.string,
+  clip: PropTypes.string
 };
