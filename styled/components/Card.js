@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { stretch, flexWrap, boxSize, boxShadow } from "./maps";
 import PropTypes from "prop-types";
-import { CardColor, LinkColor } from "../theme";
+import { CardColor } from "../theme";
 
 const Card = styled.div`
   ${CardColor}
@@ -23,9 +23,6 @@ const Card = styled.div`
   p {
     text-align: left;
     line-height: 2.2rem;
-  }
-  a {
-    ${LinkColor}
   }
 `;
 
