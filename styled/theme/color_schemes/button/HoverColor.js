@@ -38,7 +38,7 @@ const getHover = props =>
       }
     : {
         color: `${theme.gray8}`,
-        background: `${theme.gray1}`
+        background: `${theme.gray2}`
       };
 
 export default getHover;
