@@ -8,24 +8,24 @@ import {
   centerAlign,
   columnDirection,
   flexJustify,
-  flexContent
-  // cardBackground,
-  // cardColor
+  flexContent,
+  cardBackground,
+  cardColor
 } from "./maps";
 import { CardColor } from "../theme";
-import styledMap from "styled-map";
-import theme from "../theme";
+// import styledMap from "styled-map";
+// import theme from "../theme";
 import PropTypes from "prop-types";
 
-const cardColor = styledMap`
-  invert: ${theme.gray1};
-  default: ${theme.gray8};
-`;
+// const cardColor = styledMap`
+//   invert: ${theme.gray1};
+//   default: ${theme.gray8};
+// `;
 
-const cardBackground = styledMap`
-  invert: ${theme.gray8};
-  default: ${theme.gray1};
-`;
+// const cardBackground = styledMap`
+//   invert: ${theme.gray8};
+//   default: ${theme.gray1};
+// `;
 
 const Card = styled.div`
   // ${CardColor}
