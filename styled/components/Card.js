@@ -8,16 +8,19 @@ import {
   centerAlign,
   columnDirection,
   flexJustify,
-  flexContent,
-  cardBackground,
-  cardColor
+  flexContent
+  // cardBackground,
+  // cardColor
 } from "./maps";
+import { cardColor } from "../theme";
 import PropTypes from "prop-types";
 
+// color: ${props => (props.color ? props.color : cardColor)};
+// background: ${props =>
+//   props.background ? props.background : cardBackground};
+
 const Card = styled.div`
-  background: ${props =>
-    props.background ? props.background : cardBackground};
-  color: ${props => (props.color ? props.color : cardColor)};
+  ${cardColor}
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
