@@ -12,27 +12,13 @@ import {
   cardBackground,
   cardColor
 } from "./maps";
-import { CardColor } from "../theme";
-// import styledMap from "styled-map";
-// import theme from "../theme";
+
 import PropTypes from "prop-types";
 
-// const cardColor = styledMap`
-//   invert: ${theme.gray1};
-//   default: ${theme.gray8};
-// `;
-
-// const cardBackground = styledMap`
-//   invert: ${theme.gray8};
-//   default: ${theme.gray1};
-// `;
-
 const Card = styled.div`
-  // ${CardColor}
   color: ${props => (props.color ? props.color : cardColor)};
   background: ${props =>
     props.background ? props.background : cardBackground};
-
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>

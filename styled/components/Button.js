@@ -1,10 +1,19 @@
 import styled from "styled-components";
-import { sideways, longways, boxSize } from "./maps";
-import { ButtonColor, ButtonHoverColor } from "../theme";
+import {
+  sideways,
+  longways,
+  boxSize,
+  buttonColor,
+  buttonBackground,
+  buttonHoverColor,
+  buttonHoverBackground
+} from "./maps";
 import PropTypes from "prop-types";
 
 const Button = styled.button`
-  ${ButtonColor}
+  color: ${props => (props.color ? props.color : buttonColor)};
+  background: ${props =>
+    props.background ? props.background : buttonBackground};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   width: ${props => (props.width ? props.width : sideways)};
@@ -13,9 +22,10 @@ const Button = styled.button`
   padding: ${props => (props.color ? props.color : "0.5rem 1rem")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  line-height: 1.4;
   &:hover {
-    ${ButtonHoverColor}
+    color: ${props => (props.color ? props.color : buttonHoverColor)};
+    background: ${props =>
+      props.background ? props.background : buttonHoverBackground};
   }
 `;
 

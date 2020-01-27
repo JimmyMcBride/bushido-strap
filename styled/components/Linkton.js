@@ -1,11 +1,20 @@
 import styled from "styled-components";
-import { sideways, longways, boxSize } from "./maps";
+import {
+  sideways,
+  longways,
+  boxSize,
+  buttonColor,
+  buttonBackground,
+  buttonHoverColor,
+  buttonHoverBackground
+} from "./maps";
 import { Link } from "react-router-dom";
-import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
 
 const Linkton = styled(Link)`
-  ${ButtonColor}
+  color: ${props => (props.color ? props.color : buttonColor)};
+  background: ${props =>
+    props.background ? props.background : buttonBackground};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
   width: ${props => (props.width ? props.width : sideways)};
@@ -16,7 +25,9 @@ const Linkton = styled(Link)`
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: center;
   &:hover {
-    ${ButtonHoverColor}
+    color: ${props => (props.color ? props.color : buttonHoverColor)};
+    background: ${props =>
+      props.background ? props.background : buttonHoverBackground};
   }
 `;
 

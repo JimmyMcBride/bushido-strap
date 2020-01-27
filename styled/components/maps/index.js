@@ -15,3 +15,7 @@ export { default as flexJustify } from "./styles/flex/justify";
 export { default as flexItems } from "./styles/flex/align";
 export { default as flexContent } from "./styles/flex/content";
 export { default as flexWrap } from "./styles/flex/flexWrap";
+export { default as buttonColor } from "./styles/button/color";
+export { default as buttonBackground } from "./styles/button/background";
+export { default as buttonHoverColor } from "./styles/button/hoverColor";
+export { default as buttonHoverBackground } from "./styles/button/hoverBackground";
