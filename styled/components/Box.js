@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, boxShadow, boxSize, shape, marg, pad } from "./maps";
+import { stretch, boxShadow, boxSize, shape, marg, pad, flow } from "./maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
@@ -13,7 +13,7 @@ const Box = styled.div`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  overflow: ${props => (props.ovr_flow ? props.ovr_flow : "hidden")};
+  overflow: ${props => (props.overflow ? props.overflow : flow)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   img {
     width: 100%;

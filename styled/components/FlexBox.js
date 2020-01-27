@@ -6,7 +6,8 @@ import {
   flexWrap,
   shape,
   marg,
-  pad
+  pad,
+  flow
 } from "./maps";
 import PropTypes from "prop-types";
 
@@ -29,6 +30,7 @@ const FlexBox = styled.div`
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
+  overflow: ${props => (props.overflow ? props.overflow : flow)};
 `;
 
 export default FlexBox;
@@ -86,5 +88,6 @@ FlexBox.propTypes = {
   opacity: PropTypes.string,
   shadow: PropTypes.string,
   box_size: PropTypes.string,
-  clip: PropTypes.string
+  clip: PropTypes.string,
+  overflow: PropTypes.string
 };
