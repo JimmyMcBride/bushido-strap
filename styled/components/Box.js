@@ -1,10 +1,19 @@
 import styled from "styled-components";
-import { stretch, boxShadow, boxSize, shape, marg, pad, flow } from "./maps";
+import {
+  sideways,
+  longways,
+  boxShadow,
+  boxSize,
+  shape,
+  marg,
+  pad,
+  flow
+} from "./maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : stretch)};
+  height: ${props => (props.height ? props.height : longways)};
+  width: ${props => (props.width ? props.width : sideways)};
   background: ${props => (props.background ? props.background : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   color: ${props => (props.color ? props.color : "auto")};

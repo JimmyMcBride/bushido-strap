@@ -1,18 +1,29 @@
 import styled from "styled-components";
-import { stretch, flexWrap, boxSize, boxShadow } from "./maps";
+import {
+  sideways,
+  longways,
+  flexWrap,
+  boxSize,
+  boxShadow,
+  centerAlign,
+  columnDirection,
+  flexJustify,
+  flexContent
+} from "./maps";
 import PropTypes from "prop-types";
-import { CardColor } from "../theme";
 
 const Card = styled.div`
-  ${CardColor}
+  background: ${props => (props.background ? props.background : "none")};
+  color: ${props => (props.color ? props.color : "auto")};
   display: flex;
-  flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${flexWrap};
-  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
-  align-items: ${props => (props.align ? props.align : "center")};
-  align-content: ${props => (props.content ? props.content : "stretch")};
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : stretch)};
+  flex-direction: ${props =>
+    props.direction ? props.direction : columnDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : centerAlign)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
+  height: ${props => (props.height ? props.height : longways)};
+  width: ${props => (props.width ? props.width : sideways)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};

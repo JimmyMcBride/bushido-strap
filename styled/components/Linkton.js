@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, boxSize } from "./maps";
+import { sideways, longways, boxSize } from "./maps";
 import { Link } from "react-router-dom";
 import { ButtonColor, ButtonHoverColor } from "../theme";
 import PropTypes from "prop-types";
@@ -8,8 +8,8 @@ const Linkton = styled(Link)`
   ${ButtonColor}
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
-  width: ${props => (props.width ? props.width : stretch)};
-  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : sideways)};
+  height: ${props => (props.height ? props.height : longways)};
   margin: ${props => (props.margin ? props.margin : "0.5rem")};
   padding: ${props => (props.padding ? props.padding : "0.5rem 1rem")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};

@@ -1,28 +1,34 @@
 import styled from "styled-components";
 import {
-  stretch,
+  sideways,
+  longways,
   boxShadow,
   boxSize,
   flexWrap,
   shape,
   marg,
   pad,
-  flow
+  flow,
+  flexDirection,
+  flexJustify,
+  flexItems,
+  flexContent
 } from "./maps";
 import PropTypes from "prop-types";
 
 const FlexBox = styled.div`
   display: flex;
-  flex-direction: ${props => (props.direction ? props.direction : "row")};
   flex-wrap: ${flexWrap};
-  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
-  align-items: ${props => (props.align ? props.align : "stretch")};
-  align-content: ${props => (props.content ? props.content : "stretch")};
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : stretch)};
+  flex-direction: ${props =>
+    props.direction ? props.direction : flexDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : flexItems)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
   background: ${props => (props.background ? props.background : "none")};
   color: ${props => (props.color ? props.color : "auto")};
+  height: ${props => (props.height ? props.height : longways)};
   min-height: ${props => (props.min_height ? props.min_height : "auto")};
+  width: ${props => (props.width ? props.width : sideways)};
   max-width: ${props => (props.max_width ? props.max_width : "auto")};
   padding: ${props => (props.padding ? props.padding : pad)};
   margin: ${props => (props.margin ? props.margin : marg)};

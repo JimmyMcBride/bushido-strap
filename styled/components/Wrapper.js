@@ -1,16 +1,23 @@
 import styled from "styled-components";
-import { stretch, flexWrap } from "./maps";
+import {
+  flexWrap,
+  columnDirection,
+  flexJustify,
+  centerAlign,
+  flexContent
+} from "./maps";
 import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: ${props => (props.direction ? props.direction : "column")};
   flex-wrap: ${flexWrap};
-  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
-  align-items: ${props => (props.align ? props.align : "center")};
-  align-content: ${props => (props.content ? props.content : "stretch")};
+  flex-direction: ${props =>
+    props.direction ? props.direction : columnDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : centerAlign)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
   height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : stretch)};
+  width: ${props => (props.width ? props.width : "auto")};
   background: ${props => (props.background ? props.background : "none")};
   min-height: ${props => (props.min_height ? props.min_height : "100vh")};
   max-width: ${props => (props.max_width ? props.max_width : "100vw")};

@@ -1,14 +1,22 @@
 import styled from "styled-components";
-import { flexWrap, boxSize } from "./maps";
+import {
+  flexWrap,
+  boxSize,
+  flexDirection,
+  flexJustify,
+  flexItems,
+  flexContent
+} from "./maps";
 import PropTypes from "prop-types";
 
 const NavBar = styled.nav`
   display: flex;
-  flex-direction: ${props => (props.direction ? props.direction : "row")};
   flex-wrap: ${flexWrap};
-  justify-content: ${props => (props.justify ? props.justify : "flex-start")};
-  align-items: ${props => (props.align ? props.align : "stretch")};
-  align-content: ${props => (props.content ? props.content : "stretch")};
+  flex-direction: ${props =>
+    props.direction ? props.direction : flexDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : flexItems)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
   height: ${props => (props.height ? props.height : "auto")};
   width: ${props => (props.width ? props.width : "100%")};
   background: ${props => (props.background ? props.background : "none")};
