@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { stretch, boxShadow, boxSize, shape } from "./maps";
+import { stretch, boxShadow, boxSize, shape, marg, pad } from "./maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
@@ -8,8 +8,8 @@ const Box = styled.div`
   background: ${props => (props.background ? props.background : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   color: ${props => (props.color ? props.color : "auto")};
-  margin: ${props => (props.margin ? props.margin : "0")};
-  padding: ${props => (props.color ? props.color : "0")};
+  margin: ${props => (props.margin ? props.margin : marg)};
+  padding: ${props => (props.padding ? props.padding : pad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
