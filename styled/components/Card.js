@@ -20,7 +20,7 @@ import PropTypes from "prop-types";
 //   props.background ? props.background : cardBackground};
 
 const Card = styled.div`
-  ${cardColor}
+  ${CardColor}
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
