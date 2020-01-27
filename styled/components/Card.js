@@ -12,7 +12,7 @@ import {
   // cardBackground,
   // cardColor
 } from "./maps";
-import { cardColor } from "../theme";
+import { cardColor } from "../theme/color_schemes";
 import PropTypes from "prop-types";
 
 // color: ${props => (props.color ? props.color : cardColor)};
