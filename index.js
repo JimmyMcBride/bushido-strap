@@ -1,5 +1,6 @@
 // export theme stuff
-import { jsx, ThemeContext } from "@emotion/core";
+import React from "react";
+import { ThemeContext } from "@emotion/core";
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
 import { useContext } from "react";
 import theme from "../theme";
