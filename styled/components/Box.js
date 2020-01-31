@@ -8,17 +8,21 @@ import {
   marg,
   pad,
   flow
-} from "./maps";
+} from "../maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
-  height: ${props => (props.height ? props.height : longways)};
-  width: ${props => (props.width ? props.width : sideways)};
-  background: ${props => (props.background ? props.background : "none")};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
+  min-height: ${props => (props.min_h ? props.min_h : "auto")};
+  max-width: ${props => (props.max_w ? props.max_w : "auto")};
+  min-width: ${props => (props.min_w ? props.min_w : "auto")};
+  max-height: ${props => (props.max_h ? props.max_h : "auto")};
+  background: ${props => (props.bg ? props.bg : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   color: ${props => (props.color ? props.color : "auto")};
-  margin: ${props => (props.margin ? props.margin : marg)};
-  padding: ${props => (props.padding ? props.padding : pad)};
+  margin: ${props => (props.m ? props.m : marg)};
+  padding: ${props => (props.p ? props.p : pad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
@@ -34,16 +38,21 @@ export default Box;
 
 Box.propTypes = {
   // CUSTOM PROPTYPES
-  height: PropTypes.string,
-  weight: PropTypes.string,
-  background: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  min_w: PropTypes.string,
+  max_h: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
+  bg: PropTypes.string,
   radius: PropTypes.string,
   color: PropTypes.string,
-  margin: PropTypes.string,
-  padding: PropTypes.string,
+  m: PropTypes.string,
+  p: PropTypes.string,
   opacity: PropTypes.string,
   shadow: PropTypes.string,
   box_size: PropTypes.string,
   ovr_flow: PropTypes.string,
-  clip: PropTypes.string
+  clip: PropTypes.string,
+  sqr: PropTypes.string
 };

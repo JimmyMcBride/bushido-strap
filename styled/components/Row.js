@@ -1,17 +1,22 @@
 import styled from "styled-components";
 import {
-  flexWrap,
+  sideways,
+  longways,
+  boxShadow,
   boxSize,
+  flexWrap,
+  shape,
+  marg,
+  pad,
+  flow,
   flexDirection,
   flexJustify,
   flexItems,
-  flexContent,
-  marg,
-  pad
+  flexContent
 } from "../maps";
 import PropTypes from "prop-types";
 
-const NavBar = styled.nav`
+const Row = styled.div`
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
@@ -19,21 +24,28 @@ const NavBar = styled.nav`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : flexItems)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : "100%")};
-  background: ${props => (props.background ? props.background : "none")};
+  background: ${props => (props.bg ? props.bg : "none")};
   color: ${props => (props.color ? props.color : "auto")};
-  min-height: ${props => (props.min_height ? props.min_height : "auto")};
-  max-width: ${props => (props.max_width ? props.max_width : "auto")};
-  padding: ${props => (props.padding ? props.padding : pad)};
-  margin: ${props => (props.margin ? props.margin : marg)};
+  width: ${props => (props.w ? props.w : sideways)};
+  height: ${props => (props.h ? props.h : longways)};
+  min-height: ${props => (props.min_h ? props.min_h : "none")};
+  max-width: ${props => (props.max_w ? props.max_w : "none")};
+  min-width: ${props => (props.min_w ? props.min_w : "none")};
+  max-height: ${props => (props.max_h ? props.max_h : "none")};
+  padding: ${props => (props.p ? props.p : pad)};
+  margin: ${props => (props.m ? props.m : marg)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  clip-path: ${props => (props.clip ? props.clip : shape)};
+  overflow: ${props => (props.overflow ? props.overflow : flow)};
+  border: ${props => (props.border ? props.border : "none")};
+  border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
 `;
 
-export default NavBar;
+export default Row;
 
-NavBar.propTypes = {
+Row.propTypes = {
   // CUSTOM PROPTYPES
   direction: PropTypes.oneOf([
     "row",
@@ -74,14 +86,20 @@ NavBar.propTypes = {
     "initial",
     "inherit"
   ]),
-  height: PropTypes.string,
-  weight: PropTypes.string,
-  background: PropTypes.string,
+
+  border: PropTypes.string,
+  radius: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
+  bg: PropTypes.string,
   color: PropTypes.string,
-  min_height: PropTypes.string,
-  max_weight: PropTypes.string,
-  padding: PropTypes.string,
-  margin: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  p: PropTypes.string,
+  m: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  shadow: PropTypes.string,
+  box_size: PropTypes.string,
+  clip: PropTypes.string,
+  overflow: PropTypes.string
 };

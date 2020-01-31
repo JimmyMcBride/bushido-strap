@@ -10,7 +10,7 @@ import {
   flexJustify,
   flexItems,
   flexContent
-} from "./maps";
+} from "../maps";
 import PropTypes from "prop-types";
 
 const Form = styled.form`
@@ -21,14 +21,12 @@ const Form = styled.form`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : flexItems)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  height: ${props => (props.height ? props.height : longways)};
-  width: ${props => (props.width ? props.width : sideways)};
-  background: ${props => (props.background ? props.background : "none")};
-  min-height: ${props => (props.min_height ? props.min_height : "auto")};
-  max-width: ${props => (props.max_width ? props.max_width : "auto")};
-  padding: ${props => (props.padding ? props.padding : pad)};
-  margin: ${props => (props.margin ? props.margin : marg)};
-  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  color: ${props => (props.color ? props.color : "auto")};
+  background: ${props => (props.bg ? props.bg : "none")};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
+  padding: ${props => (props.p ? props.p : pad)};
+  margin: ${props => (props.m ? props.m : marg)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
 `;
 
@@ -76,13 +74,14 @@ Form.propTypes = {
     "inherit"
   ]),
 
-  height: PropTypes.string,
-  weight: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
   background: PropTypes.string,
-  min_height: PropTypes.string,
-  max_weight: PropTypes.string,
-  padding: PropTypes.string,
-  margin: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  p: PropTypes.string,
+  m: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
+  color: PropTypes.string
 };

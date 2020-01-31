@@ -2,20 +2,21 @@ import styled from "styled-components";
 import {
   sideways,
   longways,
-  flexWrap,
+  boxShadow,
   boxSize,
-  defaultShadow,
-  centerAlign,
+  flexWrap,
+  shape,
+  marg,
+  pad,
+  flow,
   columnDirection,
   flexJustify,
-  flexContent,
-  cardBackground,
-  cardColor
+  centerAlign,
+  flexContent
 } from "../maps";
-
 import PropTypes from "prop-types";
 
-const Card = styled.div`
+const Col = styled.div`
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
@@ -23,30 +24,28 @@ const Card = styled.div`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : centerAlign)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  color: ${props => (props.color ? props.color : cardColor)};
-  background: ${props => (props.bg ? props.bg : cardBackground)};
+  color: ${props => (props.color ? props.color : "auto")};
+  background: ${props => (props.bg ? props.bg : "none")};
   height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
+  padding: ${props => (props.p ? props.p : pad)};
+  margin: ${props => (props.m ? props.m : marg)};
   min-height: ${props => (props.min_h ? props.min_h : "none")};
   max-width: ${props => (props.max_w ? props.max_w : "none")};
   min-width: ${props => (props.min_w ? props.min_w : "none")};
   max-height: ${props => (props.max_h ? props.max_h : "none")};
+  opacity: ${props => (props.opacity ? props.opacity : "none")};
+  box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
+  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  clip-path: ${props => (props.clip ? props.clip : shape)};
+  overflow: ${props => (props.overflow ? props.overflow : flow)};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
-  padding: ${props => (props.p ? props.p : "0.5rem 1rem")};
-  margin: ${props => (props.m ? props.m : "1rem 0")};
-  box-shadow: ${props => (props.shadow ? props.shadow : defaultShadow)};
-  opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  // p {
-  //   text-align: left;
-  //   line-height: 2.2rem;
-  // }
 `;
 
-export default Card;
+export default Col;
 
-Card.propTypes = {
+Col.propTypes = {
   // CUSTOM PROPTYPES
   direction: PropTypes.oneOf([
     "row",
@@ -88,20 +87,20 @@ Card.propTypes = {
     "inherit"
   ]),
 
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
-  h: PropTypes.string,
-  w: PropTypes.string,
-  color: PropTypes.string,
-  bg: PropTypes.string,
-  sqr: PropTypes.string,
   border: PropTypes.string,
   radius: PropTypes.string,
-  p: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
+  bg: PropTypes.string,
+  color: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  padding: PropTypes.string,
   m: PropTypes.string,
+  p: PropTypes.string,
   opacity: PropTypes.string,
+  shadow: PropTypes.string,
   box_size: PropTypes.string,
-  shadow: PropTypes.string
+  clip: PropTypes.string,
+  overflow: PropTypes.string
 };

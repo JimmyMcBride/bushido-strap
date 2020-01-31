@@ -27,4 +27,4 @@ export default styledMap`
   circle: circle(50% at 50% 50%);
   ellipse: ellipse(34% 50% at 50% 50%);
   default: none;
-`;
+`; 

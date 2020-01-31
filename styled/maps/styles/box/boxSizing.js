@@ -1,8 +1,8 @@
 import styledMap from "styled-map";
 
 export default styledMap`
-  bbox: border-box;
+  cbox: content-box;
   init: initial;
   inherit: inherit;
-  default: content-box;
+  default: border-box;
 `;

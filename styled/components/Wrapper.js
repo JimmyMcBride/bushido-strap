@@ -4,8 +4,12 @@ import {
   columnDirection,
   flexJustify,
   centerAlign,
-  flexContent
-} from "./maps";
+  flexContent,
+  longways,
+  sideways,
+  marg,
+  pad
+} from "../maps";
 import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
@@ -16,12 +20,16 @@ const Wrapper = styled.div`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : centerAlign)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  height: ${props => (props.height ? props.height : "auto")};
-  width: ${props => (props.width ? props.width : "auto")};
-  background: ${props => (props.background ? props.background : "none")};
-  min-height: ${props => (props.min_height ? props.min_height : "100vh")};
-  max-width: ${props => (props.max_width ? props.max_width : "100vw")};
+  background: ${props => (props.bg ? props.bg : "none")};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
+  min-height: ${props => (props.min_h ? props.min_h : "100vh")};
+  max-width: ${props => (props.max_w ? props.max_w : "100vw")};
+  min-width: ${props => (props.min_w ? props.min_w : "none")};
+  max-height: ${props => (props.max_h ? props.max_h : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
+  margin: ${props => (props.m ? props.m : marg)};
+  padding: ${props => (props.p ? props.p : pad)};
 `;
 
 export default Wrapper;
@@ -67,10 +75,15 @@ Wrapper.propTypes = {
     "initial",
     "inherit"
   ]),
-  height: PropTypes.string,
-  weight: PropTypes.string,
-  min_height: PropTypes.string,
-  max_weight: PropTypes.string,
-  background: PropTypes.string,
+  m: PropTypes.string,
+  p: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
+  sqr: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  min_w: PropTypes.string,
+  max_h: PropTypes.string,
+  bg: PropTypes.string,
   opacity: PropTypes.string
 };
