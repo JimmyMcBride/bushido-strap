@@ -1,6 +1,7 @@
 // export theme stuff
 export * from "./styled/provider";
 export { default as ThemeProvider } from "./styled/provider";
+export { default as theme } from "./styled/theme";
 
 // export components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
