@@ -1,5 +1,5 @@
 // export theme stuff
-export * from "./styled/provider/ThemeProvider";
+export { default as useTheme } from "./styled/provider/useTheme";
 export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
 export { default as theme } from "./styled/theme";
 
