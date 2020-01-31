@@ -1,13 +1,12 @@
 // export theme stuff
-import React from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "@emotion/core";
 import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
-import { useContext } from "react";
 import theme from "../theme";
 
-const ThemeProvider = ({ theme, children }) => (
-  <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
-);
+const ThemeProvider = ({ theme, children }) => {
+  return <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>;
+};
 
 ThemeProvider.defaultProps = {
   theme
