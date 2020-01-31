@@ -1,3 +1,5 @@
+import React from "react";
+
 import { createTheming } from "@callstack/react-theme-provider";
 
 const { ThemeProvider, withTheme, useTheme } = createTheming(defaultTheme);
