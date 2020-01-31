@@ -1,8 +1,27 @@
-// export theme
-export { default as theme } from "./styled/theme";
-export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
-export { default as useTheme } from "./styled/provider/useTheme";
-export { default as withTheme } from "./styled/provider/withTheme";
+// export theme stuff
+import { ThemeContext } from "@emotion/core";
+import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
+import { useContext } from "react";
+import theme from "../theme";
+
+const ThemeProvider = ({ theme, children }) => (
+  <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>
+);
+
+ThemeProvider.defaultProps = {
+  theme
+};
+
+const useTheme = () => {
+  const theme = useContext(ThemeContext);
+  if (theme === undefined) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return theme;
+};
+
+export default ThemeProvider;
+export { useTheme };
 
 // export components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
