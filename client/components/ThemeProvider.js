@@ -1,10 +1,10 @@
 import React from "react";
 
+import theme from "../theme";
+
 import { createTheming } from "@callstack/react-theme-provider";
 
 const { ThemeProvider, withTheme, useTheme } = createTheming(defaultTheme);
-
-import theme from "../theme";
 
 const ThemeWrapper = ({ theme, children }) => (
   <ThemeProvider theme={theme}>{children}</ThemeProvider>
