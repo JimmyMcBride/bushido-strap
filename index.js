@@ -1,6 +1,6 @@
 // export theme stuff
-export * from "./styled/provider";
-export { default as ThemeProvider } from "./styled/provider";
+export * from "./styled/provider/ThemeProvider";
+export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
 export { default as theme } from "./styled/theme";
 
 // export components
