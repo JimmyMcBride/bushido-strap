@@ -1,11 +1,8 @@
 // export theme
-import { createTheming } from "@callstack/react-theme-provider";
-import theme from "./styled/theme";
 export { default as theme } from "./styled/theme";
-
-const { ThemeProvider, withTheme, useTheme } = createTheming(theme);
-
-export { ThemeProvider, withTheme, useTheme };
+export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
+export { default as useTheme } from "./styled/provider/useTheme";
+export { default as withTheme } from "./styled/provider/withTheme";
 
 // export components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
