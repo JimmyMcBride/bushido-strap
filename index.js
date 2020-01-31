@@ -1,27 +1,6 @@
 // export theme stuff
-import React, { useContext } from "react";
-import { ThemeContext } from "@emotion/core";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
-import theme from "../theme";
-
-const ThemeProvider = ({ theme, children }) => {
-  return <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>;
-};
-
-ThemeProvider.defaultProps = {
-  theme
-};
-
-const useTheme = () => {
-  const theme = useContext(ThemeContext);
-  if (theme === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return theme;
-};
-
-export default ThemeProvider;
-export { useTheme };
+export * from "./styled/provider";
+export { default as ThemeProvider } from "./styled/provider";
 
 // export components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
