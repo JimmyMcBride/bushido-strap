@@ -6,9 +6,9 @@ const { ThemeProvider, withTheme, useTheme } = createTheming(defaultTheme);
 
 import theme from "../theme";
 
-const ThemeWrapper = ({ theme, children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-};
+const ThemeWrapper = ({ theme, children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
 
 ThemeWrapper.defaultProps = {
   theme

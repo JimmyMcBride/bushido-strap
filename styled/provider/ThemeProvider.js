@@ -1,13 +1,19 @@
 import React from "react";
-import { ThemeProvider as EmotionThemeProvider } from "emotion-theming";
+
 import theme from "../theme";
 
-const ThemeProvider = ({ theme, children }) => {
-  return <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>;
-};
+import { createTheming } from "@callstack/react-theme-provider";
 
-ThemeProvider.defaultProps = {
+const { ThemeProvider, withTheme, useTheme } = createTheming(defaultTheme);
+
+const ThemeWrapper = ({ theme, children }) => (
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+);
+
+ThemeWrapper.defaultProps = {
   theme
 };
 
-export default ThemeProvider;
+export default ThemeWrapper;
+export default withTheme;
+export default useTheme;

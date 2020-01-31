@@ -1,7 +1,7 @@
 // export theme stuff
-export { default as useTheme } from "./client/components/ThemeProvider";
-export { default as withTheme } from "./client/components/ThemeProvider";
-export { default as ThemeProvider } from "./client/components/ThemeProvider";
+export { default as useTheme } from "./styled/provider/ThemeProvider";
+export { default as withTheme } from "./styled/provider/ThemeProvider";
+export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
 export { default as theme } from "./styled/theme";
 
 // export components
