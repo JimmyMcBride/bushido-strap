@@ -1,16 +1,28 @@
+/*
+    ./webpack.config.js
+*/
 const path = require("path");
-
 module.exports = {
+  entry: "./client/index.js",
+  output: {
+    path: path.resolve("dist"),
+    filename: "index_bundle.js"
+  },
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+      },
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, "src"),
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel",
-        query: {
-          presets: ["react", "es2017"]
-        }
+        exclude: /node_modules/,
+        use: "babel-loader"
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: "babel-loader"
       }
     ]
   }
