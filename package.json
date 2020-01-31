@@ -1,14 +1,10 @@
 {
   "name": "bushido-strap",
-  "version": "1.9.9",
+  "version": "2.0.0",
   "description": "a library of styled components with some global style overrides in sass",
-  "main": "styled/index.js",
-  "sass": "sass/styles.scss",
-  "css": "sass/styles.css",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss-compile": "node-sass -rw sass -o css",
-    "watch": "npm run scss-compile"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -35,13 +31,12 @@
   },
   "homepage": "https://github.com/JimmyMcBride/bushido-strap#readme",
   "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0",
     "node-sass": "^4.13.0",
     "react-router-dom": "^5.1.2",
     "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1",
-    "styled-map": "^3.3.0",
-    "webfontloader": "^1.6.28",
-    "webpack": "^4.41.4"
+    "styled-map": "^3.3.0"
   },
   "devDependencies": {}
 }
