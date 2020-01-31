@@ -1,6 +1,6 @@
 {
   "name": "bushido-strap",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "a library of styled components with some global style overrides in sass",
   "main": "index.js",
   "scripts": {
@@ -35,6 +35,7 @@
     "@emotion/core": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "node-sass": "^4.13.0",
+    "react": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1",
