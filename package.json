@@ -1,6 +1,6 @@
 {
   "name": "bushido-strap",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "a library of styled components with some global style overrides in sass",
   "main": "index.js",
   "scripts": {
@@ -33,16 +33,23 @@
   "dependencies": {
     "@callstack/react-theme-provider": "^2.1.0",
     "@emotion/core": "^10.0.27",
-    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "emotion-theming": "^10.0.27",
     "node-sass": "^4.13.0",
+    "path": "^0.12.7",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "sass-loader": "^8.0.0",
     "styled-components": "^4.4.1",
     "styled-map": "^3.3.0",
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.5",
+    "webpack-dev-server": "^3.10.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
