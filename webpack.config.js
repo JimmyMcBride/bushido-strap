@@ -1,4 +1,4 @@
-var path = require("path");
+const path = require("path");
 
 module.exports = {
   module: {
@@ -7,7 +7,7 @@ module.exports = {
         test: /\.js$/,
         include: path.resolve(__dirname, "src"),
         exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
+        loader: "babel",
         query: {
           presets: ["react", "es2017"]
         }
