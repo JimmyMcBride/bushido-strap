@@ -1,8 +1,8 @@
 {
   "name": "bushido-strap",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "a library of styled components with some global style overrides in sass",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
