@@ -4,7 +4,7 @@ export { default as withTheme } from "./styled/provider/withTheme";
 export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
 export { default as theme } from "./styled/theme";
 
-// export components
+// export style components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
 export { default as Wrapper } from "./styled/components/Wrapper";
 export { default as NavBar } from "./styled/components/NavBar";
