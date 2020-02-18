@@ -16,7 +16,7 @@ import {
 } from "../maps";
 import PropTypes from "prop-types";
 
-const FlexBox = styled.div`
+const Flex = styled.div`
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
@@ -41,9 +41,9 @@ const FlexBox = styled.div`
   overflow: ${props => (props.overflow ? props.overflow : flow)};
 `;
 
-export default FlexBox;
+export default Flex;
 
-FlexBox.propTypes = {
+Flex.propTypes = {
   // CUSTOM PROPTYPES
   direction: PropTypes.oneOf([
     "row",
