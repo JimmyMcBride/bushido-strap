@@ -1,10 +1,10 @@
 // import React from "react";
 
-import theme from "../theme";
+// import theme from "../theme";
 
-import { createTheming } from "@callstack/react-theme-provider";
+// import { createTheming } from "@callstack/react-theme-provider";
 
-const { ThemeProvider } = createTheming(theme);
+// const { ThemeProvider } = createTheming(theme);
 
 // const ThemeWrapper = ({ theme, children }) => (
 //   <ThemeProvider theme={theme}>{children}</ThemeProvider>
@@ -14,6 +14,6 @@ const { ThemeProvider } = createTheming(theme);
 //   theme
 // };
 
-export default ThemeProvider;
+// export default ThemeProvider;
 // export default withTheme;
 // export default useTheme;
