@@ -1,169 +1,48 @@
-# The Bushido Styled Components Library 📑🎨
+# The Bushido-strap Styled Components Library 🎨
 
-I originally created my own [react app template named Bushido](https://www.npmjs.com/package/cra-template-bushido) and set it up just the way I like it. I had a whole bunch of nifty styled components I used quite frequently with a theme object where I had a bunch of color variables stored and a index.css file that gave everything a small but smooth overhaul. It worked really well but I got tired of trying to remember where the global folder was in relation to my current directory. And I just keep thinking to myself, _I could turn this into a style library that I could just import..._ So I did!
+Bushido-strap is a design system built with accessability as the highest priority.
 
-## Prebuilt Global Styled Components 🛠
+## Getting Started
 
-Here I have some of the prebuilt styled-components that are designed to make you life a little easier when it comes to laying out your page. Check my documentation below to see a complete list of the prebuilt components and their purpose:
+### Installing
 
-### AppWrapper:
+To install Bushido-strap to your project simply run `yarn add bushido-strap` || `npm i bushido-strap` and your ready to hook it up!
 
-AppWrapper is a div that is meant to wrap your app page, where you hold your routes. It's purpose is to easily change the font and background of the whole application.
+### CSS overhaul and AppWrapper
 
-**Props:**
+Bushido-strap comes with a css file you can import that includes a nice subtle style overhaul and a normalize. Just add `import "bushido-strap/css/main.css";` to the top of your src/index.js!
 
-| CSS Property Name          | Prop Name     | Default value |
-| -------------------------- | ------------- | ------------- |
-| font-family (h1-h6 font)   | head_font     | Railway       |
-| font-family (regular font) | font          | Railway       |
-| background-image           | bg_src        | none          |
-| background-color           | bg            | theme.gray2   |
-| background-position        | bg_position   | center        |
-| background-repeat          | bg_repeat     | no-repeat     |
-| background-attachment      | bg_attachment | fixed         |
-| background-size            | bg_size       | cover         |
-| min-height                 | min_h         | none          |
-| max-width                  | max_w         | none          |
-| max-height                 | max_h         | none          |
-| min-width                  | min_w         | none          |
-| margin                     | m             | 0             |
-| padding                    | p             | 0             |
-| opacity                    | opacity       | none          |
+AppWrapper is a powerful component that lets you set the background and fonts of your application.
 
-**Style Maps:**
+Example:
 
-| CSS Property Name | Style Prop | Property Value |
-| ----------------- | ---------- | -------------- |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
+```javascript
+// src/App.js
+export default function App() {
+  return (
+    <AppWrapper
+    bg_src={
+      /* This prop lets you easily set a responsive image as your background */
+    }
+    bg={/* Lets you set the background color of the app */}
+    head_font={/* Lets you change the font of all the headers in the app */}
+    font={/* Lets you can the font of everything else in the app */}
+  >
+      <Route path="/" exact component={Dashboard} />
+    </AppWrapper>
+  );
+}
+```
 
-### Wrapper:
+### Style Props and Maps
 
-This should wrap every parent component. It set's min height to 100% view height, and max width is set to 100% view width. This makes flexing items around your page a dream.
- 
-> All flex properties are set to default flex values. Wrapper and Card's flex properties for flex-direction and align-items are set to a different default. For both: flex-direction is defaulted to column, and align-content is defaulted to center.
+Bushido-strap comes with some unique style props and maps that make laying out and editing you page very easily.
 
-**Props:**
+Style props need to be given a value and the associated
 
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| flex-direction    | direction | column        |
-| justify-content   | justify   | flex-start    |
-| align-items       | align     | center        |
-| align-content     | content   | stretch       |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| background        | bg        | none          |
-| min-height        | min_h     | 100vh         |
-| max-width         | max_w     | 100vw         |
-| min-width         | min_w     | 100vh         |
-| max-height        | max_h     | 100vw         |
-| opacity           | opacity   | none          |
+These are the props you will probably use most often. I'll break them down into catagories.
 
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value |
-| ----------------- | ---------- | -------------- |
-| flex-direction    | row        | row            |
-| flex-direction    | revrow     | row-reverse    |
-| flex-direction    | revcol     | column-reverse |
-| justify-content   | jc_end     | flex-end       |
-| justify-content   | jc_center  | center         |
-| justify-content   | jc_between | space-between  |
-| justify-content   | jc_around  | space-around   |
-| justify-content   | jc_evenly  | space-evenly   |
-| align-items       | ai_start   | flex-start     |
-| align-items       | ai_end     | flex-end       |
-| align-items       | ai_stretch | stretch        |
-| align-items       | ai_normal  | normal         |
-| align-content     | ac_center  | center         |
-| align-content     | ac_start   | flex-start     |
-| align-content     | ac_end     | flex-end       |
-| align-content     | ac_between | space-between  |
-| align-content     | ac_around  | space-around   |
-| align-content     | ac_evenly  | space-evenly   |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
-
-### Box:
-
-Box is a div with lots of useful props. Images inside the box are set to `width: 100%; height: auto;` so they will size responsively. Just adjust the with of the Box to size the image.
-
-Box's also have a prop for background, so you can set a background color, a width and a height and you have a colored box. One thing that makes Box & FlexBox unique is that you can set shape props on them! So just by adding the prop `star` you turn the div into a star. See list of style maps below for full list of shape props you can choose from. You can even create your own by using the clip-path prop, clip!
-
-> I also find that Box's make good spacers, between elements!
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| background        | bg        | none          |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| color             | color     | auto          |
-| margin            | m         | 0             |
-| padding           | p         | 0             |
-| opacity           | opacity   | none          |
-| box-shadow        | shadow    | none          |
-| box-sizing        | box_size  | border-box    |
-| overflow          | overflow  | hidden        |
-| clip-path         | clip      | none          |
-| min-height        | min_h     | 100vh         |
-| max-width         | max_w     | 100vw         |
-| min-width         | min_w     | 100vh         |
-| max-height        | max_h     | 100vw         |
-
-> The square prop changes width and height at the same time.
-
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value                |
-| ----------------- | ---------- | ----------------------------- |
-| height            | reach      | 100%                          |
-| width             | stretch    | 100%                          |
-| margin            | xsm        | 1rem                          |
-| margin            | sm         | 2rem                          |
-| margin            | mm         | 3rem                          |
-| margin            | lm         | 4rem                          |
-| margin            | xlm        | 5rem                          |
-| padding           | xsp        | 1rem                          |
-| padding           | sp         | 2rem                          |
-| padding           | mp         | 3rem                          |
-| padding           | lp         | 4rem                          |
-| padding           | xlp        | 5rem                          |
-| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
-| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
-| box-sizing        | cbox       | content-box                   |
-| box-sizing        | init       | initial                       |
-| box-sizing        | inherit    | inherit                       |
-| overflow          | visible    | visible                       |
-| overflow          | scroll     | scroll                        |
-| overflow          | auto       | auto                          |
-
-> The fill map makes both height and width 100%.
-
-### Row:
-
-Row is a lot like Box, but with all default flex properties. 
+#### Flex-box
 
 **Props:**
 
@@ -173,352 +52,20 @@ Row is a lot like Box, but with all default flex properties.
 | justify-content   | justify   | flex-start    |
 | align-items       | align     | normal        |
 | align-content     | content   | stretch       |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| min-height        | min_h     | 100vh         |
-| max-width         | max_w     | 100vw         |
-| min-width         | min_w     | 100vh         |
-| max-height        | max_h     | 100vw         |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| background        | bg        | none          |
-| border-radius     | radius    | 0.3rem        |
-| color             | color     | auto          |
-| margin            | margin    | 0             |
-| padding           | padding   | 0             |
-| opacity           | opacity   | none          |
-| box-shadow        | shadow    | none          |
-| box-sizing        | box_size  | border-box    |
-| overflow          | overflow  | hidden        |
-| clip-path         | clip      | none          |
 
-**Style Maps:**
+Example:
 
-| CSS Property Name | Style Prop | Property Value                |
-| ----------------- | ---------- | ----------------------------- |
-| flex-direction    | col        | column                        |
-| flex-direction    | revrow     | row-reverse                   |
-| flex-direction    | revcol     | column-reverse                |
-| justify-content   | jc_end     | center                        |
-| justify-content   | jc_center  | space-between                 |
-| justify-content   | jc_between | space-around                  |
-| justify-content   | jc_around  | space-evenly                  |
-| justify-content   | jc_evenly  | flex-start                    |
-| align-items       | ai_center  | center                        |
-| align-items       | ai_start   | flex-start                    |
-| align-items       | ai_end     | flex-end                      |
-| align-items       | ai_stretch | stretch                       |
-| align-content     | ac_center  | center                        |
-| align-content     | ac_start   | flex-start                    |
-| align-content     | ac_end     | flex-end                      |
-| align-content     | ac_between | space-between                 |
-| align-content     | ac_around  | space-around                  |
-| align-content     | ac_evenly  | space-evenly                  |
-| height            | reach      | 100%                          |
-| width             | stretch    | 100%                          |
-| height && width   | fill       | 100%                          |
-| margin            | xsm        | 1rem                          |
-| margin            | sm         | 2rem                          |
-| margin            | mm         | 3rem                          |
-| margin            | lm         | 4rem                          |
-| margin            | xlm        | 5rem                          |
-| padding           | xsp        | 1rem                          |
-| padding           | sp         | 2rem                          |
-| padding           | mp         | 3rem                          |
-| padding           | lp         | 4rem                          |
-| padding           | xlp        | 5rem                          |
-| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
-| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
-| box-sizing        | cbox       | content-box                   |
-| box-sizing        | init       | initial                       |
-| box-sizing        | inherit    | inherit                       |
-| overflow          | visible    | visible                       |
-| overflow          | scroll     | scroll                        |
-| overflow          | auto       | auto                          |
-
-### Col:
-
-Col is a lot like Box, but with all flex properties (default direction is column and default align items is set to center). 
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| flex-direction    | direction | column        |
-| justify-content   | justify   | flex-start    |
-| align-items       | align     | center        |
-| align-content     | content   | stretch       |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| min-height        | min_h     | 100vh         |
-| max-width         | max_w     | 100vw         |
-| min-width         | min_w     | 100vh         |
-| max-height        | max_h     | 100vw         |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| background        | bg        | none          |
-| border-radius     | radius    | 0.3rem        |
-| color             | color     | auto          |
-| margin            | margin    | 0             |
-| padding           | padding   | 0             |
-| opacity           | opacity   | none          |
-| box-shadow        | shadow    | none          |
-| box-sizing        | box_size  | border-box    |
-| overflow          | overflow  | hidden        |
-| clip-path         | clip      | none          |
-
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value                |
-| ----------------- | ---------- | ----------------------------- |
-| flex-direction    | row        | row                           |
-| flex-direction    | revrow     | row-reverse                   |
-| flex-direction    | revcol     | column-reverse                |
-| justify-content   | jc_end     | center                        |
-| justify-content   | jc_center  | space-between                 |
-| justify-content   | jc_between | space-around                  |
-| justify-content   | jc_around  | space-evenly                  |
-| justify-content   | jc_evenly  | flex-start                    |
-| align-items       | ai_normal  | normal                        |
-| align-items       | ai_start   | flex-start                    |
-| align-items       | ai_end     | flex-end                      |
-| align-items       | ai_stretch | stretch                       |
-| align-content     | ac_center  | center                        |
-| align-content     | ac_start   | flex-start                    |
-| align-content     | ac_end     | flex-end                      |
-| align-content     | ac_between | space-between                 |
-| align-content     | ac_around  | space-around                  |
-| align-content     | ac_evenly  | space-evenly                  |
-| height            | reach      | 100%                          |
-| width             | stretch    | 100%                          |
-| margin            | xsm        | 1rem                          |
-| margin            | sm         | 2rem                          |
-| margin            | mm         | 3rem                          |
-| margin            | lm         | 4rem                          |
-| margin            | xlm        | 5rem                          |
-| padding           | xsp        | 1rem                          |
-| padding           | sp         | 2rem                          |
-| padding           | mp         | 3rem                          |
-| padding           | lp         | 4rem                          |
-| padding           | xlp        | 5rem                          |
-| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
-| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
-| box-sizing        | cbox       | content-box                   |
-| box-sizing        | init       | initial                       |
-| box-sizing        | inherit    | inherit                       |
-| overflow          | visible    | visible                       |
-| overflow          | scroll     | scroll                        |
-| overflow          | auto       | auto                          |
-
-### Card:
-
-A card is similar to a Col, but it has a default background and font color and you can invert theme by using the invert it to a dark mode card. Card also has a box shadow by default that you can turn off with the noshadow prop.
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| flex-direction    | direction | column        |
-| justify-content   | justify   | flex-start    |
-| align-items       | align     | center        |
-| align-content     | content   | stretch       |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| min-height        | min_h     | 100vh         |
-| max-width         | max_w     | 100vw         |
-| min-width         | min_w     | 100vh         |
-| max-height        | max_h     | 100vw         |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| background        | bg        | none          |
-| border-radius     | radius    | 0.3rem        |
-| color             | color     | auto          |
-| margin            | margin    | 0             |
-| padding           | padding   | 0             |
-| opacity           | opacity   | none          |
-| box-shadow        | shadow    | none          |
-| box-sizing        | box_size  | border-box    |
-| overflow          | overflow  | hidden        |
-| clip-path         | clip      | none          |
-
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value                |
-| ----------------- | ---------- | ----------------------------- |
-| flex-direction    | row        | row                           |
-| flex-direction    | revrow     | row-reverse                   |
-| flex-direction    | revcol     | column-reverse                |
-| justify-content   | jc_end     | center                        |
-| justify-content   | jc_center  | space-between                 |
-| justify-content   | jc_between | space-around                  |
-| justify-content   | jc_around  | space-evenly                  |
-| justify-content   | jc_evenly  | flex-start                    |
-| align-items       | ai_normal  | normal                        |
-| align-items       | ai_start   | flex-start                    |
-| align-items       | ai_end     | flex-end                      |
-| align-items       | ai_stretch | stretch                       |
-| align-content     | ac_center  | center                        |
-| align-content     | ac_start   | flex-start                    |
-| align-content     | ac_end     | flex-end                      |
-| align-content     | ac_between | space-between                 |
-| align-content     | ac_around  | space-around                  |
-| align-content     | ac_evenly  | space-evenly                  |
-| height            | reach      | 100%                          |
-| width             | stretch    | 100%                          |
-| margin            | xsm        | 1rem                          |
-| margin            | sm         | 2rem                          |
-| margin            | mm         | 3rem                          |
-| margin            | lm         | 4rem                          |
-| margin            | xlm        | 5rem                          |
-| padding           | xsp        | 1rem                          |
-| padding           | sp         | 2rem                          |
-| padding           | mp         | 3rem                          |
-| padding           | lp         | 4rem                          |
-| padding           | xlp        | 5rem                          |
-| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
-| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
-| box-sizing        | cbox       | content-box                   |
-| box-sizing        | init       | initial                       |
-| box-sizing        | inherit    | inherit                       |
-| overflow          | visible    | visible                       |
-| overflow          | scroll     | scroll                        |
-| overflow          | auto       | auto                          |
-
-### Button:
-
-It's a beautiful button! It has some color props to quickly and easily change the color scheme of the button. 
-
-List of color props:
-- red
-- orange
-- yellow
-- green
-- teal
-- cyan
-- blue
-- purple
-- pink
-- invert
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| background        | bg        | color props   |
-| border-radius     | radius    | 0.3rem        |
-| color             | color     | color props   |
-| margin            | margin    | 0.5rem        |
-| padding           | padding   | 0.8rem 1.6rem |
-| opacity           | opacity   | none          |
-| box-sizing        | box_size  | border-box    |
+```javascript
+<Flex direction="column" align="center">
+  ...
+</Flex>
+```
 
 **Style Maps:**
 
 | CSS Property Name | Style Prop | Property Value |
 | ----------------- | ---------- | -------------- |
-| height            | reach      | 100%           |
-| width             | stretch    | 100%           |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
-| box-sizing        | cbox       | content-box    |
-| box-sizing        | init       | initial        |
-| box-sizing        | inherit    | inherit        |
-
-### Linkton:
-
-Looks exactly like a button, but is a Link from react-router-dom.
-
-List of color props:
-- red
-- orange
-- yellow
-- green
-- teal
-- cyan
-- blue
-- purple
-- pink
-- invert
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| background        | bg        | color props   |
-| border-radius     | radius    | 0.3rem        |
-| color             | color     | color props   |
-| margin            | margin    | 0.5rem        |
-| padding           | padding   | 0.8rem 1.6rem |
-| opacity           | opacity   | none          |
-| box-sizing        | box_size  | border-box    |
-
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value |
-| ----------------- | ---------- | -------------- |
-| height            | reach      | 100%           |
-| width             | stretch    | 100%           |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
-| box-sizing        | cbox       | content-box    |
-| box-sizing        | init       | initial        |
-| box-sizing        | inherit    | inherit        |
-
-### Form:
-
-It's a form with flex-box (direction: column, align: center by default) and some basic additional props.
-
-**Props:**
-
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| flex-direction    | direction | column        |
-| justify-content   | justify   | flex-start    |
-| align-items       | align     | center        |
-| align-content     | content   | stretch       |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| background        | bg        | none          |
-| color             | color     | auto          |
-| margin            | margin    | 0             |
-| padding           | padding   | 0             |
-| box-sizing        | box_size  | border-box    |
-
-**Style Maps:**
-
-| CSS Property Name | Style Prop | Property Value |
-| ----------------- | ---------- | -------------- |
-| flex-direction    | row        | row            |
+| flex-direction    | col        | column         |
 | flex-direction    | revrow     | row-reverse    |
 | flex-direction    | revcol     | column-reverse |
 | justify-content   | jc_end     | center         |
@@ -526,7 +73,7 @@ It's a form with flex-box (direction: column, align: center by default) and some
 | justify-content   | jc_between | space-around   |
 | justify-content   | jc_around  | space-evenly   |
 | justify-content   | jc_evenly  | flex-start     |
-| align-items       | ai_normal  | normal         |
+| align-items       | ai_center  | center         |
 | align-items       | ai_start   | flex-start     |
 | align-items       | ai_end     | flex-end       |
 | align-items       | ai_stretch | stretch        |
@@ -536,60 +83,186 @@ It's a form with flex-box (direction: column, align: center by default) and some
 | align-content     | ac_between | space-between  |
 | align-content     | ac_around  | space-around   |
 | align-content     | ac_evenly  | space-evenly   |
-| height            | reach      | 100%           |
-| width             | stretch    | 100%           |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
-| box-sizing        | cbox       | content-box    |
-| box-sizing        | init       | initial        |
-| box-sizing        | inherit    | inherit        |
+| flex-direction    | drape      | column         |
+| align-items       | drape      | center         |
 
-### Input:
+Example:
 
-A better looking input to use.
+```javascript
+// col changes flex-direction to column
+// ai_center changes align items to center
+<Flex col ai_center>...</Flex>
+// drape changes flex-direction to column and align-items to center
+<Flex drape>...</Flex>
+```
+
+### Sizing and color props
 
 **Props:**
 
 | CSS Property Name | Prop Name | Default value |
 | ----------------- | --------- | ------------- |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
 | height            | h         | auto          |
 | width             | w         | auto          |
 | width && height   | sqr       | auto          |
+| border-radius     | radius    | 0.3rem        |
+| border            | border    | none          |
+| margin            | m         | 0             |
+| padding           | p         | 0             |
 | background        | bg        | none          |
 | color             | color     | auto          |
-| margin            | margin    | 0             |
-| padding           | padding   | 0             |
+| opacity           | opacity   | none          |
+| min-height        | min_h     | none          |
+| max-width         | max_w     | none          |
+| min-width         | min_w     | none          |
+| max-height        | max_h     | none          |
 | box-sizing        | box_size  | border-box    |
+| box-shadow        | shadow    | none          |
+| overflow          | overflow  | hidden        |
+| clip-path         | clip      | none          |
+
+> The square prop changes width and height at the same time.
 
 **Style Maps:**
 
-| CSS Property Name | Style Prop | Property Value |
-| ----------------- | ---------- | -------------- |
-| height            | reach      | 100%           |
-| width             | stretch    | 100%           |
-| margin            | xsm        | 1rem           |
-| margin            | sm         | 2rem           |
-| margin            | mm         | 3rem           |
-| margin            | lm         | 4rem           |
-| margin            | xlm        | 5rem           |
-| padding           | xsp        | 1rem           |
-| padding           | sp         | 2rem           |
-| padding           | mp         | 3rem           |
-| padding           | lp         | 4rem           |
-| padding           | xlp        | 5rem           |
-| box-sizing        | cbox       | content-box    |
-| box-sizing        | init       | initial        |
-| box-sizing        | inherit    | inherit        |
+| CSS Property Name | Style Prop | Property Value                |
+| ----------------- | ---------- | ----------------------------- |
+| width             | stretch    | 100%                          |
+| margin            | xsm        | 1rem                          |
+| margin            | sm         | 2rem                          |
+| margin            | mm         | 3rem                          |
+| margin            | lm         | 4rem                          |
+| margin            | xlm        | 5rem                          |
+| padding           | xsp        | 1rem                          |
+| padding           | sp         | 2rem                          |
+| padding           | mp         | 3rem                          |
+| padding           | lp         | 4rem                          |
+| padding           | xlp        | 5rem                          |
+| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
+| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
+| box-sizing        | cbox       | content-box                   |
+| box-sizing        | init       | initial                       |
+| box-sizing        | inherit    | inherit                       |
+| overflow          | visible    | visible                       |
+| overflow          | scroll     | scroll                        |
+| overflow          | auto       | auto                          |
+
+### AppWrapper:
+
+AppWrapper is a div that is meant to wrap your app page, where you hold your routes. It's purpose is to easily change the font and background of the whole application.
+
+### Wrapper:
+
+This should wrap every parent component. It set's min height to 100% view height, and max width is set to 100% view width. This makes flexing items around your page a dream. Default flex-direction is set to column instead of row and align-items is set to
+
+### Box:
+
+Box is a div with lots of useful props. Images inside the box are set to `width: 100%; height: auto;` so they will size responsively. Just adjust the with of the Box to size the image.
+
+Example:
+
+```javascript
+/* Placing the image in a Box with a width of 5rem
+will responsively size it to a width of 50px */
+<Box w="5rem">
+  <img src={`image source`} alt="alt text" >
+</Box>
+```
+
+Box's also have a prop for background, so you can set a background color, a width and a height and you have a colored box. One thing that makes Box & FlexBox unique is that you can set shape props on them! So just by adding the prop `star` you turn the div into a star. See list of style maps below for full list of shape props you can choose from. You can even create your own by using the clip-path prop, clip!
+
+Example:
+
+```javascript
+<Flex w="20rem" h="10rem" jc_around ai_center shade>
+  <Box star bg="red" sqr="5rem" />
+  <Box message bg="green" sqr="5rem" />
+  <Box octagon bg="blue" sqr="5rem" />
+</Flex>
+```
+
+Will look like...
+
+![Shape image](./assets/../shapes.png)
+
+> I also find that Box's make good spacers, between elements!
+
+```javascript
+// This puts a 20px spacer between Header, Body and Footer components
+<Flex drape>
+  <Header />
+  <Box h="2rem" />
+  <Body />
+  <Box h="2rem" />
+  <Footer />
+</Flex>
+```
+
+### Card:
+
+A beautiful card component that helps you lay out chunks of information across the page. Has flex properties; flex direction is column and align items is center by default. To change them to row and normal just add across prop.
+
+Example:
+```javascript
+<Card across></Card>
+```
+
+Card also has an invert color map that inverts the values making the background dark and the text light.
+
+Example:
+```javascript
+<Card across>
+  <h1>This is a dark mode card.</h1>
+</Card>
+```
+
+### Button:
+
+It's a beautiful button! It has some color props to quickly and easily change the color scheme of the button.
+
+List of color props:
+
+- red
+- orange
+- yellow
+- green
+- teal
+- cyan
+- blue
+- purple
+- pink
+- invert
+
+### Linkton:
+
+Looks exactly like a button, but is a Link from @reach/router.
+
+List of color props:
+
+- red
+- orange
+- yellow
+- green
+- teal
+- cyan
+- blue
+- purple
+- pink
+- invert
+
+Example:
+
+```javascript
+<Linkton to="/" red>Go home</Linkton>
+```
+
+### Form:
+
+It's a form with flex-box (direction: column, align: center by default).
+
+### Input:
+
+A better looking input to use.
 
 ### Importing bushido-strap css and styled components 🚀
 
@@ -603,22 +276,18 @@ All styled components get exported from `bushido-strap`. So all you need to do i
 
 ```javascript
 import React from "react";
-import { Wrapper, Row, Button, Card } from "bushido-strap";
+import { Wrapper, Flex, Button } from "bushido-strap";
 
 export default function MyComponent() {
   return (
     <Wrapper>
-      <Card w="80vw" invert>
+      <Flex drape w="80vw">
         <h2>Card Header</h2>
         <p>Card text.</p>
-        <Row>
-          <Button red>
-            Left Button
-          </Button>
-          <Button green>
-            Right Button
-          </Button>
-        </Row>
+        <Flex>
+          <Button primary>Left Button</Button>
+          <Button secondary>Right Button</Button>
+        </Flex>
       </Card>
     </Wrapper>
   );
@@ -627,90 +296,45 @@ export default function MyComponent() {
 
 ## Theme Color Variables 🖌
 
-At the top of the file you want to use the color variables in just throw in this import: `import theme from "bushido-strap/styled/theme"`
+If you want to use the color variables in just throw in theme to your Bushido-strap import: `import { theme } from "bushido-strap"`
 
 Example:
 
 ```javascript
 import React from "react";
-import { Wrapper, Row, Button, Card } from "bushido-strap";
-import theme from "bushido-strap/styled/theme"
+import { Wrapper, Flex, Button, theme } from "bushido-strap";
 
 export default function MyComponent() {
   return (
     <Wrapper bg={theme.gray8}>
-      <Card w="80vw" invert>
+      <Flex w="80vw" drape>
         <h2>Card Header</h2>
         <p>Card text.</p>
-        <Row>
-          <Button red>
-            Left Button
-          </Button>
-          <Button green>
-            Right Button
-          </Button>
-        </Row>
-      </Card>
+        <Flex>
+          <Button primary>Left Button</Button>
+          <Button secondary>Right Button</Button>
+        </Flex>
+      </Flex>
     </Wrapper>
   );
 }
 ```
 
-[Check here to see the full list of my javascript theme colors.](https://github.com/JimmyMcBride/bushido-strap/blob/master/styled/theme/index.js)
+[Check here to see the full list of my javascript theme colors.](https://github.com/ApaptivUI/bushido-strap/blob/master/styled/theme/index.js)
 
-You can also use your own custom theme to add or change any of the variables using the ThemeProvider with the useTheme hook or the withTheme higher order component.
+### Flex and Box Shape Props!
 
-Example:
+Flex's and Box's have unique shape props you can use to turn your div's into awesome little shapes! Highly recommend using the sqr prop to set height and width to equal size's and giving a background (bg) prop color since the default is set to none.
 
-```javascript
-import React from "react";
-import { Wrapper, Row, Button, Card, ThemeProvider, useTheme } from "bushido-strap";
-import theme from "bushido-strap/styled/theme"
-
-const customTheme = {
-  // Spreading out theme from bushido-strap so we have it and
-  // can add to, or modify existing variables
-  ...theme,
-  // creating a new color for theme object
-  newColor: "crimson",
-  // reassigning gray8 variable to black
-  gray8: "black
-}
-
-export default function MyComponent() {
-  cont newTheme = useTheme()
-  return (
-    <ThemeProvider theme={customTheme}>
-      <Wrapper bg={newTheme.gray8}>
-        <Card w="80vw" invert>
-          <h2>Card Header</h2>
-          <p>Card text.</p>
-          <Row bg={newTheme.newColor}>
-            <Button red>
-              Left Button
-            </Button>
-            <Button green>
-              Right Button
-            </Button>
-          </Row>
-        </Card>
-      </Wrapper>
-    </ThemeProvider>
-  );
-}
-```
-
-### Row, Col and Box Shape Props!
-
-Row's, Col's and Box's have unique shape props you can use to turn your div's into awesome little shapes! Highly recommend using the sqr prop to set height and width to equal size's and giving a background (bg) prop since the default is set to none. 
+You can also set a custom clip path with the `clip` prop.
 
 Example:
 
 ```javascript
-<Row sqr="5rem" bg={theme.red5} message />
+<Box sqr="5rem" bg={theme.red5} message />
 ```
 
-| CSS Property Name | Style Prop    | Property Value                                                                                                      |
+| CSS Property Name | Style Map     | Property Value                                                                                                      |
 | ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------- |
 | clip-path         | triangle      | polygon(50% 0%, 0% 100%, 100% 100%)                                                                                 |
 | clip-path         | trapezoid     | polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)                                                                         |

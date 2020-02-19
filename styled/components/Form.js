@@ -6,9 +6,9 @@ import {
   boxSize,
   marg,
   pad,
-  flexDirection,
+  columnDirection,
   flexJustify,
-  flexItems,
+  centerAlign,
   flexContent
 } from "../maps";
 import PropTypes from "prop-types";
@@ -17,9 +17,9 @@ const Form = styled.form`
   display: flex;
   flex-wrap: ${flexWrap};
   flex-direction: ${props =>
-    props.direction ? props.direction : flexDirection};
+    props.direction ? props.direction : columnDirection};
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
-  align-items: ${props => (props.align ? props.align : flexItems)};
+  align-items: ${props => (props.align ? props.align : centerAlign)};
   align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.bg ? props.bg : "none")};

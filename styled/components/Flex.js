@@ -26,8 +26,8 @@ const Flex = styled.div`
   align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.background ? props.background : "none")};
-  width: ${props => (props.width ? props.width : sideways)};
-  height: ${props => (props.height ? props.height : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.padding ? props.padding : pad)};
   margin: ${props => (props.margin ? props.margin : marg)};
   min-height: ${props => (props.min_h ? props.min_h : "auto")};
@@ -85,14 +85,14 @@ Flex.propTypes = {
     "inherit"
   ]),
 
-  height: PropTypes.string,
-  weight: PropTypes.string,
-  background: PropTypes.string,
+  h: PropTypes.string,
+  w: PropTypes.string,
+  bg: PropTypes.string,
   color: PropTypes.string,
-  min_height: PropTypes.string,
-  max_weight: PropTypes.string,
-  padding: PropTypes.string,
-  margin: PropTypes.string,
+  min_h: PropTypes.string,
+  max_w: PropTypes.string,
+  p: PropTypes.string,
+  m: PropTypes.string,
   opacity: PropTypes.string,
   shadow: PropTypes.string,
   box_size: PropTypes.string,
