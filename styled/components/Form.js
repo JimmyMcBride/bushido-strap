@@ -9,7 +9,8 @@ import {
   columnDirection,
   flexJustify,
   centerAlign,
-  flexContent
+  flexContent,
+  textAlign
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -28,6 +29,7 @@ const Form = styled.form`
   padding: ${props => (props.p ? props.p : pad)};
   margin: ${props => (props.m ? props.m : marg)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  text-align: ${textAlign};
 `;
 
 export default Form;

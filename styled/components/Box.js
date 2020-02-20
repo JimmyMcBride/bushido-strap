@@ -7,7 +7,8 @@ import {
   shape,
   marg,
   pad,
-  flow
+  flow,
+  textAlign
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -28,6 +29,7 @@ const Box = styled.div`
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
+  text-align: ${textAlign};
   img {
     width: 100%;
     height: auto;

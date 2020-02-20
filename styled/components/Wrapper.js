@@ -8,7 +8,8 @@ import {
   longways,
   sideways,
   marg,
-  pad
+  pad,
+  textAlign
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -30,6 +31,7 @@ const Wrapper = styled.div`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
+  text-align: ${textAlign};
 `;
 
 export default Wrapper;

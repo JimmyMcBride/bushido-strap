@@ -2,7 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
 import "../../css/main.css";
-import { marg, pad } from "../maps";
+import { marg, pad, bgCover, bgFixed } from "../maps";
 
 // root container for the application
 const AppWrapper = styled.div`
@@ -16,8 +16,8 @@ const AppWrapper = styled.div`
   background-repeat: ${props =>
     props.bg_repeat ? props.bg_repeat : "no-repeat"};
   background-attachment: ${props =>
-    props.bg_attachment ? props.bg_attachment : "fixed"};
-  background-size: ${props => (props.bg_size ? props.bg_size : "cover")};
+    props.bg_attachment ? props.bg_attachment : bgFixed};
+  background-size: ${props => (props.bg_size ? props.bg_size : bgCover)};
   min-height: ${props => (props.min_h ? props.min_h : "none")};
   max-width: ${props => (props.max_w ? props.max_w : "none")};
   min-width: ${props => (props.min_w ? props.min_w : "none")};

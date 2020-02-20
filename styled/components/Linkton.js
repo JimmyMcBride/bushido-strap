@@ -8,7 +8,8 @@ import {
   buttonHoverColor,
   buttonHoverBackground,
   btnMarg,
-  btnPad
+  btnPad,
+  textCenter
 } from "../maps";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -24,7 +25,7 @@ const Linkton = styled(Link)`
   padding: ${props => (props.p ? props.p : btnPad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  text-align: center;
+  text-align: ${textCenter};
   &:hover {
     color: ${props => (props.color ? props.color : buttonHoverColor)};
     background: ${props =>

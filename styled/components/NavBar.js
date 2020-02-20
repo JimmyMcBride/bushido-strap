@@ -7,7 +7,8 @@ import {
   flexItems,
   flexContent,
   marg,
-  pad
+  pad,
+  textAlign
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -31,6 +32,7 @@ const NavBar = styled.nav`
   margin: ${props => (props.m ? props.m : marg)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  text-align: ${textAlign};
 `;
 
 export default NavBar;
