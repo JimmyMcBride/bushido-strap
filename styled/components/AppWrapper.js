@@ -6,7 +6,7 @@ import { marg, pad, bgCover, bgFixed } from "../maps";
 
 // root container for the application
 const AppWrapper = styled.div`
-  background: ${props => (props.bg ? props.bg : theme.gray2)};
+  background: ${props => (props.bg ? props.bg : theme.gray3)};
   background-image: ${props =>
     props.bg_src ? `url(${props.bg_src})` : "none"};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
