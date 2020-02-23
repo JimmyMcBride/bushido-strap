@@ -16,3 +16,4 @@ export { default as Linkton } from "./styled/components/Linkton";
 export { default as Card } from "./styled/components/Card";
 export { default as Box } from "./styled/components/Box";
 export { default as Container } from "./styled/components/Container";
+export { default as Text } from "./styled/components/Text";
