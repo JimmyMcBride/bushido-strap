@@ -17,6 +17,6 @@ export default styledMap`
   violet: ${theme.violet5};
   purple: ${theme.purple5};
   pink: ${theme.pink5};
-  invert: ${theme.gray1};
+  invert: ${theme.gray2};
   default: ${theme.gray5};
 `;
