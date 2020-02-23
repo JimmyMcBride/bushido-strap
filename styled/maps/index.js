@@ -29,3 +29,5 @@ export { default as bgCover } from "./styles/bgCover";
 export { default as bgAttach } from "./styles/bgAttach";
 export { default as bgFixed } from "./styles/bgFixed";
 export { default as invertColor } from "./styles/invertColor";
+export { default as fontSize } from "./styles/fontSize";
+export { default as fontWeight } from "./styles/fontWeight";

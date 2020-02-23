@@ -100,52 +100,80 @@ Example:
 
 **Props:**
 
-| CSS Property Name | Prop Name | Default value |
-| ----------------- | --------- | ------------- |
-| height            | h         | auto          |
-| width             | w         | auto          |
-| width && height   | sqr       | auto          |
-| border-radius     | radius    | 0.3rem        |
-| border            | border    | none          |
-| margin            | m         | 0             |
-| padding           | p         | 0             |
-| background        | bg        | none          |
-| color             | color     | auto          |
-| opacity           | opacity   | none          |
-| min-height        | min_h     | none          |
-| max-width         | max_w     | none          |
-| min-width         | min_w     | none          |
-| max-height        | max_h     | none          |
-| box-sizing        | box_size  | border-box    |
-| box-shadow        | shadow    | none          |
-| overflow          | overflow  | hidden        |
-| clip-path         | clip      | none          |
+| CSS Property Name   | Prop Name | Default value |
+| ------------------- | --------- | ------------- |
+| height              | h         | auto          |
+| width               | w         | auto          |
+| width && height     | sqr       | auto          |
+| border-radius       | radius    | 0.3rem        |
+| border              | border    | none          |
+| margin              | m         | 0             |
+| padding             | p         | 0             |
+| background          | bg        | none          |
+| color               | color     | auto          |
+| opacity             | opacity   | none          |
+| min-height          | min_h     | none          |
+| max-width           | max_w     | none          |
+| min-width           | min_w     | none          |
+| max-height          | max_h     | none          |
+| box-sizing          | box_size  | border-box    |
+| box-shadow          | shadow    | none          |
+| overflow            | overflow  | hidden        |
+| font-family         | font      | Open Sans     |
+| font-size           | f_size    | 1.6rem        |
+| clip-path           | clip      | none          |
+| background-size     | bg_size   | auto          |
+| background-attach   | bg_size   | scroll        |
+| background-position | bg_size   | center        |
 
 > The square prop changes width and height at the same time.
 
 **Style Maps:**
 
-| CSS Property Name | Style Prop | Property Value                |
-| ----------------- | ---------- | ----------------------------- |
-| width             | stretch    | 100%                          |
-| margin            | xsm        | 1rem                          |
-| margin            | sm         | 2rem                          |
-| margin            | mm         | 3rem                          |
-| margin            | lm         | 4rem                          |
-| margin            | xlm        | 5rem                          |
-| padding           | xsp        | 1rem                          |
-| padding           | sp         | 2rem                          |
-| padding           | mp         | 3rem                          |
-| padding           | lp         | 4rem                          |
-| padding           | xlp        | 5rem                          |
-| box-shadow        | shade      | 0 0.3rem 1rem \${theme.gray7} |
-| box-shadow        | backlight  | 0 0.3rem 1rem \${theme.gray0} |
-| box-sizing        | cbox       | content-box                   |
-| box-sizing        | init       | initial                       |
-| box-sizing        | inherit    | inherit                       |
-| overflow          | visible    | visible                       |
-| overflow          | scroll     | scroll                        |
-| overflow          | auto       | auto                          |
+| CSS Property Name | Style Prop     | Property Value               |
+| ----------------- | -------------- | ---------------------------- |
+| width             | stretch        | 100%                         |
+| margin            | xsm            | 1rem                         |
+| margin            | sm             | 2rem                         |
+| margin            | mm             | 3rem                         |
+| margin            | lm             | 4rem                         |
+| margin            | xlm            | 5rem                         |
+| padding           | xsp            | 1rem                         |
+| padding           | sp             | 2rem                         |
+| padding           | mp             | 3rem                         |
+| padding           | lp             | 4rem                         |
+| padding           | xlp            | 5rem                         |
+| font-size         | xsf            | 0.6rem                       |
+| font-size         | sf             | 1rem                         |
+| font-size         | mf             | 1.4rem                       |
+| font-size         | lf             | 2rem                         |
+| font-size         | xlf            | 3rem                         |
+| box-shadow        | shade          | 0 0.3rem 1rem ${theme.gray7} |
+| box-shadow        | backlight      | 0 0.3rem 1rem ${theme.gray0} |
+| box-sizing        | cbox           | content-box                  |
+| box-sizing        | init           | initial                      |
+| box-sizing        | inherit        | inherit                      |
+| overflow          | visible        | visible                      |
+| overflow          | scroll         | scroll                       |
+| overflow          | auto           | auto                         |
+| text-align        | ta_right       | right                        |
+| text-align        | ta_left        | left                         |
+| text-align        | ta_center      | center                       |
+| text-align        | ta_justify     | justify                      |
+| text-align        | ta_all         | justify-all                  |
+| text-align        | ta_start       | start                        |
+| text-align        | ta_end         | end                          |
+| background-size   | size_len       | length                       |
+| background-size   | size_cover     | cover                        |
+| background-size   | size_contain   | contain                      |
+| background-size   | size_initial   | initial                      |
+| background-size   | size_inherit   | inherit                      |
+| background-size   | size_auto      | auto                         |
+| background-attach | attach_fix     | fix                          |
+| background-attach | attach_local   | local                        |
+| background-attach | attach_inherit | inherit                      |
+| background-attach | attach_initial | initial                      |
+| background-attach | attach_scroll  | scroll                       |
 
 ### AppWrapper:
 
@@ -153,7 +181,20 @@ AppWrapper is a div that is meant to wrap your app page, where you hold your rou
 
 ### Wrapper:
 
-This should wrap every parent component. It set's min height to 100% view height, and max width is set to 100% view width. This makes flexing items around your page a dream. Default flex-direction is set to column instead of row and align-items is set to
+This should wrap every parent component. It set's min height to 100% view height, and max width is set to 100% view width. This makes flexing items around your page a dream. Default flex-direction is set to column instead of row and align-items is set to.
+
+### Text:
+
+A text component that lets you set size, font and font weight easily.
+
+Example:
+
+```javascript
+// Bold text, font size 2rem, text align center, font Georgia
+<Text bold lf ta_center font="Georgia">
+  Some text here...
+</Text>
+```
 
 ### Box:
 

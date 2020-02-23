@@ -1,18 +1,29 @@
 import styled from "styled-components";
 import {
+  flexWrap,
+  columnDirection,
+  flexJustify,
+  centerAlign,
+  flexContent,
   sideways,
   longways,
   boxSize,
+  textCenter,
   buttonColor,
   buttonBackground,
-  buttonHoverColor,
-  buttonHoverBackground,
   btnMarg,
   btnPad
 } from "../maps";
 import PropTypes from "prop-types";
 
 const Button = styled.button`
+  display: flex;
+  flex-wrap: ${flexWrap};
+  flex-direction: ${props =>
+    props.direction ? props.direction : columnDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : centerAlign)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : buttonColor)};
   background: ${props => (props.bg ? props.bg : buttonBackground)};
   border: ${props => (props.border ? props.border : "none")};
@@ -23,6 +34,7 @@ const Button = styled.button`
   padding: ${props => (props.p ? props.p : btnPad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  text-align: ${textCenter};
   &:hover {
     color: ${props =>
       props.hover_color ? props.hover_color : buttonHoverColor};

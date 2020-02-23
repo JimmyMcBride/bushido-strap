@@ -1,20 +1,30 @@
 import styled from "styled-components";
 import {
+  flexWrap,
+  columnDirection,
+  flexJustify,
+  centerAlign,
+  flexContent,
   sideways,
   longways,
   boxSize,
+  textCenter,
   buttonColor,
   buttonBackground,
-  buttonHoverColor,
-  buttonHoverBackground,
   btnMarg,
-  btnPad,
-  textCenter
+  btnPad
 } from "../maps";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Linkton = styled(Link)`
+  display: flex;
+  flex-wrap: ${flexWrap};
+  flex-direction: ${props =>
+    props.direction ? props.direction : columnDirection};
+  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
+  align-items: ${props => (props.align ? props.align : centerAlign)};
+  align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : buttonColor)};
   background: ${props => (props.bg ? props.bg : buttonBackground)};
   border: ${props => (props.border ? props.border : "none")};

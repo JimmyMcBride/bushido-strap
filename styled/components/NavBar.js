@@ -20,16 +20,16 @@ const NavBar = styled.nav`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : flexItems)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  height: ${props => (props.h ? props.h : "auto")};
-  width: ${props => (props.w ? props.w : "100%")};
+  background-position: ${props =>
+    props.bg_position ? props.bg_position : "fixed"};
   background: ${props => (props.bg ? props.bg : "none")};
   color: ${props => (props.color ? props.color : "auto")};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
-  padding: ${props => (props.p ? props.p : pad)};
+  height: ${props => (props.h ? props.h : "auto")};
+  width: ${props => (props.w ? props.w : "100%")};
   margin: ${props => (props.m ? props.m : marg)};
+  padding: ${props => (props.p ? props.p : pad)};
+  min-height: ${props => (props.min_h ? props.min_h : "auto")};
+  max-width: ${props => (props.max_w ? props.max_w : "auto")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
@@ -80,14 +80,12 @@ NavBar.propTypes = {
   ]),
   h: PropTypes.string,
   w: PropTypes.string,
+  p: PropTypes.string,
+  m: PropTypes.string,
   bg: PropTypes.string,
   color: PropTypes.string,
   min_h: PropTypes.string,
   max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
-  p: PropTypes.string,
-  m: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string
 };
