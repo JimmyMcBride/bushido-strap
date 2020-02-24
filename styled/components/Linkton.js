@@ -14,7 +14,7 @@ import {
   buttonHoverColor,
   buttonHoverBackground,
   btnMarg,
-  btnPad
+  btnPad,
 } from "../maps";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -39,7 +39,8 @@ const Linkton = styled(Link)`
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textCenter};
   &:hover {
-    color: ${props => (props.color ? props.color : buttonHoverColor)};
+    color: ${props =>
+      props.hover_color ? props.hover_color : buttonHoverColor};
     background: ${props =>
       props.hover_bg ? props.hover_bg : buttonHoverBackground};
   }
@@ -53,7 +54,7 @@ Linkton.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -62,7 +63,7 @@ Linkton.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -70,7 +71,7 @@ Linkton.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -78,7 +79,7 @@ Linkton.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -86,7 +87,7 @@ Linkton.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
   h: PropTypes.string,
   w: PropTypes.string,
@@ -96,8 +97,8 @@ Linkton.propTypes = {
   radius: PropTypes.string,
   hover_color: PropTypes.string,
   hover_bg: PropTypes.string,
-  margin: PropTypes.string,
-  padding: PropTypes.string,
+  m: PropTypes.string,
+  p: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
 };
