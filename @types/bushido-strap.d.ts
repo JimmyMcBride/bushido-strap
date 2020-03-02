@@ -1,1 +1,1 @@
-declare module "my-library";
+declare module "bushido-strap";
