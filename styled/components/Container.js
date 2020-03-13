@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import "../../css/main.css";
 import {
   marg,
   pad,
@@ -13,7 +12,7 @@ import {
   textAlign,
   bgCover,
   bgAttach,
-  invertColor
+  invertColor,
 } from "../maps";
 
 // root container for the application
@@ -56,7 +55,7 @@ Container.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -65,7 +64,7 @@ Container.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -73,7 +72,7 @@ Container.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -81,7 +80,7 @@ Container.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -89,7 +88,7 @@ Container.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
   m: PropTypes.string,
   p: PropTypes.string,
@@ -105,5 +104,5 @@ Container.propTypes = {
   bg_position: PropTypes.string,
   bg_repeat: PropTypes.string,
   bg_attachment: PropTypes.string,
-  bg_size: PropTypes.string
+  bg_size: PropTypes.string,
 };

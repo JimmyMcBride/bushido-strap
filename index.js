@@ -5,7 +5,7 @@
 export { default as theme } from "./styled/theme";
 
 // export style components
-// export { default as AppWrapper } from "./styled/components/AppWrapper";
+export { default as AppWrapper } from "./styled/components/AppWrapper";
 export { default as Wrapper } from "./styled/components/Wrapper";
 export { default as NavBar } from "./styled/components/NavBar";
 export { default as Flex } from "./styled/components/Flex";
@@ -17,7 +17,3 @@ export { default as Card } from "./styled/components/Card";
 export { default as Box } from "./styled/components/Box";
 export { default as Container } from "./styled/components/Container";
 export { default as Text } from "./styled/components/Text";
-
-import AppWrapper from "./styled/components/AppWrapper";
-
-export { AppWrapper };
