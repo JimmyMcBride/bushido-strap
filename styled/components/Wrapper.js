@@ -9,7 +9,7 @@ import {
   sideways,
   marg,
   pad,
-  textAlign
+  textAlign,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -42,7 +42,7 @@ Wrapper.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -51,7 +51,7 @@ Wrapper.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -59,7 +59,7 @@ Wrapper.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -67,7 +67,7 @@ Wrapper.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -75,7 +75,7 @@ Wrapper.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
   m: PropTypes.string,
   p: PropTypes.string,
@@ -87,5 +87,5 @@ Wrapper.propTypes = {
   min_w: PropTypes.string,
   max_h: PropTypes.string,
   bg: PropTypes.string,
-  opacity: PropTypes.string
+  opacity: PropTypes.string,
 };

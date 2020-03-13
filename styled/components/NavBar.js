@@ -8,7 +8,7 @@ import {
   flexContent,
   marg,
   pad,
-  textAlign
+  textAlign,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -20,8 +20,7 @@ const NavBar = styled.nav`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : flexItems)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  background-position: ${props =>
-    props.bg_position ? props.bg_position : "fixed"};
+  position: ${props => (props.position ? props.position : "fixed")};
   background: ${props => (props.bg ? props.bg : "none")};
   color: ${props => (props.color ? props.color : "auto")};
   height: ${props => (props.h ? props.h : "auto")};
@@ -43,7 +42,7 @@ NavBar.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -52,7 +51,7 @@ NavBar.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -60,7 +59,7 @@ NavBar.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -68,7 +67,7 @@ NavBar.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -76,7 +75,7 @@ NavBar.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
   h: PropTypes.string,
   w: PropTypes.string,
@@ -87,5 +86,6 @@ NavBar.propTypes = {
   min_h: PropTypes.string,
   max_w: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
+  position: PropTypes.string,
 };

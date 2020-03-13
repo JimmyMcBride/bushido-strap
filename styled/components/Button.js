@@ -14,7 +14,7 @@ import {
   buttonHoverColor,
   buttonHoverBackground,
   btnMarg,
-  btnPad
+  btnPad,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -53,7 +53,7 @@ Button.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -62,7 +62,7 @@ Button.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -70,7 +70,7 @@ Button.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -78,7 +78,7 @@ Button.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -86,7 +86,7 @@ Button.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
   h: PropTypes.string,
   w: PropTypes.string,
@@ -99,5 +99,5 @@ Button.propTypes = {
   m: PropTypes.string,
   p: PropTypes.string,
   opacity: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
 };

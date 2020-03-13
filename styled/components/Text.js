@@ -7,7 +7,7 @@ import {
   pad,
   fontSize,
   textAlign,
-  fontWeight
+  fontWeight,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -41,5 +41,5 @@ Text.propTypes = {
   min_w: PropTypes.string,
   max_h: PropTypes.string,
   p: PropTypes.string,
-  m: PropTypes.string
+  m: PropTypes.string,
 };

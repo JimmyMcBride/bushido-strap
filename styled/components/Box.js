@@ -8,7 +8,7 @@ import {
   marg,
   pad,
   flow,
-  textAlign
+  textAlign,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -56,5 +56,5 @@ Box.propTypes = {
   box_size: PropTypes.string,
   ovr_flow: PropTypes.string,
   clip: PropTypes.string,
-  sqr: PropTypes.string
+  sqr: PropTypes.string,
 };

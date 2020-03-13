@@ -11,7 +11,7 @@ import {
   flexContent,
   cardBackground,
   cardColor,
-  textAlign
+  textAlign,
 } from "../maps";
 
 import PropTypes from "prop-types";
@@ -50,7 +50,7 @@ Card.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -59,7 +59,7 @@ Card.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -67,7 +67,7 @@ Card.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -75,7 +75,7 @@ Card.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -83,7 +83,7 @@ Card.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
 
   min_h: PropTypes.string,
@@ -101,5 +101,5 @@ Card.propTypes = {
   m: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string,
-  shadow: PropTypes.string
+  shadow: PropTypes.string,
 };

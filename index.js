@@ -1,8 +1,19 @@
 // export theme stuff
-// export { default as useTheme } from "./styled/provider/useTheme";
-// export { default as withTheme } from "./styled/provider/withTheme";
-// export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
+import ThemeWrapper from "./jsx/components/ThemeProvider";
+
+import { withTheme, useTheme } from "./jsx/components/ThemeProvider";
+
 export { theme } from "./styled/theme";
+
+// export hooks
+import { useModal } from "./jsx/hooks/useModal";
+
+// jsx components
+import NavLink from "./jsx/components/NavLink";
+import Modal from "./jsx/components/Modal";
+
+// exports
+export { ThemeWrapper, withTheme, NavLink, useModal, useTheme, Modal };
 
 // export style components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
@@ -17,3 +28,7 @@ export { default as Card } from "./styled/components/Card";
 export { default as Box } from "./styled/components/Box";
 export { default as Container } from "./styled/components/Container";
 export { default as Text } from "./styled/components/Text";
+export { default as Select } from "./styled/components/Select";
+export { default as Option } from "./styled/components/Option";
+export { default as TextArea } from "./styled/components/TextArea";
+export { default as ToolTip } from "./styled/components/ToolTip";

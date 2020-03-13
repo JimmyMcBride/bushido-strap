@@ -10,7 +10,7 @@ import {
   flexJustify,
   centerAlign,
   flexContent,
-  textAlign
+  textAlign,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -40,7 +40,7 @@ Form.propTypes = {
     "row",
     "row-reverse",
     "column",
-    "column-reverse"
+    "column-reverse",
   ]),
 
   justify: PropTypes.oneOf([
@@ -49,7 +49,7 @@ Form.propTypes = {
     "center",
     "space-between",
     "space-around",
-    "space-evenly"
+    "space-evenly",
   ]),
 
   align: PropTypes.oneOf([
@@ -57,7 +57,7 @@ Form.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   content: PropTypes.oneOf([
@@ -65,7 +65,7 @@ Form.propTypes = {
     "flex-start",
     "flex-end",
     "center",
-    "baseline"
+    "baseline",
   ]),
 
   wrap: PropTypes.oneOf([
@@ -73,7 +73,7 @@ Form.propTypes = {
     "wrap",
     "wrap-reverse",
     "initial",
-    "inherit"
+    "inherit",
   ]),
 
   h: PropTypes.string,
@@ -85,5 +85,5 @@ Form.propTypes = {
   m: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
 };

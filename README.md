@@ -175,6 +175,10 @@ Example:
 | background-attach | attach_initial | initial                      |
 | background-attach | attach_scroll  | scroll                       |
 
+## New Semantic Components!
+
+Now featuring new semantic components! Main, Section and Aside. They work much like Flex but with flex direction default to column and align items default to center. Main difference is that they break down into their sematic counterparts instead of div's.
+
 ### AppWrapper:
 
 AppWrapper is a div that is meant to wrap your app page, where you hold your routes. It's purpose is to easily change the font and background of the whole application.
@@ -255,6 +259,112 @@ Example:
 <Card across>
   <h1>This is a dark mode card.</h1>
 </Card>
+```
+
+### Text:
+
+A text component that lets you set size, font and font weight easily.
+
+Example:
+
+```javascript
+// Bold text, font size 2rem, text align center, font Georgia
+<Text bold lf ta_center font="Georgia">
+  Some text here...
+</Text>
+```
+
+### Modal
+
+In order to pull off a modal you're going to need 2 components: Modal and useModal. In order to make Modal work your going to need to pass it an "isActive" prop and a "toggle" prop. You can get both of these props off of useModal hook:
+
+```javascript
+import { useModal } from "adaptiv-ui";
+
+const [isActive, toggle] = useModal();
+```
+
+Then you can plug them into Modal and you're good to go!
+
+Example:
+
+```javascript
+import React from "react";
+import { useModal, Modal, Flex, Button, Text } from "adaptiv-ui";
+
+export default function Component() {
+  const [isActive, toggle] = useModal();
+
+  return (
+    <>
+      <Button onClick={toggle}>Toggle</Button>
+      <Modal isActive={isActive} toggle={toggle}>
+        <Flex w="40rem" h="40rem" drape>
+          <Text>I'm a modal, yo!</Text>
+          <Button autoFocus onClick={() => alert("Thanks for clicking me!")}>
+            Click me!
+          </Button>
+          <Button onClick={toggle}>Close</Button>
+        </Flex>
+      </Modal>
+    </>
+  );
+}
+```
+
+![Modal image](./assets/modal.png)
+
+### Tool Tip
+
+TooTip component has all the same props as Flex, but it has a special feature! After adding your element, you can place a div under it with a className of "tooltip". Whatever you put inside this "tooltip" div will be invisible until you hover over or focus on the element you nested inside your ToolTip component. In addition to the Flex props, there are a couple of extra props that ToolTip has so that you can edit your "tooltip" element and position.
+
+tt_w: edits the **width** of the tooltip
+tt_h: edits the **height** of the tooltip
+tt_color: edits the **color** of the tooltip
+tt_bg: edits the **background color** of the tooltip
+tt_top: edits the **top position** of the tooltip
+tt_right: edits the **right position** of the tooltip
+tt_bottom: edits the **bottom position** of the tooltip
+tt_left: edits the **left position** of the tooltip
+tt_radius: edits the **radius** of the tooltip
+tt_zIndex: edits the **z index** of the tooltip
+
+Example:
+
+```javascript
+// using tt props to edit tool tip position and size
+<ToolTip tt_left="105%" tabIndex={0} tt_w="12rem" tt_top="25%">
+  {/* These two Box's make up the content that we want to add a tooltip too */}
+  <Box bg={theme.primary} circle p="2rem">
+    <Box sqr="2rem" window bg="white" />
+  </Box>
+  {/* Our "tooltip" div is the container for what we want to show in our
+  tooltip on focus or hover. */}
+  <div class="tooltip">
+    <Text bold lf ta_center>
+      Tooltip text
+    </Text>
+  </div>
+</ToolTip>
+```
+
+![Tooltip image](./assets/tooltip.png)
+
+### Container
+
+Container is a component that's main purpose is to provide a background image. It also can set colors as the background but the css for images is set for responsiveness. If you need things to lay on top of a background image this is the component to use. Just wrap the content in Container and set bg_src prop to the location/URL of your image. It also has flex enabled and all sizing props. By default justify content is column and align items is center. You can change these individually to you own desire. You can also use the `across` props to set them to flex-start / normal respectively.
+
+Example:
+
+```javascript
+<Wrapper>
+  {/* Add invert prop to make text white instead of black */}
+  <Container bg_src={image} h="50vh" invert>
+    <h3>Stuff...</h3>
+    <h3>Stuff...</h3>
+    <h3>Stuff...</h3>
+  </Container>
+</Wrapper>
 ```
 
 ### Button:
