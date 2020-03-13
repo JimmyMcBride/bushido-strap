@@ -15,7 +15,7 @@ import {
   flexContent,
   textAlign,
 } from "../maps";
-import theme from "../theme";
+import { theme } from "../theme";
 import PropTypes from "prop-types";
 
 const ToolTip = styled.div`
