@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import theme from "../theme";
-import "../../css/main.css";
 import { marg, pad, bgCover, bgFixed } from "../maps";
 
 // root container for the application
@@ -54,5 +53,5 @@ AppWrapper.propTypes = {
   bg_position: PropTypes.string,
   bg_repeat: PropTypes.string,
   bg_attachment: PropTypes.string,
-  bg_size: PropTypes.string
+  bg_size: PropTypes.string,
 };
