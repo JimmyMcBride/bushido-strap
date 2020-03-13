@@ -1,5 +1,5 @@
 import styledMap from "styled-map";
-import theme from "../../../theme";
+import { theme } from "../../../theme";
 
 export default styledMap`
   invert: ${theme.gray9};

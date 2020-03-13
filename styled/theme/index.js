@@ -1,5 +1,5 @@
 // theme variables are set here
-export default {
+export const theme = {
   // Grayscale
   gray0: "#FAFAFA",
   gray1: "#F5F5F5",
@@ -209,5 +209,5 @@ export default {
   blackAlpha6: "rgba(0, 0, 0, 0.48)",
   blackAlpha7: "rgba(0, 0, 0, 0.64)",
   blackAlpha8: "rgba(0, 0, 0, 0.80)",
-  blackAlpha9: "rgba(0, 0, 0, 0.92)"
+  blackAlpha9: "rgba(0, 0, 0, 0.92)",
 };

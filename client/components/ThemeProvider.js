@@ -1,6 +1,6 @@
 import React from "react";
 
-import theme from "../theme";
+import { theme } from "../theme";
 
 import { createTheming } from "@callstack/react-theme-provider";
 
@@ -11,7 +11,7 @@ const ThemeWrapper = ({ theme, children }) => (
 );
 
 ThemeWrapper.defaultProps = {
-  theme
+  theme,
 };
 
 export default ThemeWrapper;

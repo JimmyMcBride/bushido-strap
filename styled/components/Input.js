@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { sideways, longways, boxSize, marg } from "../maps";
 import PropTypes from "prop-types";
-import theme from "../theme";
+import { theme } from "../theme";
 
 const Input = styled.input`
   color: ${props => (props.color ? props.color : "auto")};
@@ -32,5 +32,5 @@ Input.propTypes = {
   margin: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
-  box_size: PropTypes.string
+  box_size: PropTypes.string,
 };

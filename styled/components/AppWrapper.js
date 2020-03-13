@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../theme";
+import { theme } from "../theme";
 import { marg, pad, bgCover, bgFixed } from "../maps";
 
 // root container for the application
