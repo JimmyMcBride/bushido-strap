@@ -2,7 +2,7 @@
 // export { default as useTheme } from "./styled/provider/useTheme";
 // export { default as withTheme } from "./styled/provider/withTheme";
 // export { default as ThemeProvider } from "./styled/provider/ThemeProvider";
-import { theme } from "./styled/theme";
+export { theme } from "./styled/theme";
 
 // export style components
 export { default as AppWrapper } from "./styled/components/AppWrapper";
