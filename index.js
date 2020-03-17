@@ -32,3 +32,4 @@ export { default as Select } from "./styled/components/Select";
 export { default as Option } from "./styled/components/Option";
 export { default as TextArea } from "./styled/components/TextArea";
 export { default as ToolTip } from "./styled/components/ToolTip";
+export { default as Ref } from "./styled/components/Ref";
