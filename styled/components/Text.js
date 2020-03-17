@@ -25,6 +25,7 @@ const Text = styled.div`
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   font-size: ${props => (props.f_size ? props.f_size : fontSize)};
   font-weight: ${props => (props.weight ? props.weight : fontWeight)};
+  text-decoration: ${props => (props.textDec ? props.textDec : "none")}
   text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
@@ -56,4 +57,5 @@ Text.propTypes = {
   hvrP: PropTypes.string,
   hvrColor: PropTypes.string,
   hvrBg: PropTypes.string,
+  textDec: PropTypes.string,
 };
