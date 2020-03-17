@@ -49,8 +49,6 @@ const NavLink = styled(Lnk)`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
     height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    margin: ${props => (props.hvrM ? props.hvrM : btnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : btnPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
     cursor: ${cursorStyle};

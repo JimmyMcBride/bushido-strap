@@ -7,8 +7,6 @@ import {
   textAlign,
   cursorStyle,
   hvrWidth,
-  hvrBtnMarg,
-  hvrBtnPad,
 } from "../maps";
 
 const Option = styled.option`
@@ -30,8 +28,6 @@ const Option = styled.option`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
     height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

@@ -19,8 +19,6 @@ const Select = styled.select`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : sideways)};
     height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    margin: ${props => (props.hvrM ? props.hvrM : btnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : btnPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

@@ -16,8 +16,6 @@ import {
   btnPad,
   cursorStyle,
   hvrWidth,
-  hvrBtnMarg,
-  hvrBtnPad,
   activeBackground,
 } from "../maps";
 import PropTypes from "prop-types";
@@ -50,8 +48,6 @@ const Button = styled.button`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
     height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
     cursor: ${cursorStyle};
