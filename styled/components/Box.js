@@ -20,6 +20,7 @@ const Box = styled.div`
   min-width: ${props => (props.min_w ? props.min_w : "auto")};
   max-height: ${props => (props.max_h ? props.max_h : "auto")};
   background: ${props => (props.bg ? props.bg : "none")};
+  border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   color: ${props => (props.color ? props.color : "auto")};
   margin: ${props => (props.m ? props.m : marg)};
