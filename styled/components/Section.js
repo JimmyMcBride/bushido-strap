@@ -30,10 +30,10 @@ const Section = styled.section`
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.p ? props.p : pad)};
   margin: ${props => (props.m ? props.m : marg)};
-  min-height: ${props => (props.min_h ? props.min_h : "auto")};
-  max-width: ${props => (props.max_w ? props.max_w : "auto")};
-  min-width: ${props => (props.min_w ? props.min_w : "auto")};
-  max-height: ${props => (props.max_h ? props.max_h : "auto")};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
@@ -89,10 +89,10 @@ Section.propTypes = {
   w: PropTypes.string,
   background: PropTypes.string,
   color: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   p: PropTypes.string,
   m: PropTypes.string,
   opacity: PropTypes.string,

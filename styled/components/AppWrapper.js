@@ -6,21 +6,25 @@ import { marg, pad, bgCover, bgFixed } from "../maps";
 // root container for the application
 const AppWrapper = styled.div`
   background: ${props => (props.bg ? props.bg : theme.gray2)};
-  background-image: ${props =>
-    props.bg_src ? `url(${props.bg_src})` : "none"};
+  background-image: ${props => (props.bgSrc ? `url(${props.bgSrc})` : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   font-family: ${props => (props.font ? props.font : '"Raleway", sans-serif')};
   background-position: ${props =>
-    props.bg_position ? props.bg_position : "center"};
+    props.bgPosition ? props.bgPosition : "center"};
   background-repeat: ${props =>
-    props.bg_repeat ? props.bg_repeat : "no-repeat"};
+    props.bgRepeat ? props.bgRepeat : "no-repeat"};
   background-attachment: ${props =>
-    props.bg_attachment ? props.bg_attachment : bgFixed};
-  background-size: ${props => (props.bg_size ? props.bg_size : bgCover)};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
+    props.bgAttachment ? props.bgAttachment : bgFixed};
+  background-size: ${props => (props.bgSize ? props.bgSize : bgCover)};
+  position: ${props => (props.position ? props.position : "relative")};
+  top: ${props => (props.top ? props.top : "auto")}
+  right: ${props => (props.right ? props.right : "auto")}
+  bottom: ${props => (props.bottom ? props.bottom : "auto")}
+  left: ${props => (props.left ? props.left : "auto")}
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
   h1,
@@ -41,17 +45,21 @@ export default AppWrapper;
 AppWrapper.propTypes = {
   m: PropTypes.string,
   p: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
+  top: PropTypes.string,
+  right: PropTypes.string,
+  left: PropTypes.string,
+  bottom: PropTypes.string,
   bg: PropTypes.string,
-  bg_src: PropTypes.string,
+  bgSrc: PropTypes.string,
   opacity: PropTypes.string,
   font: PropTypes.string,
   head_font: PropTypes.string,
-  bg_position: PropTypes.string,
-  bg_repeat: PropTypes.string,
-  bg_attachment: PropTypes.string,
-  bg_size: PropTypes.string,
+  bgPosition: PropTypes.string,
+  bgRepeat: PropTypes.string,
+  bgAttachment: PropTypes.string,
+  bgSize: PropTypes.string,
 };

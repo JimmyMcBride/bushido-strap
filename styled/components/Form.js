@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   flexWrap,
   boxSize,
   marg,
@@ -11,6 +10,7 @@ import {
   centerAlign,
   flexContent,
   textAlign,
+  cursorStyle,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -24,12 +24,19 @@ const Form = styled.form`
   align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.bg ? props.bg : "none")};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.p ? props.p : pad)};
   margin: ${props => (props.m ? props.m : marg)};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
+  &:hover {
+    cursor: ${cursorStyle};
+  }
 `;
 
 export default Form;
@@ -78,6 +85,10 @@ Form.propTypes = {
 
   h: PropTypes.string,
   w: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   background: PropTypes.string,
   min_h: PropTypes.string,
   max_w: PropTypes.string,

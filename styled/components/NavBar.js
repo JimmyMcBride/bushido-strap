@@ -20,17 +20,21 @@ const NavBar = styled.nav`
   justify-content: ${props => (props.justify ? props.justify : flexJustify)};
   align-items: ${props => (props.align ? props.align : flexItems)};
   align-content: ${props => (props.content ? props.content : flexContent)};
-  position: ${props => (props.position ? props.position : "fixed")};
+  position: ${props => (props.position ? props.position : "relative")};
   background: ${props => (props.bg ? props.bg : "none")};
   color: ${props => (props.color ? props.color : "auto")};
   height: ${props => (props.h ? props.h : "auto")};
   width: ${props => (props.w ? props.w : "100%")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
+  top: ${props => (props.top ? props.top : "auto")}
+  right: ${props => (props.right ? props.right : "auto")}
+  bottom: ${props => (props.bottom ? props.bottom : "auto")}
+  left: ${props => (props.left ? props.left : "auto")}
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
@@ -84,11 +88,15 @@ NavBar.propTypes = {
   p: PropTypes.string,
   m: PropTypes.string,
   bg: PropTypes.string,
+  top: PropTypes.string,
+  right: PropTypes.string,
+  left: PropTypes.string,
+  bottom: PropTypes.string,
   color: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  max_h: PropTypes.string,
-  min_w: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string,
   position: PropTypes.string,

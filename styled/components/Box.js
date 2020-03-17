@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   boxShadow,
   boxSize,
   shape,
@@ -9,16 +8,20 @@ import {
   pad,
   flow,
   textAlign,
+  cursorStyle,
+  hvrBtnMarg,
+  hvrBtnPad,
+  hvrWidth,
 } from "../maps";
 import PropTypes from "prop-types";
 
 const Box = styled.div`
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
-  min-height: ${props => (props.min_h ? props.min_h : "auto")};
-  max-width: ${props => (props.max_w ? props.max_w : "auto")};
-  min-width: ${props => (props.min_w ? props.min_w : "auto")};
-  max-height: ${props => (props.max_h ? props.max_h : "auto")};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   background: ${props => (props.bg ? props.bg : "none")};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.1rem")};
@@ -27,7 +30,7 @@ const Box = styled.div`
   padding: ${props => (props.p ? props.p : pad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
-  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  box-sizing: ${props => (props.boxSize ? props.boxSize : boxSize)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   text-align: ${textAlign};
@@ -35,16 +38,29 @@ const Box = styled.div`
     width: 100%;
     height: auto;
   }
+
+  &:hover {
+    border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
+    width: ${props =>
+      props.hvrW ? props.hvrW : props.hvrSqr ? props.hvrSqr : hvrWidth};
+    height: ${props =>
+      props.hvrH ? props.hvrH : props.hvrSqr ? props.hvrSqr : "auto"};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
+    color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
+    background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
+    cursor: ${cursorStyle};
+  }
 `;
 
 export default Box;
 
 Box.propTypes = {
   // CUSTOM PROPTYPES
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   h: PropTypes.string,
   w: PropTypes.string,
   bg: PropTypes.string,
@@ -54,8 +70,15 @@ Box.propTypes = {
   p: PropTypes.string,
   opacity: PropTypes.string,
   shadow: PropTypes.string,
-  box_size: PropTypes.string,
+  boxSize: PropTypes.string,
   ovr_flow: PropTypes.string,
   clip: PropTypes.string,
   sqr: PropTypes.string,
+  hvrBorder: PropTypes.string,
+  hvrW: PropTypes.string,
+  hvrH: PropTypes.string,
+  hvrM: PropTypes.string,
+  hvrP: PropTypes.string,
+  hvrColor: PropTypes.string,
+  hvrBg: PropTypes.string,
 };

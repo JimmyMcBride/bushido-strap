@@ -24,10 +24,10 @@ const Wrapper = styled.div`
   background: ${props => (props.bg ? props.bg : "none")};
   height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
-  min-height: ${props => (props.min_h ? props.min_h : "100vh")};
-  max-width: ${props => (props.max_w ? props.max_w : "100vw")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
+  min-height: ${props => (props.minH ? props.minH : "100vh")};
+  max-width: ${props => (props.maxW ? props.maxW : "100vw")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
@@ -82,10 +82,10 @@ Wrapper.propTypes = {
   h: PropTypes.string,
   w: PropTypes.string,
   sqr: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   bg: PropTypes.string,
   opacity: PropTypes.string,
 };

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import {
   marg,
   pad,
-  longways,
   flexWrap,
   columnDirection,
   flexJustify,
@@ -13,6 +12,7 @@ import {
   bgCover,
   bgAttach,
   invertColor,
+  cursorStyle,
 } from "../maps";
 
 // root container for the application
@@ -25,26 +25,28 @@ const Container = styled.div`
   align-items: ${props => (props.align ? props.align : centerAlign)};
   align-content: ${props => (props.content ? props.content : flexContent)};
   background: ${props => (props.bg ? props.bg : "white")};
-  background-image: ${props =>
-    props.bg_src ? `url(${props.bg_src})` : "none"};
+  background-image: ${props => (props.bgSrc ? `url(${props.bgSrc})` : "none")};
   background-position: ${props =>
-    props.bg_position ? props.bg_position : "center"};
+    props.bgPosition ? props.bgPosition : "center"};
   background-repeat: ${props =>
-    props.bg_repeat ? props.bg_repeat : "no-repeat"};
+    props.bgRepeat ? props.bgRepeat : "no-repeat"};
   background-attachment: ${props =>
-    props.bg_attachment ? props.bg_attachment : bgAttach};
-  background-size: ${props => (props.bg_size ? props.bg_size : bgCover)};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
+    props.bgAttachment ? props.bgAttachment : bgAttach};
+  background-size: ${props => (props.bgSize ? props.bgSize : bgCover)};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   width: ${props => (props.w ? props.w : "100%")};
-  height: ${props => (props.h ? props.h : longways)};
+  height: ${props => (props.h ? props.h : "auto")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   text-align: ${textAlign};
   color: ${invertColor};
+  &:hover {
+    cursor: ${cursorStyle};
+  }
 `;
 
 export default Container;
@@ -92,17 +94,17 @@ Container.propTypes = {
   ]),
   m: PropTypes.string,
   p: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   bg: PropTypes.string,
-  bg_src: PropTypes.string,
+  bgSrc: PropTypes.string,
   opacity: PropTypes.string,
   font: PropTypes.string,
   head_font: PropTypes.string,
-  bg_position: PropTypes.string,
-  bg_repeat: PropTypes.string,
-  bg_attachment: PropTypes.string,
-  bg_size: PropTypes.string,
+  bgPosition: PropTypes.string,
+  bgRepeat: PropTypes.string,
+  bgAttachment: PropTypes.string,
+  bgSize: PropTypes.string,
 };

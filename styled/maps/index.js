@@ -1,5 +1,5 @@
 export { default as sideways } from "./styles/width";
-export { default as longways } from "./styles/height";
+export { default as hvrWidth } from "./styles/hoverWidth";
 export { default as boxShadow } from "./styles/box/boxShadow";
 export { default as defaultShadow } from "./styles/box/defaultShadow";
 export { default as boxSize } from "./styles/box/boxSizing";
@@ -33,3 +33,8 @@ export { default as fontSize } from "./styles/fontSize";
 export { default as fontWeight } from "./styles/fontWeight";
 export { default as textMarg } from "./styles/text/marg";
 export { default as textPad } from "./styles/text/pad";
+export { default as cursorStyle } from "./styles/cursorStyle";
+export { default as hvrBtnMarg } from "./styles/button/hoverMargin";
+export { default as hvrBtnPad } from "./styles/button/hoverPadding";
+export { default as hvrMarg } from "./styles/hoverMargin";
+export { default as hvrPad } from "./styles/hoverPadding";

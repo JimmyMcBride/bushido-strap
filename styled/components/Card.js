@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   flexWrap,
   boxSize,
   defaultShadow,
@@ -12,6 +11,9 @@ import {
   cardBackground,
   cardColor,
   textAlign,
+  hvrBtnMarg,
+  hvrBtnPad,
+  hvrWidth,
 } from "../maps";
 
 import PropTypes from "prop-types";
@@ -26,12 +28,12 @@ const Card = styled.div`
   align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : cardColor)};
   background: ${props => (props.bg ? props.bg : cardBackground)};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
   padding: ${props => (props.p ? props.p : "0.5rem 1rem")};
@@ -40,6 +42,16 @@ const Card = styled.div`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
+  &:hover {
+    border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
+    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
+    height: ${props => (props.hvrH ? props.hvrH : "auto")};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
+    color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
+    background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
+    cursor: ${cursorStyle};
+  }
 `;
 
 export default Card;
@@ -86,10 +98,10 @@ Card.propTypes = {
     "inherit",
   ]),
 
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
-  min_w: PropTypes.string,
-  max_h: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   h: PropTypes.string,
   w: PropTypes.string,
   color: PropTypes.string,
@@ -102,4 +114,11 @@ Card.propTypes = {
   opacity: PropTypes.string,
   box_size: PropTypes.string,
   shadow: PropTypes.string,
+  hvrBorder: PropTypes.string,
+  hvrW: PropTypes.string,
+  hvrH: PropTypes.string,
+  hvrM: PropTypes.string,
+  hvrP: PropTypes.string,
+  hvrColor: PropTypes.string,
+  hvrBg: PropTypes.string,
 };

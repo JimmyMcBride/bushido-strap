@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   boxShadow,
   boxSize,
   flexWrap,
@@ -14,6 +13,10 @@ import {
   flexItems,
   flexContent,
   textAlign,
+  cursorStyle,
+  hvrBtnMarg,
+  hvrBtnPad,
+  hvrWidth,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -29,20 +32,32 @@ const Flex = styled.div`
   background: ${props => (props.bg ? props.bg : "none")};
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.1rem")};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
-  padding: ${props => (props.padding ? props.padding : pad)};
-  margin: ${props => (props.margin ? props.margin : marg)};
-  min-height: ${props => (props.min_h ? props.min_h : "none")};
-  max-width: ${props => (props.max_w ? props.max_w : "none")};
-  min-width: ${props => (props.min_w ? props.min_w : "none")};
-  max-height: ${props => (props.max_h ? props.max_h : "none")};
+  padding: ${props => (props.p ? props.p : pad)};
+  margin: ${props => (props.m ? props.m : marg)};
+  min-height: ${props => (props.minH ? props.minH : "none")};
+  max-width: ${props => (props.maxW ? props.maxW : "none")};
+  min-width: ${props => (props.minW ? props.minW : "none")};
+  max-height: ${props => (props.maxH ? props.maxH : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
   text-align: ${textAlign};
+  &:hover {
+    border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
+    width: ${props =>
+      props.hvrW ? props.hvrW : props.hvrSqr ? props.hvrSqr : hvrWidth};
+    height: ${props =>
+      props.hvrH ? props.hvrH : props.hvrSqr ? props.hvrSqr : "auto"};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
+    color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
+    background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
+    cursor: ${cursorStyle};
+  }
 `;
 
 export default Flex;
@@ -93,8 +108,10 @@ Flex.propTypes = {
   w: PropTypes.string,
   bg: PropTypes.string,
   color: PropTypes.string,
-  min_h: PropTypes.string,
-  max_w: PropTypes.string,
+  minH: PropTypes.string,
+  maxW: PropTypes.string,
+  minW: PropTypes.string,
+  maxH: PropTypes.string,
   p: PropTypes.string,
   m: PropTypes.string,
   opacity: PropTypes.string,
@@ -102,4 +119,11 @@ Flex.propTypes = {
   box_size: PropTypes.string,
   clip: PropTypes.string,
   overflow: PropTypes.string,
+  hvrBorder: PropTypes.string,
+  hvrW: PropTypes.string,
+  hvrH: PropTypes.string,
+  hvrM: PropTypes.string,
+  hvrP: PropTypes.string,
+  hvrColor: PropTypes.string,
+  hvrBg: PropTypes.string,
 };
