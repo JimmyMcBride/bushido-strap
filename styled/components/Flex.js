@@ -14,9 +14,9 @@ import {
   flexContent,
   textAlign,
   cursorStyle,
-  hvrBtnMarg,
-  hvrBtnPad,
   hvrWidth,
+  hvrMarg,
+  hvrPad,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -52,8 +52,8 @@ const Flex = styled.div`
       props.hvrW ? props.hvrW : props.hvrSqr ? props.hvrSqr : hvrWidth};
     height: ${props =>
       props.hvrH ? props.hvrH : props.hvrSqr ? props.hvrSqr : "auto"};
-    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

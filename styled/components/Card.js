@@ -11,10 +11,10 @@ import {
   cardBackground,
   cardColor,
   textAlign,
-  hvrBtnMarg,
-  hvrBtnPad,
   hvrWidth,
   cursorStyle,
+  hvrPad,
+  hvrMarg,
 } from "../maps";
 
 import PropTypes from "prop-types";
@@ -47,8 +47,8 @@ const Card = styled.div`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
     height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    margin: ${props => (props.hvrM ? props.hvrM : hvrBtnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : hvrBtnPad)};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};
