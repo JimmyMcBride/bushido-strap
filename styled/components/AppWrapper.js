@@ -34,7 +34,7 @@ const AppWrapper = styled.div`
   h5,
   h6 {
     font-family: ${props =>
-      props.head_font ? props.head_font : '"Raleway", sans-serif'};
+      props.headFont ? props.headFont : '"Raleway", sans-serif'};
     line-height: 1.2;
     margin: 1.6rem;
   }
@@ -57,7 +57,7 @@ AppWrapper.propTypes = {
   bgSrc: PropTypes.string,
   opacity: PropTypes.string,
   font: PropTypes.string,
-  head_font: PropTypes.string,
+  headFont: PropTypes.string,
   bgPosition: PropTypes.string,
   bgRepeat: PropTypes.string,
   bgAttachment: PropTypes.string,
