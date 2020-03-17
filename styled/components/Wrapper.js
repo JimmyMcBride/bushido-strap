@@ -5,7 +5,6 @@ import {
   flexJustify,
   centerAlign,
   flexContent,
-  longways,
   sideways,
   marg,
   pad,
@@ -22,7 +21,7 @@ const Wrapper = styled.div`
   align-items: ${props => (props.align ? props.align : centerAlign)};
   align-content: ${props => (props.content ? props.content : flexContent)};
   background: ${props => (props.bg ? props.bg : "none")};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   min-height: ${props => (props.minH ? props.minH : "100vh")};
   max-width: ${props => (props.maxW ? props.maxW : "100vw")};

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   boxSize,
   marg,
   pad,
@@ -9,13 +8,16 @@ import {
   textAlign,
   fontWeight,
   cursorStyle,
+  hvrWidth,
+  hvrMarg,
+  hvrPad,
 } from "../maps";
 import PropTypes from "prop-types";
 
 const Text = styled.div`
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.background ? props.background : "none")};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.p ? props.p : pad)};
   margin: ${props => (props.m ? props.m : marg)};
@@ -29,10 +31,10 @@ const Text = styled.div`
   text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : sideways)};
-    height: ${props => (props.hvrH ? props.hvrH : longways)};
-    margin: ${props => (props.hvrM ? props.hvrM : btnMarg)};
-    padding: ${props => (props.hvrP ? props.hvrP : btnPad)};
+    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
+    height: ${props => (props.hvrH ? props.hvrH : "auto")};
+    margin: ${props => (props.hvrM ? props.hvrM : hvrMarg)};
+    padding: ${props => (props.hvrP ? props.hvrP : hvrPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

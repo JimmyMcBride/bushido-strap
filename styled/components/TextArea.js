@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   boxSize,
   textMarg,
   textPad,
@@ -16,7 +15,7 @@ const TextArea = styled.textarea`
   padding: ${props => (props.p ? props.p : textPad)};
   margin: ${props => (props.m ? props.m : textMarg)};
   width: ${props => (props.w ? props.w : sideways)};
-  height: ${props => (props.h ? props.h : longways)};
+  height: ${props => (props.h ? props.h : "auto")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   border: ${props => (props.border ? props.border : `0.5px solid #C4C4C4`)};
   min-height: ${props => (props.minH ? props.minH : "none")};

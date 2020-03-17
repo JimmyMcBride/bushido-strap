@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {
   sideways,
-  longways,
   boxShadow,
   boxSize,
   flexWrap,
@@ -29,7 +28,7 @@ const ToolTip = styled.div`
   align-content: ${props => (props.content ? props.content : flexContent)};
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.background ? props.background : "none")};
-  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : longways)};
+  height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.p ? props.p : pad)};
   margin: ${props => (props.m ? props.m : marg)};

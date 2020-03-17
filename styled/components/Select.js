@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import {
-  sideways,
-  longways,
-  boxSize,
-  textMarg,
-  textPad,
-  cursorStyle,
-} from "../maps";
+import { sideways, boxSize, textMarg, textPad, cursorStyle } from "../maps";
 
 const Select = styled.select`
   color: ${props => (props.color ? props.color : "auto")};
@@ -15,7 +8,7 @@ const Select = styled.select`
   padding: ${props => (props.p ? props.p : textPad)};
   margin: ${props => (props.m ? props.m : textMarg)};
   width: ${props => (props.w ? props.w : sideways)};
-  height: ${props => (props.h ? props.h : longways)};
+  height: ${props => (props.h ? props.h : "auto")};
   min-height: ${props => (props.minH ? props.minH : "none")};
   max-width: ${props => (props.maxW ? props.maxW : "none")};
   min-width: ${props => (props.minW ? props.minW : "none")};
@@ -25,7 +18,7 @@ const Select = styled.select`
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : sideways)};
-    height: ${props => (props.hvrH ? props.hvrH : longways)};
+    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     margin: ${props => (props.hvrM ? props.hvrM : btnMarg)};
     padding: ${props => (props.hvrP ? props.hvrP : btnPad)};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
