@@ -27,8 +27,10 @@ const NavBar = styled.nav`
   width: ${props => (props.w ? props.w : "100%")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
-  min-height: ${props => (props.min_h ? props.min_h : "auto")};
-  max-width: ${props => (props.max_w ? props.max_w : "auto")};
+  min-height: ${props => (props.min_h ? props.min_h : "none")};
+  max-width: ${props => (props.max_w ? props.max_w : "none")};
+  max-height: ${props => (props.max_h ? props.max_h : "none")};
+  min-width: ${props => (props.min_w ? props.min_w : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
@@ -85,6 +87,8 @@ NavBar.propTypes = {
   color: PropTypes.string,
   min_h: PropTypes.string,
   max_w: PropTypes.string,
+  max_h: PropTypes.string,
+  min_w: PropTypes.string,
   opacity: PropTypes.string,
   box_size: PropTypes.string,
   position: PropTypes.string,
