@@ -14,8 +14,8 @@ import {
   buttonHoverBackground,
   btnMarg,
   btnPad,
-  cursorStyle,
   activeBackground,
+  buttonCursorStyle,
 } from "../maps";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -48,7 +48,7 @@ const Linkton = styled(Link)`
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
-    cursor: ${cursorStyle};
+    cursor: ${buttonCursorStyle};
   }
 
   &:active {

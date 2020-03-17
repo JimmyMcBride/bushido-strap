@@ -20,6 +20,7 @@ export { default as buttonColor } from "./styles/button/color";
 export { default as buttonBackground } from "./styles/button/background";
 export { default as buttonHoverColor } from "./styles/button/hoverColor";
 export { default as buttonHoverBackground } from "./styles/button/hoverBackground";
+export { default as buttonCursorStyle } from "./styles/button/cursorStyle";
 export { default as btnMarg } from "./styles/button/margin";
 export { default as btnPad } from "./styles/button/padding";
 export { default as textAlign } from "./styles/textAlign";
