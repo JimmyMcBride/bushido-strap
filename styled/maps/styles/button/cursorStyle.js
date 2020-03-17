@@ -38,5 +38,5 @@ export default styledMap`
   zoomOut: zoom-out;
   initial: initial;
   inherit: inherit;
-  default: auto;
+  default: pointer;
 `;
