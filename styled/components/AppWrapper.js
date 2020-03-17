@@ -16,11 +16,11 @@ const AppWrapper = styled.div`
   background-attachment: ${props =>
     props.bgAttachment ? props.bgAttachment : bgFixed};
   background-size: ${props => (props.bgSize ? props.bgSize : bgCover)};
-  position: ${props => (props.position ? props.position : "absolute")};
-  top: ${props => (props.top ? props.top : 0)}
-  right: ${props => (props.right ? props.right : 0)}
-  bottom: ${props => (props.bottom ? props.bottom : 0)}
-  left: ${props => (props.left ? props.left : 0)}
+  // position: ${props => (props.position ? props.position : "absolute")};
+  // top: ${props => (props.top ? props.top : 0)}
+  // right: ${props => (props.right ? props.right : 0)}
+  // bottom: ${props => (props.bottom ? props.bottom : 0)}
+  // left: ${props => (props.left ? props.left : 0)}
   min-height: ${props => (props.minH ? props.minH : "none")};
   max-width: ${props => (props.maxW ? props.maxW : "none")};
   min-width: ${props => (props.minW ? props.minW : "none")};
@@ -49,10 +49,10 @@ AppWrapper.propTypes = {
   maxW: PropTypes.string,
   minW: PropTypes.string,
   maxH: PropTypes.string,
-  top: PropTypes.string,
-  right: PropTypes.string,
-  left: PropTypes.string,
-  bottom: PropTypes.string,
+  // top: PropTypes.string,
+  // right: PropTypes.string,
+  // left: PropTypes.string,
+  // bottom: PropTypes.string,
   bg: PropTypes.string,
   bgSrc: PropTypes.string,
   opacity: PropTypes.string,
