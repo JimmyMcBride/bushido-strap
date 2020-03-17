@@ -18,6 +18,7 @@ import {
   hvrWidth,
   hvrBtnMarg,
   hvrBtnPad,
+  activeBackground,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -44,6 +45,7 @@ const Button = styled.button`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textCenter};
+
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
@@ -53,6 +55,11 @@ const Button = styled.button`
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
     cursor: ${cursorStyle};
+  }
+
+  &:active {
+    background: ${props =>
+      props.activeBg ? props.activeBg : activeBackground};
   }
 `;
 

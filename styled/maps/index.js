@@ -36,5 +36,6 @@ export { default as textPad } from "./styles/text/pad";
 export { default as cursorStyle } from "./styles/cursorStyle";
 export { default as hvrBtnMarg } from "./styles/button/hoverMargin";
 export { default as hvrBtnPad } from "./styles/button/hoverPadding";
+export { default as activeBackground } from "./styles/button/activeBackground";
 export { default as hvrMarg } from "./styles/hoverMargin";
 export { default as hvrPad } from "./styles/hoverPadding";
