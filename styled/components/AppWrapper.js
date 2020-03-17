@@ -16,11 +16,11 @@ const AppWrapper = styled.div`
   background-attachment: ${props =>
     props.bgAttachment ? props.bgAttachment : bgFixed};
   background-size: ${props => (props.bgSize ? props.bgSize : bgCover)};
-  position: ${props => (props.position ? props.position : "relative")};
-  top: ${props => (props.top ? props.top : "auto")}
-  right: ${props => (props.right ? props.right : "auto")}
-  bottom: ${props => (props.bottom ? props.bottom : "auto")}
-  left: ${props => (props.left ? props.left : "auto")}
+  position: ${props => (props.position ? props.position : "absolute")};
+  top: ${props => (props.top ? props.top : 0)}
+  right: ${props => (props.right ? props.right : 0)}
+  bottom: ${props => (props.bottom ? props.bottom : 0)}
+  left: ${props => (props.left ? props.left : 0)}
   min-height: ${props => (props.minH ? props.minH : "none")};
   max-width: ${props => (props.maxW ? props.maxW : "none")};
   min-width: ${props => (props.minW ? props.minW : "none")};
