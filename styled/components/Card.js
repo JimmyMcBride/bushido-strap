@@ -14,6 +14,7 @@ import {
   hvrBtnMarg,
   hvrBtnPad,
   hvrWidth,
+  cursorStyle,
 } from "../maps";
 
 import PropTypes from "prop-types";
