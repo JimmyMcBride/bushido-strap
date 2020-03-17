@@ -15,14 +15,6 @@ const Select = styled.select`
   max-height: ${props => (props.maxH ? props.maxH : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   border: ${props => (props.border ? props.border : `0.5px solid #C4C4C4`)};
-  &:hover {
-    border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : sideways)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
-    color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
-    background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
-    cursor: ${cursorStyle};
-  }
 `;
 
 export default Select;

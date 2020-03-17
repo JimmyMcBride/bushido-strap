@@ -11,7 +11,6 @@ import {
   cardBackground,
   cardColor,
   textAlign,
-  hvrWidth,
   cursorStyle,
 } from "../maps";
 
@@ -43,8 +42,6 @@ const Card = styled.div`
   text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sideways, boxSize, marg, cursorStyle, hvrWidth } from "../maps";
+import { sideways, boxSize, marg, cursorStyle } from "../maps";
 import PropTypes from "prop-types";
 import { theme } from "../theme";
 
@@ -21,8 +21,6 @@ const Input = styled.input`
   &:hover {
     border: ${props =>
       props.hvrBorder ? props.hvrBorder : `0.2rem solid ${theme.blue1}`};
-    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : theme.whiteAlpha6)};
     cursor: ${cursorStyle};

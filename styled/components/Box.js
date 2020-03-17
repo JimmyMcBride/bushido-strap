@@ -9,7 +9,6 @@ import {
   flow,
   textAlign,
   cursorStyle,
-  hvrWidth,
 } from "../maps";
 import PropTypes from "prop-types";
 
@@ -39,10 +38,6 @@ const Box = styled.div`
 
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props =>
-      props.hvrW ? props.hvrW : props.hvrSqr ? props.hvrSqr : hvrWidth};
-    height: ${props =>
-      props.hvrH ? props.hvrH : props.hvrSqr ? props.hvrSqr : "auto"};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};

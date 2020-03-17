@@ -15,7 +15,6 @@ import {
   btnMarg,
   btnPad,
   cursorStyle,
-  hvrWidth,
   activeBackground,
 } from "../maps";
 import { NavLink as Lnk } from "react-router-dom";
@@ -47,8 +46,6 @@ const NavLink = styled(Lnk)`
 
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
     cursor: ${cursorStyle};

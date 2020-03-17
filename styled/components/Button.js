@@ -15,7 +15,6 @@ import {
   btnMarg,
   btnPad,
   cursorStyle,
-  hvrWidth,
   activeBackground,
 } from "../maps";
 import PropTypes from "prop-types";
@@ -46,8 +45,6 @@ const Button = styled.button`
 
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
     background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
     cursor: ${cursorStyle};

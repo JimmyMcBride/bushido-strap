@@ -6,7 +6,6 @@ import {
   textPad,
   textAlign,
   cursorStyle,
-  hvrWidth,
 } from "../maps";
 
 const Option = styled.option`
@@ -26,8 +25,6 @@ const Option = styled.option`
   text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    width: ${props => (props.hvrW ? props.hvrW : hvrWidth)};
-    height: ${props => (props.hvrH ? props.hvrH : "auto")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
     background: ${props => (props.hvrBg ? props.hvrBg : "auto")};
     cursor: ${cursorStyle};
