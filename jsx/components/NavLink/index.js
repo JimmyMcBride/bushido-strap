@@ -11,7 +11,6 @@ import {
   centerAlign,
   flexContent,
   sideways,
-  longways,
   boxSize,
   buttonColor,
   buttonBackground,
@@ -54,7 +53,7 @@ const Link = styled(Lnk)`
   border: ${props => (props.border ? props.border : "none")};
   border-radius: ${props => (props.radius ? props.radius : "0.5rem")};
   width: ${props => (props.w ? props.w : sideways)};
-  height: ${props => (props.h ? props.h : longways)};
+  height: ${props => (props.h ? props.h : "auto")};
   margin: ${props => (props.m ? props.m : btnMarg)};
   padding: ${props => (props.p ? props.p : btnPad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
