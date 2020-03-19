@@ -210,9 +210,9 @@ html body code {
   border-radius: 0.3rem;
 }
 
-html body button:focus {
+/* html body button:focus {
   outline: 0;
-}
+} */
 
 html body img {
   border-radius: 0.4rem;
