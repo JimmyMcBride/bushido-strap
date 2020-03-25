@@ -22,7 +22,7 @@ const ModalWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1060;
+    // z-index: 1060;
     width: 100%;
     height: 100%;
     background-color: ${theme.blackAlpha8};
@@ -35,7 +35,7 @@ const ModalWrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    // z-index: 1050;
+    z-index: 1050;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
