@@ -41,7 +41,6 @@ const ToolTip = styled.div`
   box-sizing: ${props => (props.boxSize ? props.boxSize : boxSize)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   position: ${props => (props.position ? props.position : "relative")};
-  // overflow: ${props => (props.overflow ? props.overflow : flow)};
   text-align: ${textAlign};
 
   &:hover {

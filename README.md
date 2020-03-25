@@ -21,11 +21,11 @@ Example:
 export default function App() {
   return (
     <AppWrapper
-    bg_src={
+    bgSrc={
       /* This prop lets you easily set a responsive image as your background */
     }
     bg={/* Lets you set the background color of the app */}
-    head_font={/* Lets you change the font of all the headers in the app */}
+    headFont={/* Lets you change the font of all the headers in the app */}
     font={/* Lets you can the font of everything else in the app */}
   >
       <Route path="/" exact component={Dashboard} />
@@ -68,21 +68,21 @@ Example:
 | flex-direction    | col        | column         |
 | flex-direction    | revrow     | row-reverse    |
 | flex-direction    | revcol     | column-reverse |
-| justify-content   | jc_end     | center         |
-| justify-content   | jc_center  | space-between  |
-| justify-content   | jc_between | space-around   |
-| justify-content   | jc_around  | space-evenly   |
-| justify-content   | jc_evenly  | flex-start     |
-| align-items       | ai_center  | center         |
-| align-items       | ai_start   | flex-start     |
-| align-items       | ai_end     | flex-end       |
-| align-items       | ai_stretch | stretch        |
-| align-content     | ac_center  | center         |
-| align-content     | ac_start   | flex-start     |
-| align-content     | ac_end     | flex-end       |
-| align-content     | ac_between | space-between  |
-| align-content     | ac_around  | space-around   |
-| align-content     | ac_evenly  | space-evenly   |
+| justify-content   | jcEnd      | center         |
+| justify-content   | jcCenter   | space-between  |
+| justify-content   | jcBetween  | space-around   |
+| justify-content   | jcAround   | space-evenly   |
+| justify-content   | jcEvenly   | flex-start     |
+| align-items       | aiCenter   | center         |
+| align-items       | aiStart    | flex-start     |
+| align-items       | aiEnd      | flex-end       |
+| align-items       | aiStretch  | stretch        |
+| align-content     | acCenter   | center         |
+| align-content     | acStart    | flex-start     |
+| align-content     | acEnd      | flex-end       |
+| align-content     | acBetween  | space-between  |
+| align-content     | acAround   | space-around   |
+| align-content     | acEvenly   | space-evenly   |
 | flex-direction    | drape      | column         |
 | align-items       | drape      | center         |
 
@@ -90,8 +90,8 @@ Example:
 
 ```javascript
 // col changes flex-direction to column
-// ai_center changes align items to center
-<Flex col ai_center>...</Flex>
+// aiCenter changes align items to center
+<Flex col aiCenter>...</Flex>
 // drape changes flex-direction to column and align-items to center
 <Flex drape>...</Flex>
 ```
@@ -112,68 +112,68 @@ Example:
 | background          | bg        | none          |
 | color               | color     | auto          |
 | opacity             | opacity   | none          |
-| min-height          | min_h     | none          |
-| max-width           | max_w     | none          |
-| min-width           | min_w     | none          |
-| max-height          | max_h     | none          |
-| box-sizing          | box_size  | border-box    |
+| min-height          | minH      | none          |
+| max-width           | maxW      | none          |
+| min-width           | minW      | none          |
+| max-height          | maxH      | none          |
+| box-sizing          | boxSize   | border-box    |
 | box-shadow          | shadow    | none          |
 | overflow            | overflow  | hidden        |
 | font-family         | font      | Open Sans     |
-| font-size           | f_size    | 1.6rem        |
+| font-size           | fSize     | 1.6rem        |
 | clip-path           | clip      | none          |
-| background-size     | bg_size   | auto          |
-| background-attach   | bg_size   | scroll        |
-| background-position | bg_size   | center        |
+| background-size     | bgSize    | auto          |
+| background-attach   | bgSize    | scroll        |
+| background-position | bgSize    | center        |
 
 > The square prop changes width and height at the same time.
 
 **Style Maps:**
 
-| CSS Property Name | Style Prop     | Property Value               |
-| ----------------- | -------------- | ---------------------------- |
-| width             | stretch        | 100%                         |
-| margin            | xsm            | 1rem                         |
-| margin            | sm             | 2rem                         |
-| margin            | mm             | 3rem                         |
-| margin            | lm             | 4rem                         |
-| margin            | xlm            | 5rem                         |
-| padding           | xsp            | 1rem                         |
-| padding           | sp             | 2rem                         |
-| padding           | mp             | 3rem                         |
-| padding           | lp             | 4rem                         |
-| padding           | xlp            | 5rem                         |
-| font-size         | xsf            | 0.6rem                       |
-| font-size         | sf             | 1rem                         |
-| font-size         | mf             | 1.4rem                       |
-| font-size         | lf             | 2rem                         |
-| font-size         | xlf            | 3rem                         |
-| box-shadow        | shade          | 0 0.3rem 1rem ${theme.gray7} |
-| box-shadow        | backlight      | 0 0.3rem 1rem ${theme.gray0} |
-| box-sizing        | cbox           | content-box                  |
-| box-sizing        | init           | initial                      |
-| box-sizing        | inherit        | inherit                      |
-| overflow          | visible        | visible                      |
-| overflow          | scroll         | scroll                       |
-| overflow          | auto           | auto                         |
-| text-align        | ta_right       | right                        |
-| text-align        | ta_left        | left                         |
-| text-align        | ta_center      | center                       |
-| text-align        | ta_justify     | justify                      |
-| text-align        | ta_all         | justify-all                  |
-| text-align        | ta_start       | start                        |
-| text-align        | ta_end         | end                          |
-| background-size   | size_len       | length                       |
-| background-size   | size_cover     | cover                        |
-| background-size   | size_contain   | contain                      |
-| background-size   | size_initial   | initial                      |
-| background-size   | size_inherit   | inherit                      |
-| background-size   | size_auto      | auto                         |
-| background-attach | attach_fix     | fix                          |
-| background-attach | attach_local   | local                        |
-| background-attach | attach_inherit | inherit                      |
-| background-attach | attach_initial | initial                      |
-| background-attach | attach_scroll  | scroll                       |
+| CSS Property Name | Style Prop    | Property Value               |
+| ----------------- | ------------- | ---------------------------- |
+| width             | stretch       | 100%                         |
+| margin            | xsm           | 1rem                         |
+| margin            | sm            | 2rem                         |
+| margin            | mm            | 3rem                         |
+| margin            | lm            | 4rem                         |
+| margin            | xlm           | 5rem                         |
+| padding           | xsp           | 1rem                         |
+| padding           | sp            | 2rem                         |
+| padding           | mp            | 3rem                         |
+| padding           | lp            | 4rem                         |
+| padding           | xlp           | 5rem                         |
+| font-size         | xsf           | 0.6rem                       |
+| font-size         | sf            | 1rem                         |
+| font-size         | mf            | 1.4rem                       |
+| font-size         | lf            | 2rem                         |
+| font-size         | xlf           | 3rem                         |
+| box-shadow        | shade         | 0 0.3rem 1rem ${theme.gray7} |
+| box-shadow        | backlight     | 0 0.3rem 1rem ${theme.gray0} |
+| box-sizing        | cbox          | content-box                  |
+| box-sizing        | init          | initial                      |
+| box-sizing        | inherit       | inherit                      |
+| overflow          | visible       | visible                      |
+| overflow          | scroll        | scroll                       |
+| overflow          | auto          | auto                         |
+| text-align        | taRight       | right                        |
+| text-align        | taLeft        | left                         |
+| text-align        | taCenter      | center                       |
+| text-align        | taJustify     | justify                      |
+| text-align        | taAll         | justify-all                  |
+| text-align        | taStart       | start                        |
+| text-align        | taEnd         | end                          |
+| background-size   | sizeLen       | length                       |
+| background-size   | sizeCover     | cover                        |
+| background-size   | sizeContain   | contain                      |
+| background-size   | sizeInitial   | initial                      |
+| background-size   | sizeInherit   | inherit                      |
+| background-size   | sizeAuto      | auto                         |
+| background-attach | attachFix     | fix                          |
+| background-attach | attachLocal   | local                        |
+| background-attach | attachInherit | inherit                      |
+| background-attach | attachInitial | initial                      |
+| background-attach | attachScroll  | scroll                       |
 
 ## New Semantic Components!
 
@@ -195,7 +195,7 @@ Example:
 
 ```javascript
 // Bold text, font size 2rem, text align center, font Georgia
-<Text bold lf ta_center font="Georgia">
+<Text bold lf taCenter font="Georgia">
   Some text here...
 </Text>
 ```
@@ -219,7 +219,7 @@ Box's also have a prop for background, so you can set a background color, a widt
 Example:
 
 ```javascript
-<Flex w="20rem" h="10rem" jc_around ai_center shade>
+<Flex w="20rem" h="10rem" jcAround aiCenter shade>
   <Box star bg="red" sqr="5rem" />
   <Box message bg="green" sqr="5rem" />
   <Box octagon bg="blue" sqr="5rem" />
@@ -269,7 +269,7 @@ Example:
 
 ```javascript
 // Bold text, font size 2rem, text align center, font Georgia
-<Text bold lf ta_center font="Georgia">
+<Text bold lf taCenter font="Georgia">
   Some text here...
 </Text>
 ```
@@ -318,22 +318,22 @@ export default function Component() {
 
 TooTip component has all the same props as Flex, but it has a special feature! After adding your element, you can place a div under it with a className of "tooltip". Whatever you put inside this "tooltip" div will be invisible until you hover over or focus on the element you nested inside your ToolTip component. In addition to the Flex props, there are a couple of extra props that ToolTip has so that you can edit your "tooltip" element and position.
 
-tt_w: edits the **width** of the tooltip
-tt_h: edits the **height** of the tooltip
-tt_color: edits the **color** of the tooltip
-tt_bg: edits the **background color** of the tooltip
-tt_top: edits the **top position** of the tooltip
-tt_right: edits the **right position** of the tooltip
-tt_bottom: edits the **bottom position** of the tooltip
-tt_left: edits the **left position** of the tooltip
-tt_radius: edits the **radius** of the tooltip
-tt_zIndex: edits the **z index** of the tooltip
+ttW: edits the **width** of the tooltip
+ttH: edits the **height** of the tooltip
+ttColor: edits the **color** of the tooltip
+ttBg: edits the **background color** of the tooltip
+ttTop: edits the **top position** of the tooltip
+ttRight: edits the **right position** of the tooltip
+ttBottom: edits the **bottom position** of the tooltip
+ttLeft: edits the **left position** of the tooltip
+ttRadius: edits the **radius** of the tooltip
+ttZindex: edits the **z index** of the tooltip
 
 Example:
 
 ```javascript
 // using tt props to edit tool tip position and size
-<ToolTip tt_left="105%" tabIndex={0} tt_w="12rem" tt_top="25%">
+<ToolTip ttLeft="105%" tabIndex={0} ttW="12rem" ttTop="25%">
   {/* These two Box's make up the content that we want to add a tooltip too */}
   <Box bg={theme.primary} circle p="2rem">
     <Box sqr="2rem" window bg="white" />
@@ -341,7 +341,7 @@ Example:
   {/* Our "tooltip" div is the container for what we want to show in our
   tooltip on focus or hover. */}
   <div class="tooltip">
-    <Text bold lf ta_center>
+    <Text bold lf taCenter>
       Tooltip text
     </Text>
   </div>
@@ -352,14 +352,14 @@ Example:
 
 ### Container
 
-Container is a component that's main purpose is to provide a background image. It also can set colors as the background but the css for images is set for responsiveness. If you need things to lay on top of a background image this is the component to use. Just wrap the content in Container and set bg_src prop to the location/URL of your image. It also has flex enabled and all sizing props. By default justify content is column and align items is center. You can change these individually to you own desire. You can also use the `across` props to set them to flex-start / normal respectively.
+Container is a component that's main purpose is to provide a background image. It also can set colors as the background but the css for images is set for responsiveness. If you need things to lay on top of a background image this is the component to use. Just wrap the content in Container and set bgSrc prop to the location/URL of your image. It also has flex enabled and all sizing props. By default justify content is column and align items is center. You can change these individually to you own desire. You can also use the `across` props to set them to flex-start / normal respectively.
 
 Example:
 
 ```javascript
 <Wrapper>
   {/* Add invert prop to make text white instead of black */}
-  <Container bg_src={image} h="50vh" invert>
+  <Container bgSrc={image} h="50vh" invert>
     <h3>Stuff...</h3>
     <h3>Stuff...</h3>
     <h3>Stuff...</h3>
@@ -499,12 +499,12 @@ Example:
 | clip-path         | decagon       | polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)                   |
 | clip-path         | bevel         | polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)                                     |
 | clip-path         | rabbet        | polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%) |
-| clip-path         | arrow_left    | polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%) |
-| clip-path         | arrow_right   | polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)                                               |
-| clip-path         | point_left    | polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%)                                                               |
-| clip-path         | point_right   | polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)                                                                 |
-| clip-path         | chevron_left  | polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)                                                      |
-| clip-path         | chevron_right | polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)                                                        |
+| clip-path         | arrowLeft     | polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%) |
+| clip-path         | arrowRight    | polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)                                               |
+| clip-path         | pointLeft     | polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%)                                                               |
+| clip-path         | pointRight    | polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)                                                                 |
+| clip-path         | chevronLeft   | polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)                                                      |
+| clip-path         | chevronRight  | polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)                                                        |
 | clip-path         | star          | polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)                     |
 | clip-path         | cross         | polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%) |
 | clip-path         | window        | polygon(0 40%, 40% 40%, 40% 0, 60% 0, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0 60%)     |
