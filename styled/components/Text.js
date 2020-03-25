@@ -13,7 +13,7 @@ import PropTypes from "prop-types";
 
 const Text = styled.div`
   color: ${props => (props.color ? props.color : "auto")};
-  background: ${props => (props.background ? props.background : "none")};
+  background: ${props => (props.bg ? props.bg : "none")};
   height: ${props => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
   width: ${props => (props.w ? props.w : props.sqr ? props.sqr : sideways)};
   padding: ${props => (props.p ? props.p : pad)};
@@ -41,7 +41,7 @@ Text.propTypes = {
   // CUSTOM PROPTYPES
   h: PropTypes.string,
   w: PropTypes.string,
-  background: PropTypes.string,
+  bg: PropTypes.string,
   color: PropTypes.string,
   minH: PropTypes.string,
   maxW: PropTypes.string,
