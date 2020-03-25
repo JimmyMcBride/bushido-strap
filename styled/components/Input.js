@@ -22,7 +22,7 @@ const Input = styled.input`
     border: ${props =>
       props.hvrBorder ? props.hvrBorder : `0.2rem solid ${theme.blue1}`};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};
-    background: ${props => (props.hvrBg ? props.hvrBg : theme.coolGray3)};
+    background: ${props => (props.hvrBg ? props.hvrBg : theme.coolGray1)};
     cursor: ${cursorStyle};
   }
 `;
