@@ -39,7 +39,7 @@ const NavBar = styled.nav`
   max-height: ${props => (props.maxH ? props.maxH : "none")};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  text-align: ${textAlign};
+  // text-align: ${textAlign};
 `;
 
 export default NavBar;

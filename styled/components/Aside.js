@@ -37,7 +37,7 @@ const Aside = styled.aside`
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.boxSize ? props.boxSize : boxSize)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
-  text-align: ${textAlign};
+  // text-align: ${textAlign};
 `;
 
 export default Aside;

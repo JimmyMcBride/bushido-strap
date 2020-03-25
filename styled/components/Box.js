@@ -30,7 +30,7 @@ const Box = styled.div`
   box-sizing: ${props => (props.boxSize ? props.boxSize : boxSize)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
-  text-align: ${textAlign};
+  // text-align: ${textAlign};
   img {
     width: 100%;
     height: auto;
