@@ -7,10 +7,10 @@ const Input = styled.input`
   color: ${props => (props.color ? props.color : "auto")};
   background: ${props => (props.bg ? props.bg : "auto")};
   border-radius: ${props => (props.radius ? props.radius : "0.3rem")};
-  padding: ${props => (props.padding ? props.padding : "0.8rem")};
-  margin: ${props => (props.margin ? props.margin : marg)};
-  width: ${props => (props.width ? props.width : sideways)};
-  height: ${props => (props.height ? props.height : "auto")};
+  padding: ${props => (props.p ? props.p : "0.8rem")};
+  margin: ${props => (props.m ? props.m : marg)};
+  width: ${props => (props.w ? props.w : sideways)};
+  height: ${props => (props.h ? props.h : "auto")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   min-height: ${props => (props.minH ? props.minH : "none")};
   max-width: ${props => (props.maxW ? props.maxW : "none")};
@@ -32,13 +32,13 @@ export default Input;
 Input.propTypes = {
   // CUSTOM PROPTYPES
   radius: PropTypes.string,
-  padding: PropTypes.string,
-  margin: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
+  p: PropTypes.string,
+  m: PropTypes.string,
+  w: PropTypes.string,
+  h: PropTypes.string,
   minH: PropTypes.string,
   maxW: PropTypes.string,
   minW: PropTypes.string,
   maxH: PropTypes.string,
-  box_size: PropTypes.string,
+  boxSize: PropTypes.string,
 };
