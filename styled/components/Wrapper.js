@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
 `;
 
 export default Wrapper;

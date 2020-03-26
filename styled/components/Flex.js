@@ -42,7 +42,7 @@ const Flex = styled.div`
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};

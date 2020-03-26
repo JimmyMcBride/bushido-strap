@@ -33,7 +33,7 @@ const Form = styled.form`
   min-width: ${props => (props.minW ? props.minW : "none")};
   max-height: ${props => (props.maxH ? props.maxH : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
   &:hover {
     cursor: ${cursorStyle};
   }

@@ -39,7 +39,7 @@ const Card = styled.div`
   box-shadow: ${props => (props.shadow ? props.shadow : defaultShadow)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};

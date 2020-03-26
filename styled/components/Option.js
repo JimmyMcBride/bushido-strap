@@ -22,7 +22,7 @@ const Option = styled.option`
   min-width: ${props => (props.minW ? props.minW : "none")};
   max-height: ${props => (props.maxH ? props.maxH : "none")};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
   &:hover {
     border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
     color: ${props => (props.hvrColor ? props.hvrColor : "auto")};

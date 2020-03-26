@@ -42,7 +42,7 @@ const Container = styled.div`
   margin: ${props => (props.m ? props.m : marg)};
   padding: ${props => (props.p ? props.p : pad)};
   opacity: ${props => (props.opacity ? props.opacity : "none")};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
   color: ${invertColor};
   &:hover {
     cursor: ${cursorStyle};

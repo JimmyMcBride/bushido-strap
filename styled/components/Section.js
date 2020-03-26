@@ -37,7 +37,7 @@ const Section = styled.section`
   box-shadow: ${props => (props.shadow ? props.shadow : boxShadow)};
   box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
   overflow: ${props => (props.overflow ? props.overflow : flow)};
-  // text-align: ${textAlign};
+  text-align: ${textAlign};
 `;
 
 export default Section;
