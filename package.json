@@ -1,6 +1,6 @@
 {
   "name": "bushido-strap",
-  "version": "2.9.6",
+  "version": "2.9.7",
   "description": "a library of styled components with some global style overrides in sass",
   "main": "dist/index",
   "scripts": {
