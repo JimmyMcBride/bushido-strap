@@ -31,6 +31,7 @@ const Box = styled.div`
   overflow: ${props => (props.overflow ? props.overflow : flow)};
   clip-path: ${props => (props.clip ? props.clip : shape)};
   text-align: ${textAlign};
+
   img {
     width: 100%;
     height: auto;
