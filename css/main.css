@@ -1004,7 +1004,7 @@ html body img {
 }
 
 .markdown-body img {
-  max-width: 80%;
+  max-width: 75%;
   box-sizing: initial;
   /* background-color: #fff; */
 }
