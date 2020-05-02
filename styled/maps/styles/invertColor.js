@@ -2,6 +2,6 @@ import styledMap from "styled-map";
 import { theme } from "../../theme";
 
 export default styledMap`
-  invert: ${theme.gray8};
-  default: ${theme.gray1};
+  invert: ${theme.colors.gray8};
+  default: ${theme.colors.gray1};
 `;

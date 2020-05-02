@@ -9,7 +9,7 @@ const { ThemeProvider, withTheme, useTheme } = createTheming(theme);
 import PropTypes from "prop-types";
 
 const ThemeWrapper = ({ theme, children }) => (
-  <ThemeProvider theme={theme.primary}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme.colors.primary}>{children}</ThemeProvider>
 );
 
 ThemeWrapper.defaultProps = {

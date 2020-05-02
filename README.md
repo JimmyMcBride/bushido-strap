@@ -130,50 +130,50 @@ Example:
 
 **Style Maps:**
 
-| CSS Property Name | Style Prop    | Property Value               |
-| ----------------- | ------------- | ---------------------------- |
-| width             | stretch       | 100%                         |
-| margin            | xsm           | 1rem                         |
-| margin            | sm            | 2rem                         |
-| margin            | mm            | 3rem                         |
-| margin            | lm            | 4rem                         |
-| margin            | xlm           | 5rem                         |
-| padding           | xsp           | 1rem                         |
-| padding           | sp            | 2rem                         |
-| padding           | mp            | 3rem                         |
-| padding           | lp            | 4rem                         |
-| padding           | xlp           | 5rem                         |
-| font-size         | xsf           | 0.6rem                       |
-| font-size         | sf            | 1rem                         |
-| font-size         | mf            | 1.4rem                       |
-| font-size         | lf            | 2rem                         |
-| font-size         | xlf           | 3rem                         |
-| box-shadow        | shade         | 0 0.3rem 1rem ${theme.gray7} |
-| box-shadow        | backlight     | 0 0.3rem 1rem ${theme.gray0} |
-| box-sizing        | cbox          | content-box                  |
-| box-sizing        | init          | initial                      |
-| box-sizing        | inherit       | inherit                      |
-| overflow          | visible       | visible                      |
-| overflow          | scroll        | scroll                       |
-| overflow          | auto          | auto                         |
-| text-align        | taRight       | right                        |
-| text-align        | taLeft        | left                         |
-| text-align        | taCenter      | center                       |
-| text-align        | taJustify     | justify                      |
-| text-align        | taAll         | justify-all                  |
-| text-align        | taStart       | start                        |
-| text-align        | taEnd         | end                          |
-| background-size   | sizeLen       | length                       |
-| background-size   | sizeCover     | cover                        |
-| background-size   | sizeContain   | contain                      |
-| background-size   | sizeInitial   | initial                      |
-| background-size   | sizeInherit   | inherit                      |
-| background-size   | sizeAuto      | auto                         |
-| background-attach | attachFix     | fix                          |
-| background-attach | attachLocal   | local                        |
-| background-attach | attachInherit | inherit                      |
-| background-attach | attachInitial | initial                      |
-| background-attach | attachScroll  | scroll                       |
+| CSS Property Name | Style Prop    | Property Value                      |
+| ----------------- | ------------- | ----------------------------------- |
+| width             | stretch       | 100%                                |
+| margin            | xsm           | 1rem                                |
+| margin            | sm            | 2rem                                |
+| margin            | mm            | 3rem                                |
+| margin            | lm            | 4rem                                |
+| margin            | xlm           | 5rem                                |
+| padding           | xsp           | 1rem                                |
+| padding           | sp            | 2rem                                |
+| padding           | mp            | 3rem                                |
+| padding           | lp            | 4rem                                |
+| padding           | xlp           | 5rem                                |
+| font-size         | xsf           | 0.6rem                              |
+| font-size         | sf            | 1rem                                |
+| font-size         | mf            | 1.4rem                              |
+| font-size         | lf            | 2rem                                |
+| font-size         | xlf           | 3rem                                |
+| box-shadow        | shade         | 0 0.3rem 1rem ${theme.colors.gray7} |
+| box-shadow        | backlight     | 0 0.3rem 1rem ${theme.colors.gray0} |
+| box-sizing        | cbox          | content-box                         |
+| box-sizing        | init          | initial                             |
+| box-sizing        | inherit       | inherit                             |
+| overflow          | visible       | visible                             |
+| overflow          | scroll        | scroll                              |
+| overflow          | auto          | auto                                |
+| text-align        | taRight       | right                               |
+| text-align        | taLeft        | left                                |
+| text-align        | taCenter      | center                              |
+| text-align        | taJustify     | justify                             |
+| text-align        | taAll         | justify-all                         |
+| text-align        | taStart       | start                               |
+| text-align        | taEnd         | end                                 |
+| background-size   | sizeLen       | length                              |
+| background-size   | sizeCover     | cover                               |
+| background-size   | sizeContain   | contain                             |
+| background-size   | sizeInitial   | initial                             |
+| background-size   | sizeInherit   | inherit                             |
+| background-size   | sizeAuto      | auto                                |
+| background-attach | attachFix     | fix                                 |
+| background-attach | attachLocal   | local                               |
+| background-attach | attachInherit | inherit                             |
+| background-attach | attachInitial | initial                             |
+| background-attach | attachScroll  | scroll                              |
 
 ## New Semantic Components!
 
@@ -335,7 +335,7 @@ Example:
 // using tt props to edit tool tip position and size
 <ToolTip ttLeft="105%" tabIndex={0} ttW="12rem" ttTop="25%">
   {/* These two Box's make up the content that we want to add a tooltip too */}
-  <Box bg={theme.primary} circle p="2rem">
+  <Box bg={theme.colors.primary} circle p="2rem">
     <Box sqr="2rem" window bg="white" />
   </Box>
   {/* Our "tooltip" div is the container for what we want to show in our
@@ -457,7 +457,7 @@ import { Wrapper, Flex, Button, theme } from "bushido-strap";
 
 export default function MyComponent() {
   return (
-    <Wrapper bg={theme.gray8}>
+    <Wrapper bg={theme.colors.gray8}>
       <Flex w="80vw" drape>
         <h2>Card Header</h2>
         <p>Card text.</p>
@@ -482,7 +482,7 @@ You can also set a custom clip path with the `clip` prop.
 Example:
 
 ```javascript
-<Box sqr="5rem" bg={theme.red5} message />
+<Box sqr="5rem" bg={theme.colors.red5} message />
 ```
 
 | CSS Property Name | Style Map     | Property Value                                                                                                      |
