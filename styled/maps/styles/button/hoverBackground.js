@@ -4,9 +4,11 @@ import { theme } from "../../../theme";
 export default styledMap`
   red: ${theme.colors.red4};
   orange: ${theme.colors.orange4};
+  deepOrange: ${theme.colors.deepOrange4};
+  brown: ${theme.colors.brown4};
   amber: ${theme.colors.amber4};
   yellow: ${theme.colors.yellow4};
-  brown: ${theme.colors.brown4};
+  lime: ${theme.colors.lime4};
   lightGreen: ${theme.colors.lightGreen4};
   green: ${theme.colors.green4};
   teal: ${theme.colors.teal4};
