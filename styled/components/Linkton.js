@@ -17,42 +17,43 @@ import {
   activeBackground,
   buttonCursorStyle,
 } from "../maps";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Linkton = styled(Link)`
+const Linkton = styled.a`
   display: flex;
   flex-wrap: ${flexWrap};
-  flex-direction: ${props =>
+  flex-direction: ${(props) =>
     props.direction ? props.direction : columnDirection};
-  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
-  align-items: ${props => (props.align ? props.align : centerAlign)};
-  align-content: ${props => (props.content ? props.content : flexContent)};
-  color: ${props => (props.color ? props.color : buttonColor)};
-  background: ${props => (props.bg ? props.bg : buttonBackground)};
-  border: ${props => (props.border ? props.border : "none")};
-  border-radius: ${props => (props.radius ? props.radius : "0.3rem 1rem")};
-  width: ${props => (props.w ? props.w : sideways)};
-  height: ${props => (props.h ? props.h : "auto")};
-  margin: ${props => (props.m ? props.m : btnMarg)};
-  padding: ${props => (props.p ? props.p : btnPad)};
-  min-height: ${props => (props.minH ? props.minH : "none")};
-  max-width: ${props => (props.maxW ? props.maxW : "none")};
-  min-width: ${props => (props.minW ? props.minW : "none")};
-  max-height: ${props => (props.maxH ? props.maxH : "none")};
-  opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  justify-content: ${(props) => (props.justify ? props.justify : flexJustify)};
+  align-items: ${(props) => (props.align ? props.align : centerAlign)};
+  align-content: ${(props) => (props.content ? props.content : flexContent)};
+  color: ${(props) => (props.color ? props.color : buttonColor)};
+  background: ${(props) => (props.bg ? props.bg : buttonBackground)};
+  border: ${(props) => (props.border ? props.border : "none")};
+  border-radius: ${(props) => (props.radius ? props.radius : "0.3rem 1rem")};
+  width: ${(props) => (props.w ? props.w : sideways)};
+  height: ${(props) => (props.h ? props.h : "auto")};
+  margin: ${(props) => (props.m ? props.m : btnMarg)};
+  padding: ${(props) => (props.p ? props.p : btnPad)};
+  min-height: ${(props) => (props.minH ? props.minH : "none")};
+  max-width: ${(props) => (props.maxW ? props.maxW : "none")};
+  min-width: ${(props) => (props.minW ? props.minW : "none")};
+  max-height: ${(props) => (props.maxH ? props.maxH : "none")};
+  opacity: ${(props) => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${(props) => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textCenter};
 
   &:hover {
-    border: ${props => (props.hvrBorder ? props.hvrBorder : "none")};
-    color: ${props => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
-    background: ${props => (props.hvrBg ? props.hvrBg : buttonHoverBackground)};
+    border: ${(props) => (props.hvrBorder ? props.hvrBorder : "none")};
+    color: ${(props) => (props.hvrColor ? props.hvrColor : buttonHoverColor)};
+    background: ${(props) =>
+      props.hvrBg ? props.hvrBg : buttonHoverBackground};
     cursor: ${buttonCursorStyle};
   }
 
   &:active {
-    background: ${props =>
+    background: ${(props) =>
       props.activeBg ? props.activeBg : activeBackground};
   }
 `;
