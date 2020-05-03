@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bellota|Nova+Mono|Open+Sans|Ubuntu&display=swap");
 
 /* Variables */
 :root {
@@ -286,8 +286,7 @@ html body img {
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #24292e;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
@@ -327,7 +326,7 @@ html body img {
 .markdown-body code,
 .markdown-body kbd,
 .markdown-body pre {
-  font-family: monospace, monospace;
+  font-family: 'Nova Mono', monospace;
   font-size: 1em;
 }
 
@@ -507,7 +506,7 @@ html body img {
 
 .markdown-body code,
 .markdown-body pre {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-family: 'Nova Mono', monospace;
   font-size: 12px;
 }
 
@@ -1072,7 +1071,7 @@ html body img {
 
 .markdown-body .commit-tease-sha {
   display: inline-block;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-family: 'Nova Mono', monospace;
   font-size: 90%;
   color: #444d56;
 }
@@ -1097,7 +1096,7 @@ html body img {
   min-width: 50px;
   padding-right: 10px;
   padding-left: 10px;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-family: 'Nova Mono', monospace;
   font-size: 12px;
   line-height: 20px;
   color: rgba(27, 31, 35, 0.3);
@@ -1129,7 +1128,7 @@ html body img {
 
 .markdown-body .blob-code-inner {
   overflow: visible;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-family: 'Nova Mono', monospace;
   font-size: 12px;
   color: #24292e;
   word-wrap: normal;
@@ -1274,7 +1273,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: 'Nova Mono', monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -1317,7 +1316,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'Nova Mono', monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */

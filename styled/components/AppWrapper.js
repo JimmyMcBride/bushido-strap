@@ -10,7 +10,7 @@ const AppWrapper = styled.div`
     props.bgSrc ? `url(${props.bgSrc})` : "none"};
   opacity: ${(props) => (props.opacity ? props.opacity : "none")};
   font-family: ${(props) =>
-    props.font ? props.font : '"Raleway", sans-serif'};
+    props.font ? props.font : '"Open Sans", sans-serif'};
   background-position: ${(props) =>
     props.bgPosition ? props.bgPosition : "center"};
   background-repeat: ${(props) =>
@@ -31,7 +31,7 @@ const AppWrapper = styled.div`
   h5,
   h6 {
     font-family: ${(props) =>
-      props.headFont ? props.headFont : '"Raleway", sans-serif'};
+      props.headFont ? props.headFont : '"Bellota", cursive'};
     line-height: 1.2;
     margin: 1.6rem;
   }
