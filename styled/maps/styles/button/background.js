@@ -20,5 +20,10 @@ export default styledMap`
   purple: ${theme.colors.purple6};
   pink: ${theme.colors.pink6};
   invert: ${theme.colors.gray4};
+  primary: ${theme.palette.primary};
+  secondary: ${theme.palette.secondary};
+  success: ${theme.palette.success};
+  warning: ${theme.palette.warning};
+  info: ${theme.palette.info};
   default: ${theme.colors.gray6};
 `;
