@@ -168,7 +168,7 @@ html body h4,
 html body h5,
 html body h6 {
   line-height: 1.2;
-  margin: 1.6rem;
+  /* margin: 1.6rem; */
 }
 
 html body h1 {
