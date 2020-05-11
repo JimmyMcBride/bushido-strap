@@ -809,6 +809,7 @@
 
 .markdown-body pre code {
   font-size: 1.6rem;
+  font-family: "Space Mono", monospace;
 }
 
 /* .markdown-body pre > code {
