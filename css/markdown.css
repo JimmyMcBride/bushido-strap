@@ -801,15 +801,15 @@
 .markdown-body code {
   padding: 0.2em 0.4em;
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Space Mono", monospace;
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
 
-/* .markdown-body pre {
-  word-wrap: normal;
-} */
+.markdown-body pre code {
+  font-size: 1.8rem;
+}
 
 /* .markdown-body pre > code {
   padding: 0;
