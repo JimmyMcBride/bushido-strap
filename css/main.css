@@ -203,12 +203,12 @@ html body a:hover {
   color: var(--blue7);
 }
 
-html body code {
+/* html body code {
   background-color: #b3b3b3;
   color: #333333;
   padding: 0 0.2rem;
   border-radius: 0.3rem;
-}
+} */
 
 /* html body button:focus {
   outline: 0;
