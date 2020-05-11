@@ -107,7 +107,7 @@
 .markdown-body kbd,
 .markdown-body pre {
   font-family: "Ubuntu Mono", monospace;
-  font-size: 1em;
+  font-size: 1.6rem;
 }
 
 .markdown-body hr {
@@ -287,7 +287,7 @@
 .markdown-body code,
 .markdown-body pre {
   font-family: "Ubuntu Mono", monospace;
-  font-size: 12px;
+  font-size: 1.6rem;
 }
 
 .markdown-body pre {
@@ -799,7 +799,7 @@
 .markdown-body code {
   padding: 0.2em 0.4em;
   margin: 0;
-  font-size: 85%;
+  /* font-size: 85%; */
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
@@ -811,7 +811,7 @@
 .markdown-body pre > code {
   padding: 0;
   margin: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   word-break: normal;
   white-space: pre;
   background: transparent;
