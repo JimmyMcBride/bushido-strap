@@ -2,7 +2,8 @@
   Markdown CSS
 */
 
-.markdown-body .octicon {
+@import url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap")
+  .markdown-body .octicon {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
@@ -799,7 +800,8 @@
 .markdown-body code {
   padding: 0.2em 0.4em;
   margin: 0;
-  font-size: 85%;
+  font-size: 2rem;
+  font-family: "Space Mono", monospace;
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
 }
