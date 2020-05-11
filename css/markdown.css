@@ -798,8 +798,8 @@
   padding-right: 20px;
 }
 
-/* .markdown-body code {
-  padding: 0.1em 0.4em;
+.markdown-body code {
+  padding: 0.01em 0.4em;
   margin: 0;
   font-size: 1.4rem;
   font-family: "Space Mono", monospace;
@@ -808,8 +808,8 @@
 }
 
 .markdown-body pre code {
-  font-size: 1.8rem;
-} */
+  font-size: 1.6rem;
+}
 
 /* .markdown-body pre > code {
   padding: 0;
