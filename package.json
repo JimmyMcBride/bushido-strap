@@ -1,7 +1,7 @@
 {
-  "name": "bushido-strap",
-  "version": "3.4.5",
-  "description": "a library of styled components with some global style overrides in sass",
+  "name": "sriracha-ui",
+  "version": "0.1.0",
+  "description": "A react style library build with styled-components, and material ui theme.",
   "main": "dist/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JimmyMcBride/bushido-strap.git"
+    "url": "git+https://github.com/Sriracha-UI/sriracha-ui.git"
   },
   "keywords": [
     "styled-components",
@@ -28,9 +28,9 @@
   "author": "Jimmy McBride",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JimmyMcBride/bushido-strap/issues"
+    "url": "https://github.com/Sriracha-UI/sriracha-ui/issues"
   },
-  "homepage": "https://github.com/JimmyMcBride/bushido-strap#readme",
+  "homepage": "https://github.com/Sriracha-UI/sriracha-ui#readme",
   "dependencies": {
     "@callstack/react-theme-provider": "^2.1.0",
     "styled-components": "^5.0.1",
