@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { sideways, boxSize, btnMarg, btnPad } from "../../maps/index";
+import { sideways, boxSize, btnMarg, btnPad } from "../../maps";
 
 export default css`
   height: ${(props) => (props.h ? props.h : props.sqr ? props.sqr : "auto")};
