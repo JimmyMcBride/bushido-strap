@@ -1,6 +1,6 @@
 {
   "name": "bushido-strap",
-  "version": "3.4.6",
+  "version": "3.4.7",
   "description": "a library of styled components with material theme",
   "main": "dist/index",
   "scripts": {
