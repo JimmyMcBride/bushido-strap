@@ -15,30 +15,30 @@ import PropTypes from "prop-types";
 const NavBar = styled.nav`
   display: flex;
   flex-wrap: ${flexWrap};
-  flex-direction: ${props =>
+  flex-direction: ${(props) =>
     props.direction ? props.direction : flexDirection};
-  justify-content: ${props => (props.justify ? props.justify : flexJustify)};
-  align-items: ${props => (props.align ? props.align : flexItems)};
-  align-content: ${props => (props.content ? props.content : flexContent)};
-  position: ${props => (props.position ? props.position : "fixed")};
-  background: ${props => (props.bg ? props.bg : "none")};
-  color: ${props => (props.color ? props.color : "auto")};
-  height: ${props => (props.h ? props.h : "auto")};
-  width: ${props => (props.w ? props.w : "100%")};
-  margin: ${props => (props.m ? props.m : marg)};
-  padding: ${props => (props.p ? props.p : pad)};
-  border: ${props => (props.border ? props.border : "none")};
-  border-radius: ${props => (props.radius ? props.radius : "none")};
-  top: ${props => (props.top ? props.top : "auto")}
-  right: ${props => (props.right ? props.right : "auto")}
-  bottom: ${props => (props.bottom ? props.bottom : "auto")}
-  left: ${props => (props.left ? props.left : "auto")}
-  min-height: ${props => (props.minH ? props.minH : "none")};
-  max-width: ${props => (props.maxW ? props.maxW : "none")};
-  min-width: ${props => (props.minW ? props.minW : "none")};
-  max-height: ${props => (props.maxH ? props.maxH : "none")};
-  opacity: ${props => (props.opacity ? props.opacity : "none")};
-  box-sizing: ${props => (props.box_size ? props.box_size : boxSize)};
+  justify-content: ${(props) => (props.justify ? props.justify : flexJustify)};
+  align-items: ${(props) => (props.align ? props.align : flexItems)};
+  align-content: ${(props) => (props.content ? props.content : flexContent)};
+  background: ${(props) => (props.bg ? props.bg : "none")};
+  color: ${(props) => (props.color ? props.color : "auto")};
+  height: ${(props) => (props.h ? props.h : "auto")};
+  width: ${(props) => (props.w ? props.w : "100%")};
+  margin: ${(props) => (props.m ? props.m : marg)};
+  padding: ${(props) => (props.p ? props.p : pad)};
+  border: ${(props) => (props.border ? props.border : "none")};
+  border-radius: ${(props) => (props.radius ? props.radius : "none")};
+  position: ${(props) => (props.position ? props.position : "fixed")};
+  top: ${(props) => (props.top ? props.top : "auto")}
+  right: ${(props) => (props.right ? props.right : "auto")}
+  bottom: ${(props) => (props.bottom ? props.bottom : "auto")}
+  left: ${(props) => (props.left ? props.left : "auto")}
+  min-height: ${(props) => (props.minH ? props.minH : "none")};
+  max-width: ${(props) => (props.maxW ? props.maxW : "none")};
+  min-width: ${(props) => (props.minW ? props.minW : "none")};
+  max-height: ${(props) => (props.maxH ? props.maxH : "none")};
+  opacity: ${(props) => (props.opacity ? props.opacity : "none")};
+  box-sizing: ${(props) => (props.box_size ? props.box_size : boxSize)};
   text-align: ${textAlign};
 `;
 
