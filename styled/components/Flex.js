@@ -5,7 +5,7 @@ import {
   imageBase,
   flexRowBase,
   shapeBase,
-} from "../base/index";
+} from "../base";
 
 const Flex = styled.div`
   ${flexRowBase}

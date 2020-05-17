@@ -1,10 +1,5 @@
 import { css } from "styled-components";
-import {
-  cursorStyle,
-  boxShadow,
-  cardColor,
-  cardBackground,
-} from "../../maps/index";
+import { cursorStyle, boxShadow, cardColor, cardBackground } from "../../maps";
 
 export default css`
   color: ${(props) => (props.color ? props.color : cardColor)};

@@ -1,6 +1,6 @@
 import { css } from "styled-components";
-import { cursorStyle, boxShadow } from "../../maps/index";
-import { theme } from "../../theme/index";
+import { cursorStyle, boxShadow } from "../../maps";
+import { theme } from "../../theme";
 
 export default css`
   color: ${(props) => (props.color ? props.color : "auto")};

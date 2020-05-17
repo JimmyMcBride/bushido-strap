@@ -4,7 +4,7 @@ import {
   buttonSizeBase,
   buttonStyleBase,
   centerFontBase,
-} from "../base/index";
+} from "../base";
 
 const Button = styled.button`
   ${flexColumnBase}

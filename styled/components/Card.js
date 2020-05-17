@@ -4,7 +4,7 @@ import {
   sizeBase,
   cardStyleBase,
   centerFontBase,
-} from "../base/index";
+} from "../base";
 
 const Card = styled.div`
   ${flexColumnBase}

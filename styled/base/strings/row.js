@@ -4,7 +4,7 @@ import {
   flexItems,
   flexContent,
   flexWrap,
-} from "../../maps/index";
+} from "../../maps";
 
 export default css`
   display: flex;

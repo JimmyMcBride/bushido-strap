@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { cursorStyle, boxShadow, invertColor } from "../../maps/index";
+import { cursorStyle, boxShadow, invertColor } from "../../maps";
 
 export default css`
   color: ${(props) => (props.color ? props.color : invertColor)};

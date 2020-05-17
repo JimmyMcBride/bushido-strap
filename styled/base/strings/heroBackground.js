@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { bgCover, bgAttach } from "../../maps/index";
+import { bgCover, bgAttach } from "../../maps";
 
 export default css`
   background-image: ${(props) =>

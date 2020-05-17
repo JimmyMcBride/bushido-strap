@@ -6,7 +6,7 @@ import {
   fontBase,
   flexRowBase,
   toolTipBase,
-} from "../base/index";
+} from "../base";
 
 const ToolTip = styled.div`
   ${flexRowBase}

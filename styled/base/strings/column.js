@@ -5,7 +5,7 @@ import {
   centerAlign,
   flexContent,
   flexWrap,
-} from "../../maps/index";
+} from "../../maps";
 
 export default css`
   display: flex;

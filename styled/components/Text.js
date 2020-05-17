@@ -1,11 +1,5 @@
 import styled from "styled-components";
-import {
-  sizeBase,
-  styleBase,
-  imageBase,
-  shapeBase,
-  fontBase,
-} from "../base/index";
+import { sizeBase, styleBase, imageBase, shapeBase, fontBase } from "../base";
 
 const Text = styled.div`
   ${sizeBase}

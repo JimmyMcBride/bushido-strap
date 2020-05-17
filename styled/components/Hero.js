@@ -4,7 +4,7 @@ import {
   sizeBase,
   heroStyleBase,
   flexColumnBase,
-} from "../base/index";
+} from "../base";
 
 const Hero = styled.div`
   ${flexColumnBase}

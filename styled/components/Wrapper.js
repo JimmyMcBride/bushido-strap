@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flexColumnBase, wrapperSizeBase } from "../base/index";
+import { flexColumnBase, wrapperSizeBase } from "../base";
 
 const Wrapper = styled.div`
   ${flexColumnBase}

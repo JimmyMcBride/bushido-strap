@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { textAlign, fontSize, fontWeight } from "../../maps/index";
+import { textAlign, fontSize, fontWeight } from "../../maps";
 
 export default css`
   font-family: ${(props) => (props.font ? props.font : "inherit")};

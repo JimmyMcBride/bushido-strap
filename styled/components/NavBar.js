@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { flexRowBase, sizeBase, styleBase, positionBase } from "../base/index";
+import { flexRowBase, sizeBase, styleBase, positionBase } from "../base";
 
 const NavBar = styled.nav`
   ${flexRowBase}
