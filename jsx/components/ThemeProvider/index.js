@@ -13,7 +13,7 @@ const ThemeWrapper = ({ theme, children }) => (
 );
 
 ThemeWrapper.defaultProps = {
-  theme,
+  theme: defaultTheme,
 };
 
 export default ThemeWrapper;
