@@ -1,7 +1,7 @@
 {
   "name": "bushido-strap",
   "version": "3.4.6",
-  "description": "a library of styled components with some global style overrides in sass",
+  "description": "a library of styled components with material theme",
   "main": "dist/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
