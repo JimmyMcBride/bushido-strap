@@ -1,15 +1,15 @@
 import React from "react";
 
-import { theme } from "../../../styled/theme";
+import { theme as defaultTheme } from "../../../styled/theme";
 
 import { createTheming } from "@callstack/react-theme-provider";
 
-const { ThemeProvider, withTheme, useTheme } = createTheming(theme);
+const { ThemeProvider, withTheme, useTheme } = createTheming(defaultTheme);
 
 import PropTypes from "prop-types";
 
 const ThemeWrapper = ({ theme, children }) => (
-  <ThemeProvider theme={theme.colors.primary}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme}>{children}</ThemeProvider>
 );
 
 ThemeWrapper.defaultProps = {
