@@ -1,6 +1,6 @@
 import React from "react";
 
-import { theme } from "../../../styled/theme";
+import { theme } from "../../styled/theme";
 
 import { createTheming } from "@callstack/react-theme-provider";
 
